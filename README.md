@@ -32,6 +32,9 @@ Therefore: please feel free to look up certain tricks and functions and add it t
 
 # Source
 
+- purcell [config](https://github.com/purcell/emacs.d)
+- rememberYou [config](https://github.com/rememberYou/.emacs.d)
+- D. Garaud [config](https://github.com/garaud/foggycowinn/tree/master/emacs)
 - [mastering emacs in one year](https://github.com/redguardtoo/mastering-emacs-in-one-year-guide/blob/master/guide-en.org)
 - [learn elisp in 15 minutes](https://learnxinyminutes.com/docs/fr-fr/elisp-fr/)
 
