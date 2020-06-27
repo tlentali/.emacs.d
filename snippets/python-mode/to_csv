@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: to_csv
+# key: to_csv
+# --
+.to_csv('$1', 
+          sep='$0', 
+          index=False)

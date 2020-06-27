@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: rename_col
+# key: rename_col
+# --
+$1.rename(columns={'$2': '$3'})$0

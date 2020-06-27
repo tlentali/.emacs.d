@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: remove_cols
+# key: remove_cols
+# --
+[list(set($1).difference({'$2'}))]$0

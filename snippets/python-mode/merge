@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name: merge
+# key: merge
+# --
+pd.merge($1,
+         $2,
+         how='left',
+         left_on=['$3'],
+         right_on=['$4'],
+         suffixes=['_$1',
+                   '_$2'])
+$0

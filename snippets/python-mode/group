@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: group
+# key: group
+# --
+$1.groupby(['$2'])['$3'].$4()$0

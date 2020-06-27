@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: read_csv
+# key: read_csv
+# --
+pd.read_csv('$1.csv', sep = '$2', encoding='utf8')$0
