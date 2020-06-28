@@ -8,7 +8,7 @@
 
 ---
 
-# Get inspired
+# 🚀 Get inspired
 
 This repo, on top of being a documented conf for my futur self, aims to get you inspired by some features delivered by emacs.  
 I advise people not to use this configuration directly.  
@@ -22,7 +22,7 @@ Therefore: please feel free to look up certain tricks and functions and add it t
 
 # 🔥 Features
 
-## Apparence
+## ✨ Apparence
 
 - start full screen
 - cursor in bar instead of block
@@ -34,7 +34,7 @@ Therefore: please feel free to look up certain tricks and functions and add it t
 - set a homepage [dashboard](https://github.com/emacs-dashboard/emacs-dashboard) displaying recent used files
 - [horizon](https://github.com/aodhneine/horizon-theme.el) theme
 
-## Behavior
+## 🎉 Behavior
 
 - typed text replaces the selection if the selection is active
 - always [replace tabs with spaces](https://www.youtube.com/watch?v=SsoOG6ZeyUI) and set tab width to 4 spaces for all buffers
@@ -45,12 +45,12 @@ Therefore: please feel free to look up certain tricks and functions and add it t
 - [zoom](https://github.com/gonewest818/dimmer.el) current window size
 - visually highlight the selected buffer using [dimmer](https://github.com/gonewest818/dimmer.el)
     
-## Org mode
+## 📓 Org mode
 
 - [org agenda](https://blog.aaronbieber.com/2016/09/24/an-agenda-for-life-with-org-mode.html)
 - [org contact](https://www.reddit.com/r/emacs/comments/8toivy/tip_how_to_manage_your_contacts_with_orgcontacts/)
-
-## Python
+  
+## 🐍 Python
 
 - [elpy](https://github.com/jorgenschaefer/elpy)
 - use [flycheck](https://github.com/flycheck/flycheck) instead of flymake
@@ -58,12 +58,12 @@ Therefore: please feel free to look up certain tricks and functions and add it t
 - emacs ipython notebook : [ein](https://github.com/millejoh/emacs-ipython-notebook) and how to [use it](/programming_conf/python_ein.md) 
 - [yasnippet](https://github.com/joaotavora/yasnippet) with custom [snippets](/snippet/python-mode)
 
-# Life changing tricks
+# 🙌 Life changing tricks
 
 - use [magit](https://magit.vc/), just use it
 - on your computer settings, change the <kbd>CapsLk</kbd> by <kbd>ctrl</kbd>, you're welcome.
 
-# Source
+# 🛈 Source
 
 - [.emacs.d](https://github.com/purcell/emacs.d) by Purcell 
 - [.emacs.d](https://github.com/bbatsov/emacs.d) by Bozhidar Batsov 
