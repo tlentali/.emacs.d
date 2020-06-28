@@ -12,6 +12,7 @@
 
 In case you want to check out and use my configuration instead of yours: Don't.  
 
+I don't advise people to use it directly.  
 Not because I don't like you to have my configuration. It is not easy to accomplish because I left out some parts. Some of my settings are host-specific and/or depend on path variables, Elisp files I did not add to the GitHub repository, or external tools.  
 
 You should only adopt Elisp code you need and understand to avoid [Emacs Bankruptcy](https://www.emacswiki.org/emacs/DotEmacsBankruptcy).  
@@ -56,13 +57,14 @@ Therefore: please feel free to look up certain tricks and functions and add it t
 - [elpy](https://github.com/jorgenschaefer/elpy)
 - use [flycheck](https://github.com/flycheck/flycheck) instead of flymake
 - [neotree](https://github.com/jaypei/emacs-neotree)
-    - emacs ipython notebook : [ein](https://github.com/millejoh/emacs-ipython-notebook) and how to [use it](/programming_conf/python_ein.md) 
+- emacs ipython notebook : [ein](https://github.com/millejoh/emacs-ipython-notebook) and how to [use it](/programming_conf/python_ein.md) 
 - [yasnippet](https://github.com/joaotavora/yasnippet) with custom [snippets](/snippet/python-mode)
 
 # Source
 
-- purcell [config](https://github.com/purcell/emacs.d)
-- rememberYou [config](https://github.com/rememberYou/.emacs.d)
+- Purcell [config](https://github.com/purcell/emacs.d)
+- Bozhidar Batsov [config](https://github.com/bbatsov/emacs.d)
+- RememberYou [config](https://github.com/rememberYou/.emacs.d)
 - D. Garaud [config](https://github.com/garaud/foggycowinn/tree/master/emacs)
 - [mastering emacs in one year](https://github.com/redguardtoo/mastering-emacs-in-one-year-guide/blob/master/guide-en.org)
 - [learn elisp in 15 minutes](https://learnxinyminutes.com/docs/fr-fr/elisp-fr/)

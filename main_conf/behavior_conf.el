@@ -1,5 +1,3 @@
-;; behavior
-;;---------
 ;;; typed text replaces the selection if the selection is active
 (delete-selection-mode 1) 
 ;;; always replace tabs with spaces

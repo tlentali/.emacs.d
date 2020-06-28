@@ -32,6 +32,7 @@
     zoom
     markdown-mode
     dashboard
+    magit
     ))
 
 (mapc #'(lambda (package)

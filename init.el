@@ -17,3 +17,7 @@
 ;; org
 ;;-------
 (load "~/.emacs.d/programming_conf/org_conf.el")
+
+;; magit
+;;-------
+(load "~/.emacs.d/programming_conf/magit_conf.el")
