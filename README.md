@@ -8,10 +8,11 @@
 
 ---
 
-# Get inspirared...
+# Get inspired
 
+This repo, on top of being a documented conf for my futur self, aims to get you inspired by some features delivered by emacs.  
 I advise people not to use this configuration directly.  
-Not because I don't like you to have my configuration. It is not easy to accomplish because I left out some parts. Some of my settings are host-specific and/or depend on path variables, Elisp files I did not add to the GitHub repository, or external tools.  
+Not because I don't like you to have my configuration. Some of my settings are host-specific and/or depend on path variables, Elisp files I did not add to the GitHub repository, or external tools.  
 
 You should only adopt Elisp code you need and understand, to avoid [Emacs Bankruptcy](https://www.emacswiki.org/emacs/DotEmacsBankruptcy).  
 
@@ -31,24 +32,23 @@ Therefore: please feel free to look up certain tricks and functions and add it t
 - no line number
 - hide the startup message
 - set a homepage [dashboard](https://github.com/emacs-dashboard/emacs-dashboard) displaying recent used files
+- [horizon](https://github.com/aodhneine/horizon-theme.el) theme
 
 ## Behavior
 
 - typed text replaces the selection if the selection is active
-- always [replace tabs with spaces](https://www.youtube.com/watch?v=SsoOG6ZeyUI)
-- set tab width to 4 spaces for all buffers
+- always [replace tabs with spaces](https://www.youtube.com/watch?v=SsoOG6ZeyUI) and set tab width to 4 spaces for all buffers
 - cursor scroll [smoothly](https://github.com/aspiers/smooth-scrolling) 
 - mousewheel scroll one line at a time (less "jumpy" than defaults)
 - past without indentation mess
 - [window numbering](https://github.com/nschum/window-numbering.el) to navigate between buffers easily
--[zoom](https://github.com/gonewest818/dimmer.el) current window size
+- [zoom](https://github.com/gonewest818/dimmer.el) current window size
 - visually highlight the selected buffer using [dimmer](https://github.com/gonewest818/dimmer.el)
     
 ## Org mode
 
 - [org agenda](https://blog.aaronbieber.com/2016/09/24/an-agenda-for-life-with-org-mode.html)
 - [org contact](https://www.reddit.com/r/emacs/comments/8toivy/tip_how_to_manage_your_contacts_with_orgcontacts/)
-
 
 ## Python
 
