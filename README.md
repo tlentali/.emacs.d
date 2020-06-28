@@ -24,11 +24,40 @@ Therefore: please feel free to look up certain tricks and functions and add it t
 
 ## Apparence
 
+- start full screen
+- cursor in bar instead of block
+- remove menu
+- remove tool bar
+- remove scroll bar
+- no line number
+- hide the startup message
+- set a [dashboard](https://github.com/emacs-dashboard/emacs-dashboard) homepage displaying recent used files
+
 ## Behavior
 
+- typed text replaces the selection if the selection is active
+- always replace tabs with spaces
+- set tab width to 4 for all buffers
+- cursor scroll [smoothly](https://github.com/aspiers/smooth-scrolling) 
+- mousewheel scroll one line at a time (less "jumpy" than defaults)
+- past without indentation mess
+- [window numbering](https://github.com/nschum/window-numbering.el) to navigate between buffers easily
+-[zoom](https://github.com/gonewest818/dimmer.el) current window size
+- visually highlight the selected buffer using [dimmer](https://github.com/gonewest818/dimmer.el)
+    
 ## Org mode
 
+- [org agenda](https://blog.aaronbieber.com/2016/09/24/an-agenda-for-life-with-org-mode.html)
+- [org contact](https://www.reddit.com/r/emacs/comments/8toivy/tip_how_to_manage_your_contacts_with_orgcontacts/)
+
+
 ## Python
+
+- [elpy](https://github.com/jorgenschaefer/elpy)
+- use [flycheck](https://github.com/flycheck/flycheck) instead of flymake
+- [neotree](https://github.com/jaypei/emacs-neotree)
+    - emacs ipython notebook : [ein](https://github.com/millejoh/emacs-ipython-notebook) and how to [use it](/programming_conf/python_ein.md) 
+- [yasnippet](https://github.com/joaotavora/yasnippet) with custom [snippets](/snippet/python-mode)
 
 # Source
 
