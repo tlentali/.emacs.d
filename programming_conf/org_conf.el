@@ -1,6 +1,6 @@
 ;;; org agenda
 (setq org-agenda-files (quote ("~/.personal/agenda/")))
-;a;; org-contact
+;;; org-contact
 (use-package org
   :ensure org-plus-contrib)
 
