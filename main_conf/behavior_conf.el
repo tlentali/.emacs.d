@@ -2,7 +2,7 @@
 (delete-selection-mode 1) 
 ;;; always replace tabs with spaces
 (setq-default indent-tabs-mode nil)
-;;; set tab width to 4 for all buffers
+;;; set tab width to 4 spaces for all buffers
 (setq-default tab-width 4)
 ;;; cursor scroll smoothly 
 (require 'smooth-scrolling)
