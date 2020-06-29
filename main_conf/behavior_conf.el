@@ -20,6 +20,7 @@
 (require 'window-numbering)
 (window-numbering-mode 1)
 ;;; zoom current window size
+(custom-set-variables '(zoom-mode t))
 ;; (defun size-callback ()
 ;;   (cond ((> (frame-pixel-width) 1280) '(0.90 . 0.75))
 ;;         (t                            '(0.618 . 0.618))))
