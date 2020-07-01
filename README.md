@@ -10,6 +10,7 @@
 
 # 🚀 Get inspired
 
+This configuration was build and is still built thank to a lot of wise people (see the [Source](#source) section).  
 This repo, on top of being a documented configuration for my future self, aims to inspire you through some features delivered by emacs.  
 I advise people not to use this configuration directly.  
 Not because I don't like you to have my configuration. Some of my settings are host-specific and/or depend on path variables, Elisp files I did not add to the GitHub repository, or external tools.  
@@ -47,17 +48,17 @@ Therefore: please feel free to look up certain tricks and functions and add it t
 - visually highlight the selected buffer using [dimmer](https://github.com/gonewest818/dimmer.el)
 - disable backups auto-saves
 - change yes-or-no questions into y-or-n questions
-- After you split a window, your focus remains in the previous one.
-- swiper instead of the default search 
+- After you split a window, your cursor goes on the new one
+- [swiper](https://github.com/abo-abo/swiper) instead of the default search 
 - ibuffer instead of the default switch-to-buffer 
-- move around quickly 
-- emacs treats camelCase strings as a single word by default, this changes said behaviour
-- typing the first character in a set of 2, completes the second one after your cursor
-- briefly highlighted your cursor when changing buffer 
-- colors parentheses and other delimiters depending on their depth
+- move around quickly with [avy](https://github.com/abo-abo/avy) 
+- treats camelCase strings as a several words
+- typing () [] {} by pair
+- briefly highlighted your cursor when changing buffer with [beacon](https://github.com/Malabarba/beacon) 
+- colors parentheses and other delimiters depending on their depth with [rainbow-delimiters](https://github.com/Fanael/rainbow-delimiters)
 - highlights matching parens when the cursor is just behind one of them
-- Expand region selection 
-- popup-kill-ring
+- [Expand region](https://github.com/magnars/expand-region.el) selection 
+- [popup kill ring](https://github.com/waymondo/popup-kill-ring)
 
 | action | kbd |
 |---|:---|
@@ -88,15 +89,15 @@ Therefore: please feel free to look up certain tricks and functions and add it t
 | open magit | `C-x g` |
 | to stack | `s` |
 | to unstack | `u` |
-| to commit | `cc` + message + `C-c C-c` |
-| to push | `Pp` |
+| to commit | `c` + `c` + message + `C-c C-c` |
+| to push | `P` + `p` |
 
 # 🙌 Life changing tricks
 
 - use [magit](https://magit.vc/), just use it
 - on your computer settings, change the <kbd>CapsLk</kbd> by <kbd>ctrl</kbd>, you're welcome.
 
-# 🛈 Source
+# 🛈 Source <a name="source"/>
 
 - [.emacs.d](https://github.com/daedreth/UncleDavesEmacs) by Dawid Eckert
 - [.emacs.d](https://github.com/purcell/emacs.d) by Purcell 

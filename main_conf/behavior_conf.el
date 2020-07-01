@@ -35,8 +35,7 @@
 (setq auto-save-default nil)
 ;;; change yes-or-no questions into y-or-n questions
 (defalias 'yes-or-no-p 'y-or-n-p)
-;;; Following window splits
-;;; After you split a window, your focus remains in the previous one. This annoyed me so much I wrote these two, they take care of it.
+;;; After you split a window, your cursor goes on the new one
 (defun split-and-follow-horizontally ()
   (interactive)
   (split-window-below)
