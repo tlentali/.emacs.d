@@ -41,3 +41,6 @@
 (setq dashboard-set-init-info nil)
 ;;hook
 (dashboard-setup-startup-hook)
+;;; cursor position
+(setq line-number-mode t)
+(setq column-number-mode nil)

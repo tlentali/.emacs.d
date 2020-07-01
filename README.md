@@ -10,7 +10,7 @@
 
 # 🚀 Get inspired
 
-This repo, on top of being a documented conf for my futur self, aims to get you inspired by some features delivered by emacs.  
+This repo, on top of being a documented configuration for my future self, aims to inspire you through some features delivered by emacs.  
 I advise people not to use this configuration directly.  
 Not because I don't like you to have my configuration. Some of my settings are host-specific and/or depend on path variables, Elisp files I did not add to the GitHub repository, or external tools.  
 
@@ -32,6 +32,7 @@ Therefore: please feel free to look up certain tricks and functions and add it t
 - no line number
 - hide the startup message
 - set a homepage [dashboard](https://github.com/emacs-dashboard/emacs-dashboard) displaying recent used files
+- cursor line position
 - [horizon](https://github.com/aodhneine/horizon-theme.el) theme
 
 ## 🎉 Behavior
@@ -44,6 +45,28 @@ Therefore: please feel free to look up certain tricks and functions and add it t
 - [window numbering](https://github.com/nschum/window-numbering.el) to navigate between buffers easily
 - [zoom](https://github.com/gonewest818/dimmer.el) current window size
 - visually highlight the selected buffer using [dimmer](https://github.com/gonewest818/dimmer.el)
+- disable backups auto-saves
+- change yes-or-no questions into y-or-n questions
+- After you split a window, your focus remains in the previous one.
+- swiper instead of the default search 
+- ibuffer instead of the default switch-to-buffer 
+- move around quickly 
+- emacs treats camelCase strings as a single word by default, this changes said behaviour
+- typing the first character in a set of 2, completes the second one after your cursor
+- briefly highlighted your cursor when changing buffer 
+- colors parentheses and other delimiters depending on their depth
+- highlights matching parens when the cursor is just behind one of them
+- Expand region selection 
+- popup-kill-ring
+
+| action | kbd |
+|---|:---|
+| [window numbering](https://github.com/nschum/window-numbering.el) to navigate between buffers easily | "M-x 1" |
+| swiper instead of the default search  | "C-s" |
+| ibuffer instead of the default switch-to-buffer  | "C-x b" |
+| move around quickly | "M-s" |
+| Expand region selection | "C-q" |
+| popup-kill-ring | "M-y" |
     
 ## 📓 Org mode
 
@@ -65,6 +88,7 @@ Therefore: please feel free to look up certain tricks and functions and add it t
 
 # 🛈 Source
 
+- [.emacs.d](https://github.com/daedreth/UncleDavesEmacs) by Dawid Eckert
 - [.emacs.d](https://github.com/purcell/emacs.d) by Purcell 
 - [.emacs.d](https://github.com/bbatsov/emacs.d) by Bozhidar Batsov 
 - [.emacs.d](https://github.com/rememberYou/.emacs.d) by RememberYou 
