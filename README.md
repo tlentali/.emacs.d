@@ -61,12 +61,12 @@ Therefore: please feel free to look up certain tricks and functions and add it t
 
 | action | kbd |
 |---|:---|
-| [window numbering](https://github.com/nschum/window-numbering.el) to navigate between buffers easily | "M-x 1" |
-| swiper instead of the default search  | "C-s" |
-| ibuffer instead of the default switch-to-buffer  | "C-x b" |
-| move around quickly | "M-s" |
-| Expand region selection | "C-q" |
-| popup-kill-ring | "M-y" |
+| [window numbering](https://github.com/nschum/window-numbering.el) to navigate between buffers easily | `M-x 1` |
+| swiper instead of the default search  | `C-s` |
+| ibuffer instead of the default switch-to-buffer  | `C-x b` |
+| move around quickly | `M-s` |
+| Expand region selection | `C-q` |
+| popup-kill-ring | `M-y` |
     
 ## 📓 Org mode
 
@@ -80,6 +80,16 @@ Therefore: please feel free to look up certain tricks and functions and add it t
 - [neotree](https://github.com/jaypei/emacs-neotree)
 - emacs ipython notebook : [ein](https://github.com/millejoh/emacs-ipython-notebook) and how to [use it](/programming_conf/python_ein.md) 
 - [yasnippet](https://github.com/joaotavora/yasnippet) with custom [snippets](/snippet/python-mode)
+
+# Maggit
+
+| action | kbd |
+|---|:---|
+| open magit | `C-x g` |
+| to stack | `s` |
+| to unstack | `u` |
+| to commit | `cc` + message + `C-c C-c` |
+| to push | `Pp` |
 
 # 🙌 Life changing tricks
 
