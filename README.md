@@ -1,12 +1,9 @@
-<p align="center"><img src="./misc/221b_baker_street_london.gif" width=150/></p>
-<p align="center"><a href="https://www.gnu.org/software/emacs/"><b>GNU Emacs</b></a></p>
+<p align="center"><img src="./misc/221b_baker_street_london.gif" width=250/></p>
 <p align="center">
 	<a href="https://www.gnu.org/software/emacs/"><img src="https://img.shields.io/badge/GNU%20Emacs-27.0.50-b48ead.svg?style=flat-square"/></a>
 	<a href="https://orgmode.org/"><img src="https://img.shields.io/badge/org--mode-9.2.3-489a9f.svg?style=flat-square"/></a>
 </p>
-<p align="center">Mind amplifier in Emacs Lisp</p>
-<p align="center">✨🐂💫</p>
-<p align="center">Personal Emacs configuration to feel at home</p>
+<p align="center">Personal <a href="https://www.gnu.org/software/emacs/"><b>GNU Emacs</b></a> configuration ✨🐂💫</p>
 
 ---
 
@@ -25,6 +22,8 @@ Therefore : please feel free to look up certain tricks and functions and add it 
 
 ## ✨ Apparence
 
+How it looks :
+
 | state | activation | action                                                                                                      |
 |:-----:|:---|:------------------------------------------------------------------------------------------------------------|
 | ✅    | auto | start full screen                                                                                           |
@@ -39,6 +38,8 @@ Therefore : please feel free to look up certain tricks and functions and add it 
 | ✅    | auto |[horizon](https://github.com/aodhneine/horizon-theme.el) theme                                              |
 
 ## ⚡ Behavior
+
+How it feels :
 
 | state | activation                  | action                                                                                                                                   |
 |:-----:|:----------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------|
@@ -66,12 +67,16 @@ Therefore : please feel free to look up certain tricks and functions and add it 
     
 ## 📑 Org mode
 
+How it organizes :
+
 Have a look [here](./programming_conf/org.md).
 
 - [org agenda](https://blog.aaronbieber.com/2016/09/24/an-agenda-for-life-with-org-mode.html)
 - [org contact](https://www.reddit.com/r/emacs/comments/8toivy/tip_how_to_manage_your_contacts_with_orgcontacts/)
   
 ## 🐍 Python
+
+How it codes :
 
 | state | activation      | action                                                                                                                                   |
 |:-----:|:----------------|------------------------------------------------------------------------------------------------------------------------------------------|
@@ -82,6 +87,8 @@ Have a look [here](./programming_conf/org.md).
 | ✅    | `Tab`           | [yasnippet](https://github.com/joaotavora/yasnippet) with custom [snippets](./snippets/python-mode)                                      |
 
 ## 💽 Git
+
+How it saves :
 
 It's [Magit](https://magit.vc/) !
 
