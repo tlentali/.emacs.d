@@ -1,4 +1,4 @@
-<p align="center"><img src="./misc/221_b.jpg" width=350/></p>
+<p align="center"><img src="./misc/emacs_icon.svg" width=150 heigth=150/></p>
 <p align="center">
 	<a href="https://www.gnu.org/software/emacs/"><img src="https://img.shields.io/badge/GNU%20Emacs-27.0.50-b48ead.svg?style=flat-square"/></a>
 	<a href="https://orgmode.org/"><img src="https://img.shields.io/badge/org--mode-9.2.3-489a9f.svg?style=flat-square"/></a>
@@ -9,7 +9,7 @@
 
 # 🚀 Get inspired
 
-This Emacs configuration was and is still built thank to a lot of wise people (see the [Source](#source) section).  
+This Emacs configuration is made possible thanks to a lot of wise people (see a few in the [source](#source) section).  
 This repo, on top of being a documented configuration for my future self, aims to inspire you through some amazing features delivered by Emacs.  
 I advise people not to use this configuration directly.  
 Not because I don't like you to have my configuration. Some of my settings are host-specific and/or depend on path variables, Emacs Lisp files I did not add to the GitHub repository, or external tools.  
@@ -60,7 +60,7 @@ How it feels :
 | ✅    | auto                        | treats camelCase strings as several words                                                                                                |
 | ✅    | auto                        | typing "()", "[]", "{}" by pair                                                                                                          |
 | ✅    | auto                        | briefly highlighted your cursor when changing buffer with [beacon](https://github.com/Malabarba/beacon)                                  |
-| ❌    | auto                        | colors parentheses and other delimiters depending on their depth with [rainbow-delimiters](https://github.com/Fanael/rainbow-delimiters) |
+| ✅    | auto                        | colors parentheses and other delimiters depending on their depth with [rainbow-delimiters](https://github.com/Fanael/rainbow-delimiters) |
 | ✅    | auto                        | highlights matching parens when the cursor is just behind one of them                                                                    |
 | ✅    | `C-q`                       | [Expand region](https://github.com/magnars/expand-region.el) selection                                                                   |
 | ✅    | `M-y`                       | [popup kill ring](https://github.com/waymondo/popup-kill-ring)                                                                           |
@@ -117,11 +117,11 @@ It's [Magit](https://magit.vc/) !
 
 # 🛈 Source <a name="source"/>
 
+- [.emacs.d](https://github.com/garaud/foggycowinn/tree/master/emacs) by Damien Garaud
 - [.emacs.d](https://github.com/daedreth/UncleDavesEmacs) by Dawid Eckert
 - [.emacs.d](https://github.com/purcell/emacs.d) by Purcell 
 - [.emacs.d](https://github.com/bbatsov/emacs.d) by Bozhidar Batsov 
-- [.emacs.d](https://github.com/rememberYou/.emacs.d) by RememberYou 
-- [.emacs.d](https://github.com/garaud/foggycowinn/tree/master/emacs) by Damien Garaud 
+- [.emacs.d](https://github.com/rememberYou/.emacs.d) by RememberYou  
 - [mastering emacs in one year](https://github.com/redguardtoo/mastering-emacs-in-one-year-guide/blob/master/guide-en.org)
 - [learn elisp in 15 minutes](https://learnxinyminutes.com/docs/fr-fr/elisp-fr/)
 
