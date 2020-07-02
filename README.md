@@ -1,4 +1,4 @@
-<p align="center"><img src="./misc/221b.jpg" width=350/></p>
+<p align="center"><img src="./misc/221_b.jpg" width=350/></p>
 <p align="center">
 	<a href="https://www.gnu.org/software/emacs/"><img src="https://img.shields.io/badge/GNU%20Emacs-27.0.50-b48ead.svg?style=flat-square"/></a>
 	<a href="https://orgmode.org/"><img src="https://img.shields.io/badge/org--mode-9.2.3-489a9f.svg?style=flat-square"/></a>
