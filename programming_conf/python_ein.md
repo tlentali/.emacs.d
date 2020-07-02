@@ -1,33 +1,34 @@
 # Emacs Ipython Notebook (EIN)
 
-[EIN](https://github.com/millejoh/emacs-ipython-notebook) is shit.  
+[EIN](https://github.com/millejoh/emacs-ipython-notebook) is strange.  
 But use it this way and it will do what you expect it to do.  
 
 1. in a shell, activate your `env` and launch `jupyter notebook --NotebookApp.token=''`
-2. in emacs, type `M-x ein:login`, select the correct port
+2. in Emacs, type `M-x ein:login`, select the correct port
 
 There we go.  
-Lanching the notebook from emacs is just a matter of change, it works 1/3 times and if it doesn't work straight you have to relaunch emacs.  
+Launching the notebook from emacs is just a matter of chance : it works 1/3 times and if it doesn't work straight you have to relaunch emacs.  
 So... not worth trying. Just do as I said before, it will run the thing just fine. 
 
-Work with cell :
+## Work with cell
 
-```text
-C-c C-a              ein:worksheet-insert-cell-above-km
-C-c C-b              ein:worksheet-insert-cell-below-km
-C-c C-s              ein:worksheet-split-cell-at-point-km
-C-c RET              ein:worksheet-merge-cell-km
-C-c C-k              ein:worksheet-kill-cell-km
-```
+| action              | kbd       |
+|---------------------|:----------|
+| insert cell above   | `C-c C-a` |
+| insert cell below   | `C-c C-b` |
+| split cell at point | `C-c C-s` |
+| merge cell          | `C-c RET` |
+| kill cell           | `C-c C-k` |
 
-Execute code : 
+## Execute code 
 
-```text
-C-c C-c              ein:worksheet-execute-cell-km
-M-RET                ein:worksheet-execute-cell-and-goto-next-km
-```
+| action                     | kbd       |
+|----------------------------|:----------|
+| execute cell               | `C-c C-c` |
+| execute cell and goto next | `M-RET`   |
 
-Display image inline : 
+
+## Display image inline 
 
 ```text
 M-x customize-group RET ein
