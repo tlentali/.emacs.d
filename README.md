@@ -23,51 +23,46 @@ Therefore: please feel free to look up certain tricks and functions and add it t
 
 ## ✨ Apparence
 
-- start full screen
-- bar cursor instead of block cursor
-- remove menu
-- remove tool bar
-- remove scroll bar
-- no line number
-- hide the startup message
-- set a homepage [dashboard](https://github.com/emacs-dashboard/emacs-dashboard) displaying recent used files
-- cursor line position
-- [horizon](https://github.com/aodhneine/horizon-theme.el) theme
+| state | activation | action                                                                                                      |
+|:-----:|:---|:------------------------------------------------------------------------------------------------------------|
+| ✅    | auto | start full screen                                                                                           |
+| ✅    | auto | bar cursor instead of block cursor                                                                          |
+| ✅    | auto | remove menu                                                                                                 |
+| ✅    | auto | remove tool bar                                                                                             |
+| ✅    | auto | remove scroll bar                                                                                           |
+| ✅    | auto | no line number                                                                                              |
+| ✅    | auto | hide the startup message                                                                                    |
+| ✅    | auto | set a homepage [dashboard](https://github.com/emacs-dashboard/emacs-dashboard) displaying recent used files |
+| ✅    | auto | cursor line position                                                                                        |
+| ✅    | auto |[horizon](https://github.com/aodhneine/horizon-theme.el) theme                                              |
 
 ## ⚡ Behavior
 
-- typed text replaces the selection if the selection is active
-- always [replace tabs with spaces](https://www.youtube.com/watch?v=SsoOG6ZeyUI) and set tab width to 4 spaces for all buffers
-- cursor scroll [smoothly](https://github.com/aspiers/smooth-scrolling) 
-- mousewheel scroll one line at a time (less "jumpy" than defaults)
-- past without indentation mess
-- [window numbering](https://github.com/nschum/window-numbering.el) to navigate between buffers easily
-- [zoom](https://github.com/gonewest818/dimmer.el) current window size
-- visually highlight the selected buffer using [dimmer](https://github.com/gonewest818/dimmer.el)
-- disable backups auto-saves
-- change yes-or-no questions into y-or-n questions
-- After you split a window, your cursor goes on the new one
-- [swiper](https://github.com/abo-abo/swiper) instead of the default search 
-- ibuffer instead of the default switch-to-buffer 
-- move around quickly with [avy](https://github.com/abo-abo/avy) 
-- treats camelCase strings as several words
-- typing "()", "[]", "{}" by pair
-- briefly highlighted your cursor when changing buffer with [beacon](https://github.com/Malabarba/beacon) 
-- colors parentheses and other delimiters depending on their depth with [rainbow-delimiters](https://github.com/Fanael/rainbow-delimiters)
-- highlights matching parens when the cursor is just behind one of them
-- [Expand region](https://github.com/magnars/expand-region.el) selection 
-- [popup kill ring](https://github.com/waymondo/popup-kill-ring)
-
-| action                                                                                               | kbd     |
-|------------------------------------------------------------------------------------------------------|:--------|
-| [window numbering](https://github.com/nschum/window-numbering.el) to navigate between buffers easily | `M-x 1` |
-| swiper instead of the default search                                                                 | `C-s`   |
-| ibuffer instead of the default switch-to-buffer                                                      | `C-x b` |
-| move around quickly                                                                                  | `M-s`   |
-| Expand region selection                                                                              | `C-q`   |
-| popup-kill-ring                                                                                      | `M-y`   |
+| state | activation | action                                                                                                                                   |
+|:-----:|:---|:-----------------------------------------------------------------------------------------------------------------------------------------|
+| ✅    | auto | typed text replaces the selection if the selection is active                                                                             |
+| ✅    | auto | always [replace tabs with spaces](https://www.youtube.com/watch?v=SsoOG6ZeyUI) and set tab width to 4 spaces for all buffers             |
+| ✅    | auto | cursor scroll [smoothly](https://github.com/aspiers/smooth-scrolling)                                                                    |
+| ✅    | auto | mousewheel scroll one line at a time (less "jumpy" than defaults)                                                                        |
+| ✅    | auto | past without indentation mess                                                                                                            |
+| ✅    | `M-x 1` | [window numbering](https://github.com/nschum/window-numbering.el) to navigate between buffers easily                                     |
+| ✅    | auto |[zoom](https://github.com/gonewest818/dimmer.el) current window size                                                                     |
+| ✅    | auto | visually highlight the selected buffer using [dimmer](https://github.com/gonewest818/dimmer.el)                                          |
+| ✅    | auto | disable backups auto-saves                                                                                                               |
+| ✅    | auto | change yes-or-no questions into y-or-n questions                                                                                         |
+| ✅    | auto | After you split a window, your cursor goes on the new one                                                                                |
+| ✅    | `C-s` | [swiper](https://github.com/abo-abo/swiper) instead of the default search                                                                |
+| ✅    | `C-x b` | ibuffer instead of the default switch-to-buffer                                                                                          |
+| ✅    | `M-s` | move around quickly with [avy](https://github.com/abo-abo/avy)                                                                           |
+| ✅    | auto | treats camelCase strings as several words                                                                                                |
+| ✅    | auto | typing "()", "[]", "{}" by pair                                                                                                          |
+| ✅    | auto | briefly highlighted your cursor when changing buffer with [beacon](https://github.com/Malabarba/beacon)                                  |
+| ❌    | auto | colors parentheses and other delimiters depending on their depth with [rainbow-delimiters](https://github.com/Fanael/rainbow-delimiters) |
+| ✅    | auto | highlights matching parens when the cursor is just behind one of them                                                                    |
+| ✅    | `C-q` | [Expand region](https://github.com/magnars/expand-region.el) selection                                                                   |
+| ✅    | `M-y` | [popup kill ring](https://github.com/waymondo/popup-kill-ring)                                                                           |
     
-## 📓 Org mode
+## 📑 Org mode
 
 - [org agenda](https://blog.aaronbieber.com/2016/09/24/an-agenda-for-life-with-org-mode.html)
 - [org contact](https://www.reddit.com/r/emacs/comments/8toivy/tip_how_to_manage_your_contacts_with_orgcontacts/)
@@ -80,7 +75,9 @@ Therefore: please feel free to look up certain tricks and functions and add it t
 - emacs ipython notebook : [ein](https://github.com/millejoh/emacs-ipython-notebook) and how to [use it](/programming_conf/python_ein.md) 
 - [yasnippet](https://github.com/joaotavora/yasnippet) with custom [snippets](/snippet/python-mode)
 
-## 💽 [Magit](https://magit.vc/)
+## 💽 Magit
+
+It's [Magit](https://magit.vc/) !
 
 | action     | kbd                                    |
 |------------|:---------------------------------------|
@@ -92,7 +89,7 @@ Therefore: please feel free to look up certain tricks and functions and add it t
 
 ## 🙌 Life changing tricks
 
-- on your computer settings, change the <kbd>CapsLk</kbd> by <kbd>ctrl</kbd>, you're welcome.
+- on your computer settings : change the <kbd>CapsLk</kbd> key by <kbd>ctrl</kbd>. You're welcome.
 - preview markdown file : `M-x markdown-live-preview-mode`
 - macro :
 
@@ -115,6 +112,6 @@ Therefore: please feel free to look up certain tricks and functions and add it t
 - [mastering emacs in one year](https://github.com/redguardtoo/mastering-emacs-in-one-year-guide/blob/master/guide-en.org)
 - [learn elisp in 15 minutes](https://learnxinyminutes.com/docs/fr-fr/elisp-fr/)
 
-# 📜 Licence
+# 📜 License
 
 GPL-3.0 License, I choose you ! 
