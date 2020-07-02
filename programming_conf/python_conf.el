@@ -5,10 +5,7 @@
   (setq elpy-modules (delq 'elpy-module-flymake elpy-modules))
   (add-hook 'elpy-mode-hook 'flycheck-mode))
 ;;; get python3 interpreter
-;;; (setq python-shell-interpreter "/usr/bin/python3")
-;;; neotree
-(require 'neotree)
-(global-set-key [f8] 'neotree-toggle)
+;; (setq python-shell-interpreter "/usr/bin/python3")
 ;;; emacs ipython notebook
 ;;(require 'ein)
 ;;; yasnippet

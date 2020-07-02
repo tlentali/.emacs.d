@@ -33,6 +33,12 @@
     markdown-mode
     dashboard
     magit
+    dimmer
+    swiper
+    beacon
+    rainbow-delimiters
+    expand-region
+    popup-kill-ring
     ))
 
 (mapc #'(lambda (package)

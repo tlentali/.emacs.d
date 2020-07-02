@@ -1,16 +1,18 @@
-<p align="center"><img src="misc/emacs_icon.svg" width=150 height=150/></p>
+<p align="center"><img src="./misc/221b_baker_street_london.gif" width=150/></p>
 <p align="center"><a href="https://www.gnu.org/software/emacs/"><b>GNU Emacs</b></a></p>
 <p align="center">
 	<a href="https://www.gnu.org/software/emacs/"><img src="https://img.shields.io/badge/GNU%20Emacs-27.0.50-b48ead.svg?style=flat-square"/></a>
 	<a href="https://orgmode.org/"><img src="https://img.shields.io/badge/org--mode-9.2.3-489a9f.svg?style=flat-square"/></a>
 </p>
-<p align="center">Welcome in the fabulous Emacs world ✨🐂💫 </p>
+<p align="center">Mind amplifier in Emacs Lisp</p>
+<p align="center">✨🐂💫</p>
+<p align="center">Personal Emacs configuration to feel at home</p>
 
 ---
 
 # 🚀 Get inspired
 
-This configuration was and is still built thank to a lot of wise people (see the [Source](#source) section).  
+This Emacs configuration was and is still built thank to a lot of wise people (see the [Source](#source) section).  
 This repo, on top of being a documented configuration for my future self, aims to inspire you through some amazing features delivered by Emacs.  
 I advise people not to use this configuration directly.  
 Not because I don't like you to have my configuration. Some of my settings are host-specific and/or depend on path variables, Emacs Lisp files I did not add to the GitHub repository, or external tools.  
@@ -79,7 +81,7 @@ Have a look [here](./programming_conf/org.md).
 | ✅    | `M-x ein:login` | emacs ipython notebook : [ein](https://github.com/millejoh/emacs-ipython-notebook) and how to [use it](/programming_conf/python_ein.md)  |
 | ✅    | `Tab`           | [yasnippet](https://github.com/joaotavora/yasnippet) with custom [snippets](./snippets/python-mode)                                      |
 
-## 💽 Magit
+## 💽 Git
 
 It's [Magit](https://magit.vc/) !
 
@@ -118,4 +120,4 @@ It's [Magit](https://magit.vc/) !
 
 # 📜 License
 
-GPL-3.0 License, I choose you ! 
+**GPL-3.0 License**, I choose you ! 

@@ -30,6 +30,9 @@
 ;;; dimmer visually highlight the selected buffer
 (require 'dimmer)
 (dimmer-mode t)
+;;; neotree
+(require 'neotree)
+(global-set-key [f8] 'neotree-toggle)
 ;;; disable backups auto-saves
 (setq make-backup-files nil)
 (setq auto-save-default nil)
@@ -80,7 +83,7 @@
 (use-package rainbow-delimiters
   :ensure t
   :init
-    (add-hook 'prog-mode-hook #'rainbow-delimiters-mode))
+   (add-hook 'prog-mode-hook #'rainbow-delimiters-mode))
 ;;; highlights matching parens when the cursor is just behind one of them
 (show-paren-mode 1)
 ;;; Expand region selection
