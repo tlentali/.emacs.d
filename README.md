@@ -20,6 +20,10 @@ Please feel free to look up certain tricks and functions and add it to your conf
 
 # 🔥 Features
 
+>“If you have to ask what jazz is,  
+>you’ll never know.”  
+>**Louis Armstrong**
+
 ## ✨ Apparence
 
 How it looks :
@@ -104,6 +108,14 @@ It's [Magit](https://magit.vc/) !
 
 - on your computer settings : change the <kbd>CapsLk</kbd> key by <kbd>ctrl</kbd>. You're welcome.
 - preview markdown file : `M-x markdown-live-preview-mode`
+- to make `.emacs` point on the `.emacs.d/init.el` config file, add the following in your `.emacs` file :
+
+  ```lang-el
+  (setq user-emacs-directory (file-truename "~/.emacs.d/"))
+  (setq user-init-file "~/.emacs.d/init.el")
+  (load user-init-file)
+  ```
+  
 - macro :
 
     | action             | kbd                         |
