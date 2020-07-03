@@ -31,8 +31,15 @@
 (require 'dimmer)
 (dimmer-mode t)
 ;;; neotree
-(require 'neotree)
-(global-set-key [f8] 'neotree-toggle)
+;;(require 'neotree)
+;;(global-set-key [f8] 'neotree-toggle)
+;;; treemacs
+(use-package treemacs
+  :ensure t
+  :defer t
+  :bind
+  (:map global-map
+        ("C-x t t"   . treemacs)))
 ;;; disable backups auto-saves
 (setq make-backup-files nil)
 (setq auto-save-default nil)

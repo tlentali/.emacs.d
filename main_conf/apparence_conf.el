@@ -29,7 +29,7 @@
 ;; 1, 2 or 3 which displays one of the text banners
 ;; "path/to/your/image.png" which displays whatever image you would prefer
 ;; Content is not centered by default. To center, set
-(setq dashboard-center-content nil)
+(setq dashboard-center-content 1)
 ;; customize which widgets are displayed
 (setq show-week-agenda-p t)
 (setq dashboard-items '((recents  . 5)
@@ -44,3 +44,4 @@
 ;;; cursor position
 (setq line-number-mode t)
 (setq column-number-mode nil)
+
