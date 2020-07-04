@@ -16,7 +16,7 @@ Please feel free to look up certain tricks and functions and add it to your conf
 
 A rule that I apply to avoid [Emacs bankruptcy](https://www.emacswiki.org/emacs/DotEmacsBankruptcy) : only adopt **Emacs Lisp** code you need and understand.  
 
-# Why **Emacs**
+# 🥄 Why **Emacs** ?
 
 >“If you have to ask what jazz is,  
 >you’ll never know.”  
