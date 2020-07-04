@@ -9,14 +9,12 @@
 
 # 🚀 Get inspired
 
-This Emacs configuration is made possible thanks to a lot of wise people (see a few in the [source](#source) section).  
+This Emacs configuration is made possible thanks to a lot of wise people (see a few in the [Source](#source) section).  
 This repo, on top of being a documented configuration for my future self, aims to inspire you through some amazing features delivered by Emacs.  
-I advise people not to use this configuration directly.  
-Not because I don't like you to have my configuration. Some of my settings are host-specific and/or depend on path variables, Emacs Lisp files I did not add to the GitHub repository, or external tools.  
-
-You should only adopt Emacs Lisp code you need and understand, to avoid [Emacs bankruptcy](https://www.emacswiki.org/emacs/DotEmacsBankruptcy).  
 
 Please feel free to look up certain tricks and functions and add it to your configuration.  
+
+PS : to avoid [Emacs bankruptcy](https://www.emacswiki.org/emacs/DotEmacsBankruptcy), you should only adopt Emacs Lisp code you need and understand.  
 
 # 🔥 Features
 
@@ -31,17 +29,18 @@ The following features are what I need to feel at home.
 How it looks :
 
 | state | activation | action                                                                                                      |
-|:-----:|:---|:------------------------------------------------------------------------------------------------------------|
-| ✅    | auto | start full screen                                                                                           |
-| ✅    | auto | bar cursor instead of block cursor                                                                          |
-| ✅    | auto | remove menu                                                                                                 |
-| ✅    | auto | remove tool bar                                                                                             |
-| ✅    | auto | remove scroll bar                                                                                           |
-| ✅    | auto | no line number                                                                                              |
-| ✅    | auto | hide the startup message                                                                                    |
-| ✅    | auto | set a homepage [dashboard](https://github.com/emacs-dashboard/emacs-dashboard) displaying recent used files |
-| ✅    | auto | cursor line position                                                                                        |
-| ✅    | auto |[horizon](https://github.com/aodhneine/horizon-theme.el) theme                                              |
+|:-----:|:-----------|:------------------------------------------------------------------------------------------------------------|
+| ✅    | auto       | start full screen                                                                                           |
+| ✅    | auto       | bar cursor instead of block cursor                                                                          |
+| ✅    | auto       | remove menu                                                                                                 |
+| ✅    | auto       | remove tool bar                                                                                             |
+| ✅    | auto       | remove scroll bar                                                                                           |
+| ✅    | auto       | no line number                                                                                              |
+| ✅    | auto       | hide the startup message                                                                                    |
+| ✅    | auto       | set a homepage [dashboard](https://github.com/emacs-dashboard/emacs-dashboard) displaying recent used files |
+| ✅    | auto       | cursor line position                                                                                        |
+| ✅    | auto       | [horizon](https://github.com/aodhneine/horizon-theme.el) theme                                              |
+| ✅    | `C-x w`    | distraction-free writing mode with [writeroom](https://github.com/joostkremers/writeroom-mode)              |
 
 ## ⚡ Behavior
 

@@ -44,4 +44,7 @@
 ;;; cursor position
 (setq line-number-mode t)
 (setq column-number-mode nil)
-
+;;; distraction-free writing mode with writeroom
+(use-package writeroom-mode
+  :ensure t
+  :bind ("C-x w" . 'writeroom-mode))

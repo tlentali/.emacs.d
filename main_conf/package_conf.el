@@ -39,6 +39,7 @@
     rainbow-delimiters
     expand-region
     popup-kill-ring
+    writeroom-mode
     ))
 
 (mapc #'(lambda (package)
