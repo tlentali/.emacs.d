@@ -34,9 +34,8 @@ Some highlight in favor of **Emacs** :
 
 # 🔥 Features
 
->Emacs is what you want it be.  
->Emacs is power. But with great power,  
->comes great responsibility :  
+>Emacs is what you want it be. Emacs is power.  
+>But with great power, comes great responsibility :  
 >the responsibility to think.  
 >**Bozhidar Batsov** 
 
