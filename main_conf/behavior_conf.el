@@ -101,3 +101,14 @@
 (use-package popup-kill-ring
   :ensure t
   :bind ("M-y" . popup-kill-ring))
+;;; use ido to find file and switch buffer
+(setq ido-enable-flex-matching nil)
+(setq ido-create-new-buffer 'always)
+(setq ido-everywhere t)
+(ido-mode 1)
+;;; ido vertical
+(use-package ido-vertical-mode
+  :ensure t
+  :init 
+  (ido-vertical-mode 1))
+(setq ido-vertical-define-keys 'C-n-C-p-up-down-left-right)

@@ -24,6 +24,8 @@ Please feel free to look up certain tricks and functions and add it to your conf
 >you’ll never know.”  
 >**Louis Armstrong**
 
+The following features are what I need to feel at home.
+
 ## ✨ Apparence
 
 How it looks :
@@ -51,7 +53,7 @@ How it feels :
 | ✅    | auto                        | always [replace tabs with spaces](https://www.youtube.com/watch?v=SsoOG6ZeyUI) and set tab width to 4 spaces for all buffers             |
 | ✅    | auto                        | cursor scroll [smoothly](https://github.com/aspiers/smooth-scrolling)                                                                    |
 | ✅    | auto                        | mousewheel scroll one line at a time (less "jumpy" than defaults)                                                                        |
-| ✅    | auto                        | past things without indentation mess                                                                                                            |
+| ✅    | auto                        | past things without indentation mess                                                                                                     |
 | ✅    | `M-x` `1` or `2` or `3` ... | [window numbering](https://github.com/nschum/window-numbering.el) to navigate between buffers easily                                     |
 | ✅    | auto                        | [zoom](https://github.com/gonewest818/dimmer.el) current window size                                                                     |
 | ✅    | auto                        | visually highlight the selected buffer using [dimmer](https://github.com/gonewest818/dimmer.el)                                          |
@@ -69,6 +71,7 @@ How it feels :
 | ✅    | `C-x t t`                   | pop a tree layout file explorer [treemacs](https://github.com/Alexander-Miller/treemacs)                                                 |
 | ✅    | `C-q`                       | [Expand region](https://github.com/magnars/expand-region.el) selection                                                                   |
 | ✅    | `M-y`                       | [popup kill ring](https://github.com/waymondo/popup-kill-ring)                                                                           |
+| ✅    | `C-x f`                     | use ido and [ido vertical mode](https://github.com/creichert/ido-vertical-mode.el) to find file instead of default file navigation       |
     
 ## 📑 Org mode
 
