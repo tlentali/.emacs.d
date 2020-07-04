@@ -16,11 +16,29 @@ Please feel free to look up certain tricks and functions and add it to your conf
 
 A rule that I apply to avoid [Emacs bankruptcy](https://www.emacswiki.org/emacs/DotEmacsBankruptcy) : only adopt **Emacs Lisp** code you need and understand.  
 
-# 🔥 Features
+# Why **Emacs**
 
 >“If you have to ask what jazz is,  
 >you’ll never know.”  
 >**Louis Armstrong**
+
+Some highlight in favor of **Emacs** :
+
+- free as in "free speech" AND free as in "free beer"
+- it is extensible
+- a community of amazing and active people (so it's constantly evolving)
+- programmatically interacting with text using **Emacs Lisp** and macros
+- eventually works directly in the terminal
+- full keyboard experience (but you can use your mouse if you want)
+- text files are the most long-lived format for computing (and it is not going to change)
+
+# 🔥 Features
+
+>Emacs is what you want it be.  
+>Emacs is power. But with great power,  
+>comes great responsibility :  
+>the responsibility to think.  
+>**Bozhidar Batsov** 
 
 ## ✨ Apparence
 
