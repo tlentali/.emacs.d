@@ -10,19 +10,17 @@
 # 🚀 Get inspired
 
 This Emacs configuration is made possible thanks to a lot of wise people (see a few in the [Source](#source) section).  
-This repo, on top of being a documented configuration for my future self, aims to inspire you through some amazing features delivered by Emacs.  
+This repo, on top of being a documented configuration for my future self, aims to inspire you through some amazing features delivered by **Emacs**.  
 
 Please feel free to look up certain tricks and functions and add it to your configuration.  
 
-PS : to avoid [Emacs bankruptcy](https://www.emacswiki.org/emacs/DotEmacsBankruptcy), you should only adopt Emacs Lisp code you need and understand.  
+A rule that I apply to avoid [Emacs bankruptcy](https://www.emacswiki.org/emacs/DotEmacsBankruptcy) : only adopt **Emacs Lisp** code you need and understand.  
 
 # 🔥 Features
 
 >“If you have to ask what jazz is,  
 >you’ll never know.”  
 >**Louis Armstrong**
-
-The following features are what I need to feel at home.
 
 ## ✨ Apparence
 
