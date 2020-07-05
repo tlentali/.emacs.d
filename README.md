@@ -184,4 +184,4 @@ It's [Magit](https://magit.vc/) !
 
 # 📜 License
 
-**GPL-3.0 License**, I choose you ! 
+[GPL-3.0 License](https://github.com/tlentali/.emacs.d/blob/master/LICENCE), I choose you ! 
