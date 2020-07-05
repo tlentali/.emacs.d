@@ -9,17 +9,16 @@
 
 # 🚀 Get inspired
 
-This Emacs configuration is made possible thanks to a lot of wise people (see a few in the [Source](#source) section).  
-This repo, on top of being a documented configuration for my future self, aims to inspire you through some amazing features delivered by **Emacs**.  
-
+This Emacs configuration, on top of being a documented configuration for my future self, aims to inspire you through some amazing features delivered by **Emacs**.  
+This `.emacs.d` is made possible thanks to a lot of wise people (see a few in the [Source](#source) section).  
 Please feel free to look up certain tricks and functions and add it to your configuration.  
 
 A rule that I apply to avoid [Emacs bankruptcy](https://www.emacswiki.org/emacs/DotEmacsBankruptcy) : only adopt **Emacs Lisp** code you need and understand.  
 
-# 🥄 Why **Emacs** ?
+# 🧠 Why **Emacs** ?
 
->“If you have to ask what jazz is,  
->you’ll never know.”  
+>If you have to ask what jazz is,  
+>you’ll never know.  
 >**Louis Armstrong**
 
 Some highlight in favor of **Emacs** :
@@ -27,21 +26,26 @@ Some highlight in favor of **Emacs** :
 - free as in "free speech" AND free as in "free beer"
 - it is extensible
 - a community of amazing and active people (so it's constantly evolving)
-- programmatically interacting with text using **Emacs Lisp** and macros
+- programmatically interacting with text using [Emacs Lisp](https://learnxinyminutes.com/docs/fr-fr/elisp-fr/) and [macros](https://www.youtube.com/watch?v=ih8FpiK0zck)
 - eventually works directly in the terminal
 - full keyboard experience (but you can use your mouse if you want)
-- text files are the most long-lived format for computing (and it is not going to change)
+- text files are the most long-lived format for computing
 
 # 🔥 Features
 
 >Emacs is what you want it be. Emacs is power.  
 >But with great power, comes great responsibility :  
->the responsibility to think.  
+>the responsibility to [think](https://www.youtube.com/watch?v=HqYnevHibaI).  
 >**Bozhidar Batsov** 
 
 ## ✨ Apparence
 
-How it looks :
+>Perfection is achieved,  
+>not when there is nothing more to add,  
+>but when there is nothing left to take away.  
+>**Antoine de Saint-Exupery**
+
+A minimalist look :
 
 | state | activation | action                                                                                                      |
 |:-----:|:-----------|:------------------------------------------------------------------------------------------------------------|
@@ -59,7 +63,8 @@ How it looks :
 
 ## ⚡ Behavior
 
-How it feels :
+>Editing is a rewording activity.  
+>**Alan Perlis**
 
 | state | activation                  | action                                                                                                                                   |
 |:-----:|:----------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------|
@@ -89,7 +94,9 @@ How it feels :
     
 ## 📑 Org mode
 
-How it organizes :
+>Science is organized knowledge.  
+>Wisdom is organized life.  
+>**Kant**
 
 Have a look [here](./programming_conf/org.md).
 
@@ -98,7 +105,8 @@ Have a look [here](./programming_conf/org.md).
   
 ## 🐍 Python
 
-How it codes :
+>Python is the "most powerful language you can still read".  
+>**Paul Dubois**
 
 | state | activation      | action                                                                                                                                   |
 |:-----:|:----------------|------------------------------------------------------------------------------------------------------------------------------------------|
@@ -109,7 +117,8 @@ How it codes :
 
 ## 💽 Git
 
-How it saves :
+>Git a life.  
+>**Anonymous**
 
 It's [Magit](https://magit.vc/) !
 
