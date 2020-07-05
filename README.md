@@ -14,7 +14,7 @@
 - [🧠 Why **Emacs** ?](#why-emacs)
 - [🔥 Features](#features)
     - [⚡ Global editor behavior](#global-editor-behavior)
-    - [✨ Appearence](#appearence)
+    - [✨ Appearance](#appearance)
     - [📑 Org mode](#org-mode)
     - [🐍 Python](#python)
     - [💽 Git](#git)
@@ -49,7 +49,7 @@ Some highlight in favor of **Emacs** :
 - eventually works directly in the terminal
 - full keyboard experience (but you can use your mouse if you want) 
 
-# 🔥 Features <a name="feature"/>
+# 🔥 Features <a name="features"/>
 
 >Emacs is what you want it be. Emacs is power.  
 >But with great power, comes great responsibility :  
@@ -87,7 +87,7 @@ Some highlight in favor of **Emacs** :
 | ✅    | `M-y`                       | [popup kill ring](https://github.com/waymondo/popup-kill-ring)                                                                           |
 | ✅    | `C-x f`                     | use ido and [ido vertical mode](https://github.com/creichert/ido-vertical-mode.el) to find file instead of default file navigation       |
 
-## ✨ Appearence <a name="appareance"/>
+## ✨ Appearance <a name="appearance"/>
 
 >Perfection is achieved, not when there is nothing more to add,  
 >but when there is nothing left to take away.  
