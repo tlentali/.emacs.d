@@ -63,7 +63,7 @@
 ;;; swiper instead of the default search
 (use-package swiper
   :ensure t
-  :bind ("C-s" . 'swiper))
+  :bind ("C-c s" . 'swiper))
 ;;; ibuffer instead of the default switch-to-buffer
 (global-set-key (kbd "C-x b") 'ibuffer)
 ;;; move around quickly
