@@ -48,3 +48,6 @@
 (use-package writeroom-mode
   :ensure t
   :bind ("C-x w" . 'writeroom-mode))
+;;; font
+(custom-set-faces
+  '(default ((t (:height 100 :family "DejaVu Sans Mono")))))

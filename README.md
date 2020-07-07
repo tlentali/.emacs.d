@@ -108,6 +108,7 @@ A minimalist look :
 | ✅    | auto       | cursor line position                                                                                        |
 | ✅    | auto       | [horizon](https://github.com/aodhneine/horizon-theme.el) theme                                              |
 | ✅    | `C-x w`    | distraction-free writing mode with [writeroom](https://github.com/joostkremers/writeroom-mode)              |
+| ✅    | auto       | [DejaVu Sans Mono](https://dejavu-fonts.github.io/) font                                                    |
 
 
 ## 📑 Org mode <a name="org-mode"/>
