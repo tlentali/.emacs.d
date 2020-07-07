@@ -15,7 +15,10 @@
 ;;; remove scroll bar
 (toggle-scroll-bar -1)
 ;;; theme
-(use-package horizon-theme)
+(add-to-list 'custom-theme-load-path
+                  "~/.emacs.d/theme/")
+;;(use-package horizon-theme)
+(load-theme 'horizon t)
 ;;; dashboard homepage
 (require 'dashboard)
 ;;(require 'all-the-icons) ;;; add M-x all-the-icons-install-fonts to make it works
@@ -50,4 +53,4 @@
   :bind ("C-x w" . 'writeroom-mode))
 ;;; font
 (custom-set-faces
-  '(default ((t (:height 100 :family "Hack")))))
+  '(default ((t (:height 100 :family "hack")))))
