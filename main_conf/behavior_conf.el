@@ -112,3 +112,12 @@
   :init 
   (ido-vertical-mode 1))
 (setq ido-vertical-define-keys 'C-n-C-p-up-down-left-right)
+;;; undo tree
+(require 'undo-tree)
+;;turn on everywhere
+(global-undo-tree-mode 1)
+;; make ctrl-z undo
+(global-set-key (kbd "C-z") 'undo)
+;; make ctrl-Z redo
+(defalias 'redo 'undo-tree-redo)
+(global-set-key (kbd "C-S-z") 'redo)

@@ -86,6 +86,8 @@ Some highlight in favor of **Emacs** :
 | ✅    | `C-q`                       | [Expand region](https://github.com/magnars/expand-region.el) selection                                                                   |
 | ✅    | `M-y`                       | [popup kill ring](https://github.com/waymondo/popup-kill-ring)                                                                           |
 | ✅    | `C-x f`                     | use ido and [ido vertical mode](https://github.com/creichert/ido-vertical-mode.el) to find file instead of default file navigation       |
+| ✅    | `C-x u`                     | [undo tree](http://pragmaticemacs.com/emacs/advanced-undoredo-with-undo-tree/)                                                           |
+
 
 ## ✨ Appearance <a name="appearance"/>
 
