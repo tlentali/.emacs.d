@@ -30,4 +30,27 @@
    `(("c" "Contact" entry (file+headline "~/.personal/agenda/contacts.org" "Contacts"),
       my/org-contacts-template
       :empty-lines 1))))
-
+;;; good looking agenda M-x org-agenda RET o RET
+(setq org-agenda-custom-commands
+      '(("o" "My Agenda"
+         ((todo "TODO" (
+                      (org-agenda-overriding-header "\n⚡ Do Today:\n⎺⎺⎺⎺⎺⎺⎺⎺⎺")
+                      (org-agenda-remove-tags t)
+                      (org-agenda-prefix-format " %-2i %-15b")
+                      (org-agenda-todo-keyword-format "")
+                       ))
+          (agenda "" (
+                      (org-agenda-start-day "+0d")
+                      (org-agenda-span 5)
+                      (org-agenda-overriding-header "⚡ Schedule:\n⎺⎺⎺⎺⎺⎺⎺⎺⎺")
+                      (org-agenda-repeating-timestamp-show-all nil)
+                      (org-agenda-remove-tags t)
+                      (org-agenda-prefix-format   "  %-3i  %-15b %t%s")
+                      (org-agenda-todo-keyword-format " ☐ ")
+                      (org-agenda-current-time-string "⮜┈┈┈┈┈┈┈ now")
+                      (org-agenda-scheduled-leaders '("" ""))
+                      (org-agenda-time-grid (quote ((daily today remove-match)
+                                                    (0900 1200 1500 1800 2100)
+                                                    "      " "┈┈┈┈┈┈┈┈┈┈┈┈┈")))
+                       ))
+          ))))
