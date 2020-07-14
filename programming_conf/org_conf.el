@@ -1,5 +1,7 @@
+(require 'org)
 ;;; org agenda
 (setq org-agenda-files (quote ("~/.personal/agenda/")))
+(bind-key "C-c a" #'org-agenda)
 ;;; org-contact
 (use-package org
   :ensure org-plus-contrib)

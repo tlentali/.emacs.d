@@ -35,7 +35,7 @@
 (setq dashboard-center-content 1)
 ;; customize which widgets are displayed
 (setq show-week-agenda-p t)
-(setq dashboard-items '((recents  . 5)
+(setq dashboard-items '((recents  . 8)
                         (agenda . 5)))
 ;; to add icons to the widget headings and their items
 ;;(setq dashboard-set-heading-icons t)
