@@ -31,3 +31,18 @@ type the name (or partial name) you are looking for
 ## source
 - [[tip_how_i_organize_myself_with_orgmode](https://www.reddit.com/r/emacs/comments/9ajxqj/tip_how_i_organize_myself_with_orgmode/)]
 - [[cabaret example](https://karl-voit.at/2016/12/18/org-depend/)]
+
+# org journal
+
+| key binding | action                                                                              |
+|-------------|-------------------------------------------------------------------------------------|
+| `C-c C-j`   | insert a new entry into the current journal file (creates the file if not present). |
+| `C-c C-f`   | go to the next journal file.                                                        |
+| `C-c C-b`   | go to the previous journal file.                                                    |
+| `C-c C-s`   | search the journal for a string.                                                    |
+
+Highlight :  
+
+- search for string between two dates.
+- `TODO` are moved to the next day if note `DONE`
+- schedule a appointment in the future by adding a timestamp using `C-c .` (it will appear in `M-x org-agenda o`)

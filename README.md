@@ -124,7 +124,8 @@ Have a look at this [detailed page](./programming_conf/org.md) for more info.
 For now, I use those two :
 - [org agenda](https://blog.aaronbieber.com/2016/09/24/an-agenda-for-life-with-org-mode.html)
 - [org contact](https://www.reddit.com/r/emacs/comments/8toivy/tip_how_to_manage_your_contacts_with_orgcontacts/)
-  
+- [org journal](https://github.com/bastibe/org-journal)
+
 ## 🐍 Python <a name="python"/>
 
 >Python is the "most powerful language you can still read".  

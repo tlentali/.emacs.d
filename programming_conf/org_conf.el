@@ -1,6 +1,7 @@
 (require 'org)
 ;;; org agenda
 (setq org-agenda-files (quote ("~/.personal/agenda/")))
+;;(setq org-agenda-files (directory-files-recursively "~/.personal/agenda/" "~/.personal/journal" "\\.org$"))
 (bind-key "C-c a" #'org-agenda)
 ;;; org-contact
 (use-package org
@@ -36,7 +37,7 @@
 (setq org-agenda-custom-commands
       '(("o" "My Agenda"
          ((todo "TODO" (
-                      (org-agenda-overriding-header "\n⚡ Do Today:\n⎺⎺⎺⎺⎺⎺⎺⎺⎺")
+                      (org-agenda-overriding-header "\n⚡ Do Today:\n⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺")
                       (org-agenda-remove-tags t)
                       (org-agenda-prefix-format " %-2i %-15b")
                       (org-agenda-todo-keyword-format "")
@@ -44,7 +45,7 @@
           (agenda "" (
                       (org-agenda-start-day "+0d")
                       (org-agenda-span 5)
-                      (org-agenda-overriding-header "⚡ Schedule:\n⎺⎺⎺⎺⎺⎺⎺⎺⎺")
+                      (org-agenda-overriding-header "⚡ Schedule:\n⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺")
                       (org-agenda-repeating-timestamp-show-all nil)
                       (org-agenda-remove-tags t)
                       (org-agenda-prefix-format   "  %-3i  %-15b %t%s")
@@ -56,3 +57,8 @@
                                                     "      " "┈┈┈┈┈┈┈┈┈┈┈┈┈")))
                        ))
           ))))
+;;; org journal
+(require 'org-journal)
+(setq org-journal-dir "~/.personal/journal/")
+(setq org-journal-date-format "%A, %d %B %Y")
+(setq org-journal-enable-agenda-integration t)
