@@ -16,7 +16,7 @@
 (toggle-scroll-bar -1)
 ;;; theme
 (add-to-list 'custom-theme-load-path
-                  "~/.emacs.d/theme/")
+                  "~/Dropbox/.emacs.d/theme/")
 ;;(use-package horizon-theme)
 (load-theme 'horizon t)
 ;;; dashboard homepage

@@ -1,6 +1,6 @@
 (require 'org)
 ;;; org agenda
-(setq org-agenda-files (quote ("~/.personal/agenda/")))
+(setq org-agenda-files (quote ("~/Dropbox/personal/agenda/")))
 ;;(setq org-agenda-files (directory-files-recursively "~/.personal/agenda/" "~/.personal/journal" "\\.org$"))
 (bind-key "C-c a" #'org-agenda)
 ;;; org-contact
@@ -15,7 +15,7 @@
 (use-package org-contacts
   :ensure nil
   :after org
-  :custom (org-contacts-files '("~/.personal/agenda/contacts.org")))
+  :custom (org-contacts-files '("~/Dropbox/personal/agenda/contacts.org")))
 (use-package org-capture
   :ensure nil
   :after org
@@ -30,7 +30,7 @@
 :END:" "Template for org-contacts.")
   :custom
   (org-capture-templates
-   `(("c" "Contact" entry (file+headline "~/.personal/agenda/contacts.org" "Contacts"),
+   `(("c" "Contact" entry (file+headline "~/Dropbox/personal/agenda/contacts.org" "Contacts"),
       my/org-contacts-template
       :empty-lines 1))))
 ;;; good looking agenda M-x org-agenda RET o RET
@@ -59,6 +59,6 @@
           ))))
 ;;; org journal
 (require 'org-journal)
-(setq org-journal-dir "~/.personal/journal/")
+(setq org-journal-dir "~/Dropbox/personal/journal/")
 (setq org-journal-date-format "%A, %d %B %Y")
 (setq org-journal-enable-agenda-integration t)
