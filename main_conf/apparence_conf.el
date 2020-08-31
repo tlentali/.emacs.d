@@ -1,24 +1,32 @@
 ;;; Start full screen
 (custom-set-variables
  '(initial-frame-alist (quote ((fullscreen . maximized)))))
+
 ;;; hide the startup message
 (setq inhibit-startup-message t)
+
 ;;; no line number
 (global-linum-mode 0)
 (set-face-foreground 'linum "grey")
+
 ;;; cursor in bar
 (setq-default cursor-type 'bar)
+
 ;;; remove menu
 (menu-bar-mode -1)
+
 ;;; remove tool bar
 (tool-bar-mode -1)
+
 ;;; remove scroll bar
 (toggle-scroll-bar -1)
+
 ;;; theme
 (add-to-list 'custom-theme-load-path
                   "~/Dropbox/.emacs.d/theme/")
 ;;(use-package horizon-theme)
 (load-theme 'horizon t)
+
 ;;; dashboard homepage
 (require 'dashboard)
 ;;(require 'all-the-icons) ;;; add M-x all-the-icons-install-fonts to make it works
@@ -44,13 +52,16 @@
 (setq dashboard-set-init-info nil)
 ;;hook
 (dashboard-setup-startup-hook)
+
 ;;; cursor position
 (setq line-number-mode t)
 (setq column-number-mode nil)
+
 ;;; distraction-free writing mode with writeroom
 (use-package writeroom-mode
   :ensure t
   :bind ("C-x w" . 'writeroom-mode))
+
 ;;; font
 (custom-set-faces
   '(default ((t (:height 100 :family "hack")))))

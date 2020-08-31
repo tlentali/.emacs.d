@@ -1,4 +1,14 @@
-# org contact
+# Org mode
+
+## guru
+- [rememberYou](https://github.com/rememberYou/.emacs.d)
+- [my life in org mode](https://karl-voit.at/orgmode/)
+
+## source
+- [tip_how_i_organize_myself_with_orgmode](https://www.reddit.com/r/emacs/comments/9ajxqj/tip_how_i_organize_myself_with_orgmode/)
+- [cabaret example](https://karl-voit.at/2016/12/18/org-depend/)
+
+# Org contact
 
 ## To add a contact :
 
@@ -22,17 +32,7 @@ type the name (or partial name) you are looking for
 - [tip how to manage your contacts with orgcontacts](https://www.reddit.com/r/emacs/comments/8toivy/tip_how_to_manage_your_contacts_with_orgcontacts/)  
 - [issue org-contact solved](https://github.com/rememberYou/.emacs.d/issues/4)  
 
-# Org
-
-## guru
-- [rememberYou](https://github.com/rememberYou/.emacs.d)
-- [my life in org mode](https://karl-voit.at/orgmode/)
-
-## source
-- [tip_how_i_organize_myself_with_orgmode](https://www.reddit.com/r/emacs/comments/9ajxqj/tip_how_i_organize_myself_with_orgmode/)
-- [cabaret example](https://karl-voit.at/2016/12/18/org-depend/)
-
-# org journal
+# Org journal
 
 | key binding | action                                                                              |
 |-------------|-------------------------------------------------------------------------------------|
@@ -41,7 +41,7 @@ type the name (or partial name) you are looking for
 | `C-c C-b`   | go to the previous journal file.                                                    |
 | `C-c C-s`   | search the journal for a string.                                                    |
 
-Highlight :  
+Highlight :
 
 - search for string between two dates.
 - `TODO` are moved to the next day if not `DONE`
