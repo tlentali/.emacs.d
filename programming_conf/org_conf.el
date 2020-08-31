@@ -44,7 +44,7 @@
                        ))
           (agenda "" (
                       (org-agenda-start-day "+0d")
-                      (org-agenda-span 5)
+                      (org-agenda-span 15)
                       (org-agenda-overriding-header "⚡ Schedule:\n⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺")
                       (org-agenda-repeating-timestamp-show-all nil)
                       (org-agenda-remove-tags t)
@@ -62,3 +62,9 @@
 (setq org-journal-dir "~/Dropbox/personal/journal/")
 (setq org-journal-date-format "%A, %d %B %Y")
 (setq org-journal-enable-agenda-integration t)
+
+;;; mobileorg settings
+(setq org-directory "~/Dropbox/personal/")
+(setq org-mobile-inbox-for-pull "~/Dropbox/personal/agenda/todo.org")
+(setq org-mobile-directory "~/Dropbox/Apps/MobileOrg")
+(setq org-mobile-files '("~/Dropbox/personal/"))
