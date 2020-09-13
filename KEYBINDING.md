@@ -4,7 +4,7 @@
 | #org #todo         | `C-c C-s`                                           | add schedule time                                                                  |
 | #org #todo         | `S-arrow`                                           | to navigate in dates                                                               |
 | #org #todo         | `C-c ^` + `o`                                       | sort TODO and DONE in order                                                        |
-| #org #agenda       | `C-x C-a o`                                         | display custom agenda                                                              |
+| #org #agenda       | `C-c a o`                                           | display custom agenda                                                              |
 | #org               | `C-enter`                                           | after a org mode * line to replicate the same level of hierachy                    |
 | #org #contact      | `M-x org-capure` + `c` + fill the form              | add a contact (the birthday (yyyy-mm-dd) of the contact is used in org-agenda)     |
 | #org #contact      | `M-x org-contact` + type the name (or partial name) | look for contact                                                                   |

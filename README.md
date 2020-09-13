@@ -87,7 +87,7 @@ Some highlight in favor of **Emacs** :
 | ✅    | `M-y`                       | [popup kill ring](https://github.com/waymondo/popup-kill-ring)                                                                           |
 | ✅    | `C-x f`                     | use ido and [ido vertical mode](https://github.com/creichert/ido-vertical-mode.el) to find file instead of default file navigation       |
 | ✅    | `C-x u`                     | [undo tree](http://pragmaticemacs.com/emacs/advanced-undoredo-with-undo-tree/)                                                           |
-
+| ✅    | `M-x`                       | [smex](https://github.com/nonsequitur/smex)                                                                                              |
 
 ## ✨ Appearance <a name="appearance"/>
 
@@ -104,6 +104,7 @@ A minimalist look :
 | ✅    | auto       | remove menu                                                                                                                                                                       |
 | ✅    | auto       | remove tool bar                                                                                                                                                                   |
 | ✅    | auto       | remove scroll bar                                                                                                                                                                 |
+| ✅    | auto       | replace scroll bar by yascroll (text scroll bar)                                                                                                                                  |
 | ✅    | auto       | no line number                                                                                                                                                                    |
 | ✅    | auto       | hide the startup message                                                                                                                                                          |
 | ✅    | auto       | set a homepage [dashboard](https://github.com/emacs-dashboard/emacs-dashboard) displaying recent used files                                                                       |
@@ -131,12 +132,12 @@ For now, I use those two :
 >Python is the "most powerful language you can still read".  
 >**Paul Dubois**
 
-| state | activation      | action                                                                                                                                   |
-|:-----:|:----------------|------------------------------------------------------------------------------------------------------------------------------------------|
-| ✅    | auto            | [elpy](https://github.com/jorgenschaefer/elpy)                                                                                           |
-| ✅    | auto            | use [flycheck](https://github.com/flycheck/flycheck) instead of flymake                                                                  |
-| ✅    | `M-x ein:login` | emacs ipython notebook : [ein](https://github.com/millejoh/emacs-ipython-notebook) and how to [use it](/programming_conf/python_ein.md)  |
-| ✅    | `Tab`           | [yasnippet](https://github.com/joaotavora/yasnippet) with custom [snippets](./snippets/python-mode)                                      |
+| state | activation      | action                                                                                                                                  |
+|:-----:|:----------------|-----------------------------------------------------------------------------------------------------------------------------------------|
+| ✅    | auto            | [elpy](https://github.com/jorgenschaefer/elpy)                                                                                          |
+| ✅    | auto            | use [flycheck](https://github.com/flycheck/flycheck) instead of flymake                                                                 |
+| ✅    | `M-x ein:login` | emacs ipython notebook : [ein](https://github.com/millejoh/emacs-ipython-notebook) and how to [use it](/programming_conf/python_ein.md) |
+| ✅    | `Tab`           | [yasnippet](https://github.com/joaotavora/yasnippet) with custom [snippets](./snippets/python-mode)                                     |
 
 ## 💽 Git <a name="git"/>
 

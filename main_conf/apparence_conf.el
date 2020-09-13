@@ -21,6 +21,9 @@
 ;;; remove scroll bar
 (toggle-scroll-bar -1)
 
+;;; add yascroll (text scroll bar) instead of scroll bar
+(global-yascroll-bar-mode 1)
+
 ;;; theme
 (add-to-list 'custom-theme-load-path
                   "~/Dropbox/.emacs.d/theme/")
