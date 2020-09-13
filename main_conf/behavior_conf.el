@@ -139,13 +139,16 @@
 
 ;;; undo tree
 (require 'undo-tree)
-
 ;;turn on everywhere
 (global-undo-tree-mode 1)
-
 ;; make ctrl-z undo
 (global-set-key (kbd "C-z") 'undo)
-
 ;; make ctrl-Z redo
 (defalias 'redo 'undo-tree-redo)
 (global-set-key (kbd "C-S-z") 'redo)  
+
+;;; key binding helper smex
+(global-set-key (kbd "M-x") 'smex)
+(global-set-key (kbd "M-X") 'smex-major-mode-commands)
+;; This is your old M-x.
+(global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)

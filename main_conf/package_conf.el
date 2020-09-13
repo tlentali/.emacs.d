@@ -40,6 +40,7 @@
     expand-region
     popup-kill-ring
     writeroom-mode
+    smex
     ))
 
 (mapc #'(lambda (package)
