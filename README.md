@@ -88,6 +88,7 @@ Some highlight in favor of **Emacs** :
 | ✅    | `C-x f`                     | use ido and [ido vertical mode](https://github.com/creichert/ido-vertical-mode.el) to find file instead of default file navigation       |
 | ✅    | `C-x u`                     | [undo tree](http://pragmaticemacs.com/emacs/advanced-undoredo-with-undo-tree/)                                                           |
 | ✅    | `M-x`                       | [smex](https://github.com/nonsequitur/smex)                                                                                              |
+| ✅    | `C-c`/`C-v`/`C-z`           | [cua](https://www.emacswiki.org/emacs/CuaMode) mode (it mades me crazy to have several copy/past behavior)                               |
 
 ## ✨ Appearance <a name="appearance"/>
 
