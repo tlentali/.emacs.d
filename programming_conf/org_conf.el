@@ -66,7 +66,7 @@
           ))))
 ;;; org journal
 (require 'org-journal)
-(setq org-journal-dir "~/Dropbox/personal/journal/")
+(setq org-journal-dir "~/Dropbox/alfred/journal/")
 (setq org-journal-date-format "%A, %d %B %Y")
 (setq org-journal-enable-agenda-integration t)
 
