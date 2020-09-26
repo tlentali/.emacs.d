@@ -1,8 +1,14 @@
 (require 'org)
 ;;; org agenda
-(setq org-agenda-files (quote ("~/Dropbox/personal/agenda/")))
+;;(setq org-agenda-files (quote ("~/Dropbox/alfred/agenda/")))
+
+(load-library "find-lisp")
+(setq org-agenda-files
+   (find-lisp-find-files "~/Dropbox/alfred/" "\.org$"))
+
 ;;(setq org-agenda-files (directory-files-recursively "~/.personal/agenda/" "~/.personal/journal" "\\.org$"))
 (bind-key "C-c a" #'org-agenda)
+
 ;;; org-contact
 (use-package org
   :ensure org-plus-contrib)
@@ -15,7 +21,7 @@
 (use-package org-contacts
   :ensure nil
   :after org
-  :custom (org-contacts-files '("~/Dropbox/personal/agenda/contacts.org")))
+  :custom (org-contacts-files '("~/Dropbox/alfred/contact/contacts.org")))
 (use-package org-capture
   :ensure nil
   :after org
@@ -30,9 +36,10 @@
 :END:" "Template for org-contacts.")
   :custom
   (org-capture-templates
-   `(("c" "Contact" entry (file+headline "~/Dropbox/personal/agenda/contacts.org" "Contacts"),
+   `(("c" "Contact" entry (file+headline "~/Dropbox/alfred/contact/contacts.org" "Contacts"),
       my/org-contacts-template
       :empty-lines 1))))
+
 ;;; good looking agenda M-x org-agenda RET o RET
 (setq org-agenda-custom-commands
       '(("o" "My Agenda"
