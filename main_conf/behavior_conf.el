@@ -142,7 +142,7 @@
 ;;turn on everywhere
 (global-undo-tree-mode 1)
 ;; make ctrl-z undo
-(global-set-key (kbd "C-z") 'undo)
+;;(global-set-key (kbd "C-z") 'undo)
 ;; make ctrl-Z redo
 (defalias 'redo 'undo-tree-redo)
 (global-set-key (kbd "C-S-z") 'redo)  
@@ -152,3 +152,9 @@
 (global-set-key (kbd "M-X") 'smex-major-mode-commands)
 ;; This is your old M-x.
 (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
+
+;; cua mode 
+(cua-mode t)
+    (setq cua-auto-tabify-rectangles nil) ;; Don't tabify after rectangle commands
+    (transient-mark-mode 1) ;; No region when it is not highlighted
+    (setq cua-keep-region-after-copy t) ;; Standard Windows behaviour 
