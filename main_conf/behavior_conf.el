@@ -153,8 +153,13 @@
 ;; This is your old M-x.
 (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
 
-;; cua mode 
+;; cua mode (copy/paste normal mode) 
 (cua-mode t)
     (setq cua-auto-tabify-rectangles nil) ;; Don't tabify after rectangle commands
     (transient-mark-mode 1) ;; No region when it is not highlighted
     (setq cua-keep-region-after-copy nil) 
+
+;; show git diff in file
+(global-diff-hl-mode)
+(diff-hl-margin-mode 1)
+(diff-hl-flydiff-mode 1)
