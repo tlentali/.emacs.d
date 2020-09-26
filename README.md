@@ -147,13 +147,14 @@ For now, I use those two :
 
 It's [Magit](https://magit.vc/) !
 
-| action     | kbd                                    |
-|------------|:---------------------------------------|
-| open magit | `C-x g`                                |
-| stack      | `s`                                    |
-| unstack    | `u`                                    |
-| commit     | `c` + `c` + commit message + `C-c C-c` |
-| push       | `P` + `p`                              |
+| action                  | kbd                                          |
+|-------------------------|:---------------------------------------------|
+| open magit              | `C-x g`                                      |
+| stack                   | `s`                                          |
+| unstack                 | `u`                                          |
+| commit                  | `c` + `c` + commit message + `C-c C-c`       |
+| push                    | `P` + `p`                                    |
+| show git diff in margin | [diff-hl](https://github.com/dgutov/diff-hl) |
 
 # 🙌 Life changing tricks <a name="life-changing-tricks"/>
 
