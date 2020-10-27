@@ -9,6 +9,10 @@
 ;;(setq org-agenda-files (directory-files-recursively "~/.personal/agenda/" "~/.personal/journal" "\\.org$"))
 (bind-key "C-c a" #'org-agenda)
 
+;; org todo sequence
+(setq org-todo-keywords
+      '((sequence "TODO" "DOING" "|" "DONE")))
+
 ;;; org-contact
 (use-package org
   :ensure org-plus-contrib)
