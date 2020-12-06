@@ -69,7 +69,7 @@ Some highlight in favor of **Emacs** :
 | ✅    | auto                        | cursor scroll [smoothly](https://github.com/aspiers/smooth-scrolling)                                                                    |
 | ✅    | auto                        | mousewheel scroll one line at a time (less "jumpy" than defaults)                                                                        |
 | ✅    | auto                        | past things without indentation mess                                                                                                     |
-| ✅    | `M-x` `1` or `2` or `3` ... | [window numbering](https://github.com/nschum/window-numbering.el) to navigate between buffers easily                                     |
+| ✅    | `M-1` or `2` or `3` ... | [window numbering](https://github.com/nschum/window-numbering.el) to navigate between buffers easily                                     |
 | ✅    | auto                        | [zoom](https://github.com/gonewest818/dimmer.el) current window size                                                                     |
 | ✅    | auto                        | visually highlight the selected buffer using [dimmer](https://github.com/gonewest818/dimmer.el)                                          |
 | ✅    | auto                        | disable backups auto-saves                                                                                                               |
