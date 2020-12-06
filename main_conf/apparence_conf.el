@@ -27,6 +27,8 @@
 ;;; theme
 (add-to-list 'custom-theme-load-path
                   "~/Dropbox/.emacs.d/theme/")
+(add-to-list 'load-path "~/Dropbox/.emacs.d/theme/")
+
 ;;(use-package horizon-theme)
 (load-theme 'horizon t)
 

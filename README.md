@@ -99,22 +99,21 @@ Some highlight in favor of **Emacs** :
 
 A minimalist look :
 
-| state | activation | action                                                                                                                                                                            |
-|:-----:|:-----------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ✅    | auto       | start full screen                                                                                                                                                                 |
-| ✅    | auto       | bar cursor instead of block cursor                                                                                                                                                |
-| ✅    | auto       | remove menu                                                                                                                                                                       |
-| ✅    | auto       | remove tool bar                                                                                                                                                                   |
-| ✅    | auto       | remove scroll bar                                                                                                                                                                 |
-| ✅    | auto       | replace scroll bar by yascroll (text scroll bar)                                                                                                                                  |
-| ✅    | auto       | no line number                                                                                                                                                                    |
-| ✅    | auto       | hide the startup message                                                                                                                                                          |
-| ✅    | auto       | set a homepage [dashboard](https://github.com/emacs-dashboard/emacs-dashboard) displaying recent used files                                                                       |
-| ✅    | auto       | cursor line position                                                                                                                                                              |
-| ✅    | auto       | [horizon](https://github.com/aodhneine/horizon-theme.el) theme (and [sexy-monochrome](https://github.com/voloyev/sexy-monochrome-theme) via `M-x load-theme RET sexy-monochrome`) |
-| ✅    | `C-x w`    | distraction-free writing mode with [writeroom](https://github.com/joostkremers/writeroom-mode)                                                                                    |
-| ✅    | auto       | [Hack](https://github.com/source-foundry/Hack) font                                                                                                                               |
-
+| state | activation | action                                                                                                                                                                                                                                                                               |
+|:-----:|:-----------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ✅    | auto       | start full screen                                                                                                                                                                                                                                                                    |
+| ✅    | auto       | bar cursor instead of block cursor                                                                                                                                                                                                                                                   |
+| ✅    | auto       | remove menu                                                                                                                                                                                                                                                                          |
+| ✅    | auto       | remove tool bar                                                                                                                                                                                                                                                                      |
+| ✅    | auto       | remove scroll bar                                                                                                                                                                                                                                                                    |
+| ✅    | auto       | replace scroll bar by yascroll (text scroll bar)                                                                                                                                                                                                                                     |
+| ✅    | auto       | no line number                                                                                                                                                                                                                                                                       |
+| ✅    | auto       | hide the startup message                                                                                                                                                                                                                                                             |
+| ✅    | auto       | set a homepage [dashboard](https://github.com/emacs-dashboard/emacs-dashboard) displaying recent used files                                                                                                                                                                          |
+| ✅    | auto       | cursor line position                                                                                                                                                                                                                                                                 |
+| ✅    | auto       | [horizon](https://github.com/aodhneine/horizon-theme.el) theme (or [sexy-monochrome](https://github.com/voloyev/sexy-monochrome-theme) or [brutalist](https://asylum.madhouse-project.org/blog/2018/09/06/the-brutalist-path/ "brutalist") via `M-x load-theme RET sexy-monochrome`) |
+| ✅    | `C-x w`    | distraction-free writing mode with [writeroom](https://github.com/joostkremers/writeroom-mode)                                                                                                                                                                                       |
+| ✅    | auto       | [Hack](https://github.com/source-foundry/Hack) font                                                                                                                                                                                                                                  |
 
 ## 📑 Org mode <a name="org-mode"/>
 
@@ -143,6 +142,10 @@ For now, I use those three :
 | ✅    | `Tab`           | [yasnippet](https://github.com/joaotavora/yasnippet) with custom [snippets](./snippets/python-mode)                                     |
 
 ## 🖊️ Markdown  <a name="markdown"/>
+
+>If it is not documented, 
+>it doesn't exist.
+>**Louis Fried**
 
 | activation                                 | action                                                                                                          |
 |--------------------------------------------|-----------------------------------------------------------------------------------------------------------------|
