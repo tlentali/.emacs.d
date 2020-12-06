@@ -10,17 +10,18 @@
 <!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
 **Table of Contents**
 
-- [🚀 Get inspired](#get-inspired)
-- [🧠 Why **Emacs** ?](#why-emacs)
-- [🔥 Features](#features)
-    - [⚡ Global editor behavior](#global-editor-behavior)
-    - [✨ Appearance](#appearance)
-    - [📑 Org mode](#org-mode)
-    - [🐍 Python](#python)
-    - [💽 Git](#git)
-- [🙌 Life changing tricks](#life-changing-tricks)
-- [🛈 Source](#source)
-- [📜 License](#license)
+- [🚀 Get inspired <a name="get-inspired"/>](#🚀-get-inspired-a-nameget-inspired)
+- [🧠 Why **Emacs** ? <a name="why-Emacs"/>](#🧠-why-emacs--a-namewhy-emacs)
+- [🔥 Features <a name="features"/>](#🔥-features-a-namefeatures)
+    - [⚡ Global editor behavior <a name="global-editor-behavior"/>](#⚡-global-editor-behavior-a-nameglobal-editor-behavior)
+    - [✨ Appearance <a name="appearance"/>](#✨-appearance-a-nameappearance)
+    - [📑 Org mode <a name="org-mode"/>](#📑-org-mode-a-nameorg-mode)
+    - [🐍 Python <a name="python"/>](#🐍-python-a-namepython)
+    - [🖊️ Markdown  <a name="markdown"/>](#🖊️-markdown--a-namemarkdown)
+    - [💽 Git <a name="git"/>](#💽-git-a-namegit)
+- [🙌 Life changing tricks <a name="life-changing-tricks"/>](#🙌-life-changing-tricks-a-namelife-changing-tricks)
+- [🛈 Source <a name="source"/>](#🛈-source-a-namesource)
+- [📜 License <a name="license"/>](#📜-license-a-namelicense)
 
 <!-- markdown-toc end -->
 
@@ -123,7 +124,8 @@ A minimalist look :
 
 Have a look at this [detailed page](./programming_conf/org.md) for more info.  
 
-For now, I use those two :
+For now, I use those three :
+
 - [org agenda](https://blog.aaronbieber.com/2016/09/24/an-agenda-for-life-with-org-mode.html)
 - [org contact](https://www.reddit.com/r/emacs/comments/8toivy/tip_how_to_manage_your_contacts_with_orgcontacts/)
 - [org journal](https://github.com/bastibe/org-journal)
@@ -139,6 +141,15 @@ For now, I use those two :
 | ✅    | auto            | use [flycheck](https://github.com/flycheck/flycheck) instead of flymake                                                                 |
 | ✅    | `M-x ein:login` | emacs ipython notebook : [ein](https://github.com/millejoh/emacs-ipython-notebook) and how to [use it](/programming_conf/python_ein.md) |
 | ✅    | `Tab`           | [yasnippet](https://github.com/joaotavora/yasnippet) with custom [snippets](./snippets/python-mode)                                     |
+
+## 🖊️ Markdown  <a name="markdown"/>
+
+| activation                                 | action                                                                                                          |
+|--------------------------------------------|-----------------------------------------------------------------------------------------------------------------|
+| `M-x gh-markdown-preview`                  | live preview and github look (from this [blog](https://blog.bitsandbobs.net/blog/emacs-markdown-live-preview/)) |
+| `C-c C-l`                                  | insert link                                                                                                     |
+| `C-c C-i`                                  | insert image                                                                                                    |
+| `M-x markdown-toc-generate-or-refresh-toc` | insert or refresh [table of content](https://github.com/ardumont/markdown-toc) at cursor                        |
 
 ## 💽 Git <a name="git"/>
 
