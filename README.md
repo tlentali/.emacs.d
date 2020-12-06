@@ -90,7 +90,7 @@ Some highlight in favor of **Emacs** :
 | ✅    | `C-x u`                 | [undo tree](http://pragmaticemacs.com/emacs/advanced-undoredo-with-undo-tree/)                                                           |
 | ✅    | `M-x`                   | [smex](https://github.com/nonsequitur/smex)                                                                                              |
 | ✅    | `C-c`/`C-v`/`C-z`       | [cua](https://www.emacswiki.org/emacs/CuaMode) mode (it made me crazy to have several copy/past behavior)                                |
-| ✅    | `C-c C-a`               | in csv-mode, align data by column                                                                                                        |
+| ✅    | `C-c C-a`               | in csv-mode, align data by column (`M-x csv-align-fields`)                                                                               |
 
 ## ✨ Appearance <a name="appearance"/>
 
