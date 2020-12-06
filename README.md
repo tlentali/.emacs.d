@@ -143,9 +143,9 @@ For now, I use those three :
 
 ## 🖊️ Markdown  <a name="markdown"/>
 
->If it is not documented, 
->it doesn't exist.
->**Louis Fried**
+>If it is not documented,  
+>it doesn't exist.  
+>**Louis Fried**  
 
 | activation                                 | action                                                                                                          |
 |--------------------------------------------|-----------------------------------------------------------------------------------------------------------------|
