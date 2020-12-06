@@ -62,34 +62,35 @@ Some highlight in favor of **Emacs** :
 >Editing is a rewording activity.  
 >**Alan Perlis**
 
-| state | activation                  | action                                                                                                                                   |
-|:-----:|:----------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------|
-| ✅    | auto                        | typed text replaces the selection if the selection is active                                                                             |
-| ✅    | auto                        | always [replace tabs with spaces](https://www.youtube.com/watch?v=SsoOG6ZeyUI) and set tab width to 4 spaces for all buffers             |
-| ✅    | auto                        | cursor scroll [smoothly](https://github.com/aspiers/smooth-scrolling)                                                                    |
-| ✅    | auto                        | mousewheel scroll one line at a time (less "jumpy" than defaults)                                                                        |
-| ✅    | auto                        | past things without indentation mess                                                                                                     |
+| state | activation              | action                                                                                                                                   |
+|:-----:|:------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------|
+| ✅    | auto                    | typed text replaces the selection if the selection is active                                                                             |
+| ✅    | auto                    | always [replace tabs with spaces](https://www.youtube.com/watch?v=SsoOG6ZeyUI) and set tab width to 4 spaces for all buffers             |
+| ✅    | auto                    | cursor scroll [smoothly](https://github.com/aspiers/smooth-scrolling)                                                                    |
+| ✅    | auto                    | mousewheel scroll one line at a time (less "jumpy" than defaults)                                                                        |
+| ✅    | auto                    | past things without indentation mess                                                                                                     |
 | ✅    | `M-1` or `2` or `3` ... | [window numbering](https://github.com/nschum/window-numbering.el) to navigate between buffers easily                                     |
-| ✅    | auto                        | [zoom](https://github.com/gonewest818/dimmer.el) current window size                                                                     |
-| ✅    | auto                        | visually highlight the selected buffer using [dimmer](https://github.com/gonewest818/dimmer.el)                                          |
-| ✅    | auto                        | disable backups auto-saves                                                                                                               |
-| ✅    | auto                        | change yes-or-no questions into y-or-n questions                                                                                         |
-| ✅    | auto                        | After you split a window, your cursor goes on the new one                                                                                |
-| ✅    | `C-c s`                     | [swiper](https://github.com/abo-abo/swiper) instead of the default search                                                                |
-| ✅    | `C-x b`                     | ibuffer instead of the default switch-to-buffer                                                                                          |
-| ✅    | `M-s`                       | move around quickly with [avy](https://github.com/abo-abo/avy)                                                                           |
-| ✅    | auto                        | treats camelCase strings as several words                                                                                                |
-| ✅    | auto                        | typing "()", "[]", "{}" by pair                                                                                                          |
-| ✅    | auto                        | briefly highlighted your cursor when changing buffer with [beacon](https://github.com/Malabarba/beacon)                                  |
-| ✅    | auto                        | colors parentheses and other delimiters depending on their depth with [rainbow-delimiters](https://github.com/Fanael/rainbow-delimiters) |
-| ✅    | auto                        | highlights matching parens when the cursor is just behind one of them                                                                    |
-| ✅    | `C-x t t`                   | pop a tree layout file explorer [treemacs](https://github.com/Alexander-Miller/treemacs)                                                 |
-| ✅    | `C-q`                       | [Expand region](https://github.com/magnars/expand-region.el) selection                                                                   |
-| ✅    | `M-y`                       | [popup kill ring](https://github.com/waymondo/popup-kill-ring)                                                                           |
-| ✅    | `C-x f`                     | use ido and [ido vertical mode](https://github.com/creichert/ido-vertical-mode.el) to find file instead of default file navigation       |
-| ✅    | `C-x u`                     | [undo tree](http://pragmaticemacs.com/emacs/advanced-undoredo-with-undo-tree/)                                                           |
-| ✅    | `M-x`                       | [smex](https://github.com/nonsequitur/smex)                                                                                              |
-| ✅    | `C-c`/`C-v`/`C-z`           | [cua](https://www.emacswiki.org/emacs/CuaMode) mode (it made me crazy to have several copy/past behavior)                               |
+| ✅    | auto                    | [zoom](https://github.com/gonewest818/dimmer.el) current window size                                                                     |
+| ✅    | auto                    | visually highlight the selected buffer using [dimmer](https://github.com/gonewest818/dimmer.el)                                          |
+| ✅    | auto                    | disable backups auto-saves                                                                                                               |
+| ✅    | auto                    | change yes-or-no questions into y-or-n questions                                                                                         |
+| ✅    | auto                    | After you split a window, your cursor goes on the new one                                                                                |
+| ✅    | `C-c s`                 | [swiper](https://github.com/abo-abo/swiper) instead of the default search                                                                |
+| ✅    | `C-x b`                 | ibuffer instead of the default switch-to-buffer                                                                                          |
+| ✅    | `M-s`                   | move around quickly with [avy](https://github.com/abo-abo/avy)                                                                           |
+| ✅    | auto                    | treats camelCase strings as several words                                                                                                |
+| ✅    | auto                    | typing "()", "[]", "{}" by pair                                                                                                          |
+| ✅    | auto                    | briefly highlighted your cursor when changing buffer with [beacon](https://github.com/Malabarba/beacon)                                  |
+| ✅    | auto                    | colors parentheses and other delimiters depending on their depth with [rainbow-delimiters](https://github.com/Fanael/rainbow-delimiters) |
+| ✅    | auto                    | highlights matching parens when the cursor is just behind one of them                                                                    |
+| ✅    | `C-x t t`               | pop a tree layout file explorer [treemacs](https://github.com/Alexander-Miller/treemacs)                                                 |
+| ✅    | `C-q`                   | [Expand region](https://github.com/magnars/expand-region.el) selection                                                                   |
+| ✅    | `M-y`                   | [popup kill ring](https://github.com/waymondo/popup-kill-ring)                                                                           |
+| ✅    | `C-x f`                 | use ido and [ido vertical mode](https://github.com/creichert/ido-vertical-mode.el) to find file instead of default file navigation       |
+| ✅    | `C-x u`                 | [undo tree](http://pragmaticemacs.com/emacs/advanced-undoredo-with-undo-tree/)                                                           |
+| ✅    | `M-x`                   | [smex](https://github.com/nonsequitur/smex)                                                                                              |
+| ✅    | `C-c`/`C-v`/`C-z`       | [cua](https://www.emacswiki.org/emacs/CuaMode) mode (it made me crazy to have several copy/past behavior)                                |
+| ✅    | `C-c C-a`               | in csv-mode, align data by column                                                                                                        |
 
 ## ✨ Appearance <a name="appearance"/>
 
