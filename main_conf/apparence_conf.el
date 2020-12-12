@@ -30,7 +30,13 @@
 (add-to-list 'load-path "~/Dropbox/.emacs.d/theme/")
 
 ;;(use-package horizon-theme)
-(load-theme 'horizon t)
+(load-theme 'brutalist-dark t)
+
+;;; Set cursor color to indian pink
+(set-cursor-color "#f60386") 
+
+;;; no blink cursor
+ (blink-cursor-mode 0)
 
 ;;; dashboard homepage
 (require 'dashboard)
@@ -70,3 +76,6 @@
 ;;; font
 (custom-set-faces
   '(default ((t (:height 100 :family "hack")))))
+
+;;; choose mood line as modeline
+(mood-line-mode)

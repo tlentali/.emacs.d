@@ -48,8 +48,9 @@
        (fg-table "light blue")
        (fg-dim "gray70")
        (fg-slight-dim "dim gray")
-       (bg "gray20")
-       (bg-light "#888888")
+       ;;(bg "gray20")
+       (bg "#14161c")
+       (bg-light "#0d0e12")
        (fg-light "#ddddd8")
        (bg-highlight "grey40")
        (bg-highlight-2 "LightCyan")
@@ -65,7 +66,8 @@
        (powerline2 "gray60")
 
        (string "light blue")
-       (cursor "white smoke")
+       ;;(cursor "white smoke")
+       (cursor "#f60386")
 
        (paren-match "#aaccff")
        (paren-mismatch "red"))
