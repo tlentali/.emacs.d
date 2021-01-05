@@ -42,6 +42,7 @@
     writeroom-mode
     smex
     projectile
+    ctrlf
     ))
 
 (mapc #'(lambda (package)

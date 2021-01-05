@@ -92,6 +92,7 @@ Some highlight in favor of **Emacs** :
 | ✅    | `C-c`/`C-v`/`C-z`       | [cua](https://www.emacswiki.org/emacs/CuaMode) mode (it made me crazy to have several copy/past behavior)                                |
 | ✅    | `C-c C-a`               | in csv-mode, align data by column (`M-x csv-align-fields`)                                                                               |
 | ✅    | `C-c p`                 | [projectile](https://github.com/bbatsov/projectile)                                                                                      |
+| ✅    | `C-s`, `C-r`            | [ctrlf](https://github.com/raxod502/ctrlf)                                                                                               |
 
 ## ✨ Appearance <a name="appearance"/>
 
