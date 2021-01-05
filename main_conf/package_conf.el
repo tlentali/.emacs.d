@@ -41,6 +41,7 @@
     popup-kill-ring
     writeroom-mode
     smex
+    projectile
     ))
 
 (mapc #'(lambda (package)
