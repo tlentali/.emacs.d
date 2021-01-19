@@ -100,3 +100,7 @@ Custome :
 Normal :
 
 `C-c a a`
+
+Show the global TODO list
+
+`C-c a t`
