@@ -46,3 +46,57 @@ Highlight :
 - search for string between two dates.
 - `TODO` are moved to the next day if not `DONE`
 - schedule a appointment in the future by adding a timestamp using `C-c .` (it will appear in `M-x org-agenda o`)
+
+# Todo list
+
+## Add Todo item
+
+`C-c C-t`
+
+## Insert a new TODO entry below the current one
+
+`S-M-RET`
+
+## Change task state
+
+`C-c C-t` or `S-arrow`
+
+## Schedule task
+
+`C-c C-s`
+
+## Deadline task
+
+`C-c C-d`
+
+## Repeated tasks
+
+In one month :
+
+`<2005-10-01 Sat +1m>`
+
+In one month, warning me 3 days before :
+
+<2005-10-01 Sat +1m -3d>
+
+In one month, the same week day :
+
+<2005-10-01 Sat ++1m>
+
+In one month from the moment I made it DONE :
+
+<2005-10-01 Sat .+1m>
+
+## Show the global TODO list
+
+`C-c a t`
+
+# Agenda
+
+Custome :
+
+`C-c a o`
+
+Normal :
+
+`C-c a a`
