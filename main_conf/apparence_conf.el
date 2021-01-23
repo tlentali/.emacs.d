@@ -30,7 +30,7 @@
 (add-to-list 'load-path "~/Dropbox/.emacs.d/theme/")
 
 ;;(use-package horizon-theme)
-(load-theme 'brutalist-dark t)
+(load-theme 'sanityinc-tomorrow-eighties t)
 
 ;;; Set cursor color to indian pink
 (set-cursor-color "#f60386") 
