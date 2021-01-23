@@ -14,11 +14,3 @@
 
 ;;; emacs ipython notebook
 ;;(require 'ein)
-
-;;; yasnippet
-(use-package yasnippet
-  :ensure t
-  :init
-  (yas-global-mode 1)
-  :config
-  (add-to-list 'yas-snippet-dirs (locate-user-emacs-file "~/Dropbox/.emacs.d/snippets")))

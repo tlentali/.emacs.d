@@ -18,7 +18,9 @@
 | #screen            | `M-1` or `2` or `3` ...                             | to select buffer                                                                   |
 | #write             | `C-z`                                               | undo                                                                               |
 | #write             | `C-S-z`                                             | redo                                                                               |
-| #write             | `C-x u`                                             | popup undo tree                                                                    |
+| #write #undotree   | `C-x u`                                             | popup undo tree                                                                    |
+| #write #undotree   | `d`                                                 | undo tree display changes                                                          |
+| #write #undotree   | `q`                                                 | quit undo tree                                                                     |
 | #write             | `C-x C-s`                                           | save                                                                               |
 | #write             | `M-u`                                               | upper word                                                                         |
 | #write             | `M-l`                                               | lower word                                                                         |
@@ -49,3 +51,4 @@
 | #git               | `u`                                                 | unstack                                                                            |
 | #git               | `c` + `c` + `commit message` + `C-c C-c`            | commit                                                                             |
 | #git               | `P` + `p`                                           | push                                                                               |
+| #git               | `q`                                                 | quit magit                                                                         |
