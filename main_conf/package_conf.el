@@ -43,6 +43,8 @@
     smex
     projectile
     ctrlf
+    company
+    smartparens
     ))
 
 (mapc #'(lambda (package)

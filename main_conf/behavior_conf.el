@@ -103,7 +103,15 @@
 (use-package beacon
   :ensure t
   :config
-    (beacon-mode 1))
+    (beacon-mode 1)
+    ;; only flash on window/buffer changes...
+    (setq beacon-blink-when-window-changes t)
+    ;; ... don't be excessive:
+    (setq beacon-blink-when-window-scrolls nil)
+    (setq beacon-blink-duration .2)       ; default .3
+    (setq beacon-blink-delay .2)          ; default .3
+    (setq beacon-size 8)
+)
 
 ;;; colors parentheses and other delimiters depending on their depth
 (use-package rainbow-delimiters
@@ -113,6 +121,12 @@
 
 ;;; highlights matching parens when the cursor is just behind one of them
 (show-paren-mode 1)
+(setq show-paren-delay 0)
+; change the color/face
+(require 'paren)
+    (set-face-background 'show-paren-match (face-background 'default))
+    (set-face-foreground 'show-paren-match "#def")
+    (set-face-attribute 'show-paren-match nil :weight 'extra-bold)
 
 ;;; Expand region selection
 (use-package expand-region
@@ -176,10 +190,19 @@
 (transient-mark-mode 1) ;; No region when it is not highlighted
 (setq cua-keep-region-after-copy nil) 
 
-;;; yasnippet
+;; yasnippet
 (use-package yasnippet
   :ensure t
   :init
   (yas-global-mode 1)
   :config
   (add-to-list 'yas-snippet-dirs (locate-user-emacs-file "~/Dropbox/.emacs.d/snippets")))
+
+;; company (text completion framework)
+(add-hook 'after-init-hook 'global-company-mode)
+; No delay in showing suggestions (https://www.monolune.com/configuring-company-mode-in-emacs/)
+(setq company-idle-delay 0)
+; Show suggestions after entering one character.
+(setq company-minimum-prefix-length 1)
+; the end of the list of suggestions does not wrap around to the top of the list again
+(setq company-selection-wrap-around t)
