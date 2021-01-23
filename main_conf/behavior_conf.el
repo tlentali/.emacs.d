@@ -153,22 +153,10 @@
 ;; This is your old M-x.
 (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
 
-;; cua mode (copy/paste normal mode) 
-(cua-mode t)
-    (setq cua-auto-tabify-rectangles nil) ;; Don't tabify after rectangle commands
-    (transient-mark-mode 1) ;; No region when it is not highlighted
-    (setq cua-keep-region-after-copy nil) 
-
 ;; show git diff in file
 (global-diff-hl-mode)
 (diff-hl-margin-mode 1)
 (diff-hl-flydiff-mode 1)
-
-;; csv mode
-(load "~/Dropbox/.emacs.d/programming_conf/csv-mode.el")
-(add-to-list 'auto-mode-alist '("\\.[Cc][Ss][Vv]\\'" . csv-mode))
-(autoload 'csv-mode "csv-mode" 
-    "Major mode for editing comma-separated value files." t)
 
 ;; projectile
 (use-package projectile
@@ -181,3 +169,10 @@
 
 ;; ctrlf
 (ctrlf-mode +1)
+
+;; cua mode (copy/paste normal mode) 
+(cua-mode t)
+(setq cua-auto-tabify-rectangles nil) ;; Don't tabify after rectangle commands
+(transient-mark-mode 1) ;; No region when it is not highlighted
+(setq cua-keep-region-after-copy nil) 
+
