@@ -17,3 +17,5 @@ url
 recentf
 request/
 bookmarks
+*.eld
+var/
