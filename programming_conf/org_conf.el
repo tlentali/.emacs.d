@@ -45,6 +45,7 @@
       :empty-lines 1))))
 
 ;;; good looking agenda M-x org-agenda RET o RET
+;; https://www.reddit.com/r/unixporn/comments/jprtoj/xmonad_productivity_workflow_emacs_orgmode_agenda/
 (setq org-agenda-custom-commands
       '(("o" "My Agenda"
          ((todo "TODO" (
@@ -61,7 +62,7 @@
                       (org-agenda-remove-tags t)
                       (org-agenda-prefix-format   "  %-3i  %-15b %t%s")
                       (org-agenda-todo-keyword-format " ☐ ")
-                      (org-agenda-current-time-string "⮜┈┈┈┈┈┈┈ now")
+                      (org-agenda-current-time-string "<┈┈┈┈┈┈┈ now")
                       (org-agenda-scheduled-leaders '("" ""))
                       (org-agenda-time-grid (quote ((daily today remove-match)
                                                     (0900 1200 1500 1800 2100)
