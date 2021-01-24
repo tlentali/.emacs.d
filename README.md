@@ -94,6 +94,7 @@ Some highlight in favor of **Emacs** :
 | ✅    | `C-c p`                 | [projectile](https://github.com/bbatsov/projectile)                                                                                                                           |
 | ✅    | `C-s`, `C-r`            | [ctrlf](https://github.com/raxod502/ctrlf)                                                                                                                                    |
 | ✅    | `Tab`                   | [yasnippet](https://github.com/joaotavora/yasnippet) with custom [snippets](./snippets/python-mode) and [yasnipet-snipet](https://github.com/AndreaCrotti/yasnippet-snippets) |
+| ✅    | auto                    | [company](http://company-mode.github.io/) mode, text completion framework                                                                                                     |
 
 ## ✨ Appearance <a name="appearance"/>
 
@@ -143,6 +144,7 @@ For now, I use those three :
 | ✅    | auto            | [elpy](https://github.com/jorgenschaefer/elpy)                                                                                          |
 | ✅    | auto            | use [flycheck](https://github.com/flycheck/flycheck) instead of flymake                                                                 |
 | ✅    | `M-x ein:login` | emacs ipython notebook : [ein](https://github.com/millejoh/emacs-ipython-notebook) and how to [use it](/programming_conf/python_ein.md) |
+| ✅    | auto            | [smartparens](https://github.com/Fuco1/smartparens)                                                                                     |
 
 ## 🖊️ Markdown  <a name="markdown"/>
 

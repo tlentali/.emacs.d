@@ -124,9 +124,9 @@
 (setq show-paren-delay 0)
 ; change the color/face
 (require 'paren)
-    (set-face-background 'show-paren-match (face-background 'default))
-    (set-face-foreground 'show-paren-match "#def")
-    (set-face-attribute 'show-paren-match nil :weight 'extra-bold)
+(set-face-background 'show-paren-match (face-background 'default))
+(set-face-foreground 'show-paren-match "#def")
+(set-face-attribute 'show-paren-match nil :weight 'extra-bold)
 
 ;;; Expand region selection
 (use-package expand-region
@@ -206,3 +206,6 @@
 (setq company-minimum-prefix-length 1)
 ; the end of the list of suggestions does not wrap around to the top of the list again
 (setq company-selection-wrap-around t)
+
+;; truncate line, don't toggle
+(set-default 'truncate-lines t)

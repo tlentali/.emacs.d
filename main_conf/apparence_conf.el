@@ -7,7 +7,7 @@
 
 ;;; no line number
 (global-linum-mode 0)
-(set-face-foreground 'linum "grey")
+;;(set-face-foreground 'linum "grey")
 
 ;;; cursor in bar
 (setq-default cursor-type 'bar)
@@ -79,3 +79,7 @@
 
 ;;; choose mood line as modeline
 (mood-line-mode)
+
+;; remove right and left margin 
+;; https://emacsredux.com/blog/2015/01/18/customizing-the-fringes/
+(fringe-mode '(1 . 1))
