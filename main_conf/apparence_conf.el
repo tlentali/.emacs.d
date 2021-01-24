@@ -9,9 +9,6 @@
 (global-linum-mode 0)
 ;;(set-face-foreground 'linum "grey")
 
-;;; cursor in bar
-(setq-default cursor-type 'bar)
-
 ;;; remove menu
 (menu-bar-mode -1)
 
@@ -28,15 +25,16 @@
 (add-to-list 'custom-theme-load-path
                   "~/Dropbox/.emacs.d/theme/")
 (add-to-list 'load-path "~/Dropbox/.emacs.d/theme/")
-
 ;;(use-package horizon-theme)
 (load-theme 'sanityinc-tomorrow-eighties t)
 
-;;; Set cursor color to indian pink
-(set-cursor-color "#f60386") 
-
-;;; no blink cursor
- (blink-cursor-mode 0)
+;; Cursor
+; Set cursor color to indian pink
+(set-cursor-color "#f60386")
+; cursor in bar
+(setq-default cursor-type '(bar . 2))
+; no blink cursor
+(blink-cursor-mode 0)
 
 ;;; dashboard homepage
 (require 'dashboard)
@@ -64,22 +62,23 @@
 ;;hook
 (dashboard-setup-startup-hook)
 
-;;; cursor position
-(setq line-number-mode t)
-(setq column-number-mode nil)
-
 ;;; distraction-free writing mode with writeroom
 (use-package writeroom-mode
   :ensure t
   :bind ("C-x w" . 'writeroom-mode))
 
 ;;; font
-(custom-set-faces
-  '(default ((t (:height 100 :family "hack")))))
+;(custom-set-faces
+;  '(default ((t (:height 100 :family "hack")))))
+;(set-frame-font "source code pro-10" nil t)
+(setq default-frame-alist '((font . "Source Code Pro-10")))
 
 ;;; choose mood line as modeline
 (mood-line-mode)
+;;; mode line cursor position
+(setq line-number-mode t)
+(setq column-number-mode -1)
 
-;; remove right and left margin 
+;; remove right and left margin
 ;; https://emacsredux.com/blog/2015/01/18/customizing-the-fringes/
 (fringe-mode '(1 . 1))
