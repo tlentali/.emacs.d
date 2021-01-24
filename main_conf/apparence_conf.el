@@ -36,31 +36,11 @@
 ; no blink cursor
 (blink-cursor-mode 0)
 
-;;; dashboard homepage
-(require 'dashboard)
-;;(require 'all-the-icons) ;;; add M-x all-the-icons-install-fonts to make it works
-;; Set the title
-(setq dashboard-banner-logo-title "")
-;; Set the banner
-(setq dashboard-startup-banner 'logo)
-;; Value can be
-;; 'official which displays the official emacs logo
-;; 'logo which displays an alternative emacs logo
-;; 1, 2 or 3 which displays one of the text banners
-;; "path/to/your/image.png" which displays whatever image you would prefer
-;; Content is not centered by default. To center, set
-(setq dashboard-center-content 1)
-;; customize which widgets are displayed
-(setq show-week-agenda-p t)
-(setq dashboard-items '((recents  . 8)
-                        (agenda . 5)))
-;; to add icons to the widget headings and their items
-;;(setq dashboard-set-heading-icons t)
-;;(setq dashboard-set-file-icons t)
-;; show info about the packages loaded and the init time
-(setq dashboard-set-init-info nil)
-;;hook
-(dashboard-setup-startup-hook)
+;; startup screen : scratch
+(setq-default inhibit-startup-screen t)
+(setq inhibit-splash-screen t)
+(setq inhibit-startup-message t)
+(setq initial-scratch-message "")
 
 ;;; distraction-free writing mode with writeroom
 (use-package writeroom-mode

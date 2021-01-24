@@ -31,7 +31,6 @@
     window-numbering
     zoom
     markdown-mode
-    dashboard
     magit
     dimmer
     swiper
