@@ -16,9 +16,9 @@
 ;;(require 'ein)
 
 ;; smartparens
-(require 'smartparens-config)
+;(require 'smartparens-config)
 ;; Always start smartparens mode in python-mode.
-(add-hook 'python-mode-hook #'smartparens-mode)
+;(add-hook 'python-mode-hook #'smartparens-mode)
 
 ;; Disable vertical guide lines for indentation 
 ;; https://stackoverflow.com/questions/45214116/how-to-disable-emacs-elpy-vertical-guide-lines-for-indentation

@@ -90,14 +90,25 @@
 ;;; emacs treats camelCase strings as a single word by default, this changes said behaviour
 (global-subword-mode 1)
 
-;;; typing the first character in a set of 2, completes the second one after your cursor
-(setq electric-pair-pairs '(
-                           (?\{ . ?\})
-                           (?\( . ?\))
-                           (?\[ . ?\])
-                           (?\" . ?\")
-                           ))
-(electric-pair-mode t)
+;; dealing with pair symbol
+(require 'smartparens-config)
+(smartparens-global-mode t)
+
+;;; colors parentheses and other delimiters depending on their depth
+(use-package rainbow-delimiters
+  :ensure t
+  :init
+   (add-hook 'prog-mode-hook #'rainbow-delimiters-mode))
+
+;;; highlights matching parens when the cursor is just behind one of them
+(show-paren-mode 1)
+(setq show-paren-delay 0)
+; change the color/face
+;; https://emacs.stackexchange.com/questions/47795/spacemacs-how-can-i-customize-the-highlight-style-of-a-matching-parenthesis
+(require 'paren)
+(custom-set-faces
+ '(show-paren-match ((t (:foreground "#f60386" :background "#2d2d2d")))))
+(set-face-attribute 'show-paren-match nil :weight 'extra-bold)
 
 ;;; briefly highlighted your cursor when changing buffer 
 (use-package beacon
@@ -112,21 +123,6 @@
     (setq beacon-blink-delay .2)          ; default .3
     (setq beacon-size 8)
 )
-
-;;; colors parentheses and other delimiters depending on their depth
-(use-package rainbow-delimiters
-  :ensure t
-  :init
-   (add-hook 'prog-mode-hook #'rainbow-delimiters-mode))
-
-;;; highlights matching parens when the cursor is just behind one of them
-(show-paren-mode 1)
-(setq show-paren-delay 0)
-; change the color/face
-(require 'paren)
-(set-face-background 'show-paren-match (face-background 'default))
-(set-face-foreground 'show-paren-match "#def")
-(set-face-attribute 'show-paren-match nil :weight 'extra-bold)
 
 ;;; Expand region selection
 (use-package expand-region
