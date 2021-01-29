@@ -9,35 +9,35 @@
 
 ;; package
 ;;--------
-(setq path_package (concat root main_conf "package_conf.el"))
-(load path_package)
+(setq path_package_conf (concat root main_conf "package_conf.el"))
+(load path_package_conf)
 
 ;; apparence
 ;;----------
-(setq path_package (concat root main_conf "apparence_conf.el"))
-(load path_package)
+(setq path_apparence_conf (concat root main_conf "apparence_conf.el"))
+(load path_apparence_conf)
 
 ;; behavior
 ;;---------
-(setq path_package (concat root main_conf "behavior_conf.el"))
-(load path_package)
+(setq path_behavior_conf (concat root main_conf "behavior_conf.el"))
+(load path_behavior_conf)
 
 ;; python
 ;;-------
-(setq path_package (concat root programming_conf "python_conf.el"))
-(load path_package)
+(setq path_python_conf (concat root programming_conf "python_conf.el"))
+(load path_python_conf)
 
 ;; org
 ;;-------
-(setq path_package (concat root programming_conf "org_conf.el"))
-(load path_package)
+(setq path_org_conf (concat root programming_conf "org_conf.el"))
+(load path_org_conf)
 
 ;; magit
 ;;-------
-(setq path_package (concat root programming_conf "magit_conf.el"))
-(load path_package)
+(setq path_magit_conf (concat root programming_conf "magit_conf.el"))
+(load path_magit_conf)
 
 ;; csv
 ;;-------
-(setq path_package (concat root programming_conf "csv_conf.el"))
-(load path_package)
+(setq path_csv_conf (concat root programming_conf "csv_conf.el"))
+(load path_csv_conf)
