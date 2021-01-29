@@ -166,7 +166,8 @@
 ;; show git diff in file
 (global-diff-hl-mode)
 (diff-hl-margin-mode 1)
-(diff-hl-flydiff-mode 1)
+;; show diff on the spot, without saving the file
+(diff-hl-flydiff-mode 1) 
 
 ;; projectile
 (use-package projectile
