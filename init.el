@@ -4,6 +4,7 @@
 (setq dropbox (file-name-as-directory "Dropbox"))
 (setq emacs_d (file-name-as-directory ".emacs.d"))
 (setq root (concat home dropbox emacs_d))
+
 (setq main_conf (file-name-as-directory "main_conf"))
 (setq programming_conf (file-name-as-directory "programming_conf"))
 (setq theme (file-name-as-directory "theme"))
