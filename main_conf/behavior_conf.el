@@ -40,8 +40,9 @@
 (dimmer-mode t)
 
 ;;; neotree
-;;(require 'neotree)
-;;(global-set-key [f8] 'neotree-toggle)
+;(require 'neotree)
+;(global-set-key [f8] 'neotree-toggle)
+;(setq neo-theme (if (display-graphic-p) 'icons 'nerd))
 
 ;;; treemacs
 (use-package treemacs
@@ -179,7 +180,10 @@
               ("C-c p" . projectile-command-map)))
 
 ;; ctrlf
-(ctrlf-mode +1)
+(use-package ctrlf
+  :init
+
+  (ctrlf-mode +1))
 
 ;; cua mode (copy/paste normal mode) 
 (cua-mode t)
