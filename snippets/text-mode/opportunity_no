@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: opportunity_no
+# key: oppno
+# --
+Hello $1,
+Thank you for your message, but I am not looking for another position right now.
+I wish you to find the best candidate for this nice opportunity.
+Best regards,
+
+Thomas L
