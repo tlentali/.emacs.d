@@ -75,9 +75,9 @@
 (global-set-key (kbd "C-x 3") 'split-and-follow-vertically)
 
 ;;; swiper instead of the default search
-(use-package swiper
-  :ensure t
-  :bind ("C-c s" . 'swiper))
+;;(use-package swiper
+;;  :ensure t
+;;  :bind ("C-c s" . 'swiper))
 
 ;;; ibuffer instead of the default switch-to-buffer
 (global-set-key (kbd "C-x b") 'ibuffer)
