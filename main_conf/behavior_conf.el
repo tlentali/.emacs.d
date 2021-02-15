@@ -86,7 +86,8 @@
 (use-package avy
   :ensure t
   :bind
-    ("M-s" . avy-goto-char))
+    ("M-s" . avy-goto-char)
+)
 
 ;;; emacs treats camelCase strings as a single word by default, this changes said behaviour
 (global-subword-mode 1)
@@ -99,7 +100,8 @@
 (use-package rainbow-delimiters
   :ensure t
   :init
-   (add-hook 'prog-mode-hook #'rainbow-delimiters-mode))
+   (add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
+)
 
 ;;; highlights matching parens when the cursor is just behind one of them
 (show-paren-mode 1)
@@ -128,12 +130,14 @@
 ;;; Expand region selection
 (use-package expand-region
   :ensure t
-  :bind ("C-q" . er/expand-region))
+  :bind ("C-q" . er/expand-region)
+)
 
 ;;; popup-kill-ring
 (use-package popup-kill-ring
   :ensure t
-  :bind ("M-y" . popup-kill-ring))
+  :bind ("M-y" . popup-kill-ring)
+)
 
 ;;; use ido to find file and switch buffer
 (setq ido-enable-flex-matching nil)
@@ -149,9 +153,15 @@
 (setq ido-vertical-define-keys 'C-n-C-p-up-down-left-right)
 
 ;;; undo tree
-(require 'undo-tree)
+(use-package undo-tree
+  :ensure t
+  :init
+  (global-undo-tree-mode)
+)
+
+;;(require 'undo-tree)
 ;;turn on everywhere
-(global-undo-tree-mode 1)
+;;(global-undo-tree-mode 1)
 ;; make ctrl-z undo
 ;;(global-set-key (kbd "C-z") 'undo)
 ;; make ctrl-Z redo
@@ -200,13 +210,45 @@
   (add-to-list 'yas-snippet-dirs (locate-user-emacs-file "~/Dropbox/.emacs.d/snippets")))
 
 ;; company (text completion framework)
-(add-hook 'after-init-hook 'global-company-mode)
+;;(add-hook 'after-init-hook 'global-company-mode)
 ; No delay in showing suggestions (https://www.monolune.com/configuring-company-mode-in-emacs/)
-(setq company-idle-delay 0)
+;;(setq company-idle-delay 0)
 ; Show suggestions after entering one character.
-(setq company-minimum-prefix-length 1)
+;;(setq company-minimum-prefix-length 1)
 ; the end of the list of suggestions does not wrap around to the top of the list again
-(setq company-selection-wrap-around t)
+;;(setq company-selection-wrap-around t)
+
+(use-package company
+  :diminish company-mode
+  :init
+  (global-company-mode)
+  :config
+  ;; set default `company-backends'
+  (setq company-backends
+        '((company-files          ; files & directory
+           company-keywords       ; keywords
+           company-capf)  ; completion-at-point-functions
+          (company-abbrev company-dabbrev)
+          ))
+  (setq company-idle-delay 0) ; No delay in showing suggestions (https://www.monolune.com/configuring-company-mode-in-emacs/)
+  (setq company-minimum-prefix-length 1) ; Show suggestions after entering one character.
+  (setq company-selection-wrap-around t) ; the end of the list of suggestions does not wrap around to the top of the list again
+)
+
+(use-package company-statistics
+    :init
+    (company-statistics-mode))
+
+(use-package company-quickhelp
+    :config
+    (company-quickhelp-mode))
+
+(use-package prescient)
+
+(use-package company-prescient
+  :after company
+  :config
+  (company-prescient-mode))
 
 ;; truncate line, don't toggle
 (set-default 'truncate-lines t)

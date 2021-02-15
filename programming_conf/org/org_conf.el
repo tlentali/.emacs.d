@@ -1,5 +1,3 @@
-;;(require 'org)
-
 ;;; set path
 (setq home (file-name-as-directory "~"))
 (setq dropbox (file-name-as-directory "Dropbox"))
@@ -71,7 +69,7 @@
                  ,(concat "* TODO %?\n"
                  "/Entered on/ %U")))
   (add-to-list 'org-capture-templates
-               `("m" "Meeting" entry  (file (lambda () (concat root_org "inbox/inbox.org")))
+               `("m" "Meeting" entry  (file (lambda () (concat root_org "inbox/agenda.org")))
                  ,(concat "* %? :meeting:\n"
                  "<%<%Y-%m-%d %a %H:00>>")))
   (add-to-list 'org-capture-templates
