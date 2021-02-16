@@ -337,20 +337,41 @@
 ;; truncate line, don't toggle
 (set-default 'truncate-lines t)
 
-(use-package centaur-tabs
-  :demand
-  :config
-  (centaur-tabs-mode t)
-  (setq centaur-tabs-style "bar"
-	  centaur-tabs-height 25
-	  centaur-tabs-set-icons t
-	  centaur-tabs-set-modified-marker t
-	  centaur-tabs-show-navigation-buttons t
-	  centaur-tabs-set-bar 'over
-      centaur-tabs-gray-out-icons 'buffer
-	  x-underline-at-descent-line t)
-  (centaur-tabs-headline-match)
-  :bind
-  ("C-<prior>" . centaur-tabs-backward)
-  ("C-<next>" . centaur-tabs-forward)
-)
+;; (use-package centaur-tabs
+;;   :demand
+;;   :config
+;;   (centaur-tabs-mode t)
+;;   (setq centaur-tabs-style "bar"
+;; 	  centaur-tabs-height 25
+;; 	  centaur-tabs-set-icons t
+;; 	  centaur-tabs-set-modified-marker t
+;; 	  centaur-tabs-show-navigation-buttons t
+;; 	  centaur-tabs-set-bar 'over
+;;       centaur-tabs-gray-out-icons 'buffer
+;; 	  x-underline-at-descent-line t)
+;;   (centaur-tabs-headline-match)
+;;   :bind
+;;   ("C-<prior>" . centaur-tabs-backward)
+;;   ("C-<next>" . centaur-tabs-forward)
+;; )
+
+(use-package ibuffer-vc
+  :ensure t
+  :defer 5
+  :init
+  ;; Include version control status info in the ibuffer list.
+  (setq ibuffer-formats
+        '((mark modified read-only vc-status-mini " "
+                (name 18 18 :left :elide)
+                " "
+                (size 9 -1 :right)
+                " "
+                (mode 16 16 :left :elide)
+                " "
+                (vc-status 16 16 :left)
+                " "
+                filename-and-process)))
+  :config (add-hook 'ibuffer-hook (lambda()
+                                    (ibuffer-vc-set-filter-groups-by-vc-root)
+                                    (unless (eq ibuffer-sorting-mode 'alphabetic)
+                                      (ibuffer-do-sort-by-alphabetic)))))
