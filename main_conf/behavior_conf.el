@@ -323,10 +323,6 @@
   (setq company-selection-wrap-around t) ; the end of the list of suggestions does not wrap around to the top of the list again
 )
 
-(use-package company-statistics
-    :init
-    (company-statistics-mode))
-
 (use-package company-quickhelp
     :config
     (company-quickhelp-mode))
