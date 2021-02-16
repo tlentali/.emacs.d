@@ -63,7 +63,9 @@
 ;(setq column-number-mode -1)
 (use-package doom-modeline
   :ensure t
-  :init (doom-modeline-mode 1))
+  :init (doom-modeline-mode 1)
+)
+
 (setq doom-modeline-project-detection 'project)
 ;; Whether display the buffer encoding.
 (setq doom-modeline-buffer-encoding nil)

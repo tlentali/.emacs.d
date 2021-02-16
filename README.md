@@ -83,7 +83,7 @@ Some highlight in favor of **Emacs** :
 | ✅    | auto                    | briefly highlighted your cursor when changing buffer with [beacon](https://github.com/Malabarba/beacon)                                                                       |
 | ✅    | auto                    | colors parentheses and other delimiters depending on their depth with [rainbow-delimiters](https://github.com/Fanael/rainbow-delimiters)                                      |
 | ✅    | auto                    | highlights matching parens when the cursor is just behind one of them                                                                                                         |
-| ✅    | `C-x t t`               | pop a tree layout file explorer [treemacs](https://github.com/Alexander-Miller/treemacs)                                                                                      |
+| ✅    | `M-x treemacs`          | pop a tree layout file explorer [treemacs](https://github.com/Alexander-Miller/treemacs)                                                                                      |
 | ✅    | `C-q`                   | [Expand region](https://github.com/magnars/expand-region.el) selection                                                                                                        |
 | ✅    | `M-y`                   | [popup kill ring](https://github.com/waymondo/popup-kill-ring)                                                                                                                |
 | ✅    | `C-x f`                 | use ido and [ido vertical mode](https://github.com/creichert/ido-vertical-mode.el) to find file instead of default file navigation                                            |
