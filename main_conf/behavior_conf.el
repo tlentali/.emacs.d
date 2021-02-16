@@ -361,15 +361,15 @@
   :init
   ;; Include version control status info in the ibuffer list.
   (setq ibuffer-formats
-        '((mark modified read-only vc-status-mini " "
-                (name 18 18 :left :elide)
-                " "
+        '((mark modified read-only vc-status-mini " | "
+                (name 30 30 :left :elide)
+                " | "
                 (size 9 -1 :right)
-                " "
+                " | "
                 (mode 16 16 :left :elide)
-                " "
+                " | "
                 (vc-status 16 16 :left)
-                " "
+                " | "
                 filename-and-process)))
   :config (add-hook 'ibuffer-hook (lambda()
                                     (ibuffer-vc-set-filter-groups-by-vc-root)
