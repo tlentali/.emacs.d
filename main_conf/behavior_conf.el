@@ -196,9 +196,11 @@
 
 ;;; colors parentheses and other delimiters depending on their depth
 (use-package rainbow-delimiters
-  :ensure t
-  :init
-   (add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
+  :config
+  (progn
+    (defun @-enable-rainbow-delimiters ()
+      (rainbow-delimiters-mode t))
+    (add-hook 'prog-mode-hook '@-enable-rainbow-delimiters))
 )
 
 ;;; highlights matching parens when the cursor is just behind one of them
@@ -253,15 +255,13 @@
 ;;; undo tree
 (use-package undo-tree
   :ensure t
-  :init
-  (global-undo-tree-mode)
-)
+  :config
+  (progn
+    (global-undo-tree-mode)
+    (setq undo-tree-visualizer-timestamps t)
+    (setq undo-tree-visualizer-diff t)
+    ))
 
-;;(require 'undo-tree)
-;;turn on everywhere
-;;(global-undo-tree-mode 1)
-;; make ctrl-z undo
-;;(global-set-key (kbd "C-z") 'undo)
 ;; make ctrl-Z redo
 (defalias 'redo 'undo-tree-redo)
 (global-set-key (kbd "C-S-z") 'redo)  
@@ -382,4 +382,12 @@
   :bind
   ("C-a" . mwim-beginning-of-code-or-line)
   ("C-e" . mwim-end-of-code-or-line)
+)
+
+;; Display Keybind
+(use-package which-key
+  :config
+  (progn
+    (which-key-mode)
+    (which-key-setup-side-window-right))
 )

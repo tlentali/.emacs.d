@@ -78,3 +78,16 @@
 ;;       (if (string-equal "Python" (format-mode-line mode-name nil nil curr))
 ;;           (pyenv-use-corresponding)))
 ;;     (add-hook 'switch-buffer-functions 'pyenv-update-on-buffer-switch))
+
+
+(use-package python
+  :mode ("\\.py" . python-mode)
+  :ensure t)
+
+(use-package pyvenv)
+
+(use-package python-black
+  :demand t
+  :after python
+  :config
+  (python-black-on-save-mode))
