@@ -374,4 +374,12 @@
   :config (add-hook 'ibuffer-hook (lambda()
                                     (ibuffer-vc-set-filter-groups-by-vc-root)
                                     (unless (eq ibuffer-sorting-mode 'alphabetic)
-                                      (ibuffer-do-sort-by-alphabetic)))))
+                                      (ibuffer-do-sort-by-alphabetic))))
+)
+
+;; Smart Move, move to the beginning/end of line, code or comment 
+(use-package mwim
+  :bind
+  ("C-a" . mwim-beginning-of-code-or-line)
+  ("C-e" . mwim-end-of-code-or-line)
+)
