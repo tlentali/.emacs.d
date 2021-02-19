@@ -8,7 +8,7 @@
 
 (load-library "find-lisp")
 
-(setq org-agenda-files (list "inbox.org" "agenda.org" "note.org" "projects.org"))
+;;(setq org-agenda-files (list "inbox.org" "agenda.org" "note.org" "projects.org"))
 
 (use-package org
   :ensure org-plus-contrib ;; load from the package instead of internal
@@ -91,11 +91,10 @@
   )
 
 ;; Refile
-;;(setq org-refile-targets (quote (("projects.org" :maxlevel . 5))))
 (setq org-refile-use-outline-path 'file)
 (setq org-outline-path-complete-in-steps nil)
-(setq org-refile-targets
-      '(("projects.org" :regexp . "\\(?:\\(?:Note\\|Task\\)s\\)")))
+;; (setq org-refile-targets '(("projects.org" :regexp . "\\(?:\\(?:Note\\|Task\\)s\\)")))
+(setq org-refile-targets (quote (("projects.org" :maxlevel . 5))))
 
 (defun log-todo-next-creation-date (&rest ignore)
   "Log NEXT creation time in the property drawer under the key 'ACTIVATED'"
