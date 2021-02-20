@@ -11,6 +11,7 @@
 ;;(setq org-agenda-files (list "inbox.org" "agenda.org" "note.org" "projects.org"))
 
 (use-package org
+  :straight t
   :ensure org-plus-contrib ;; load from the package instead of internal
   :mode (("\\.org$" . org-mode)
          ("\\.org.draft$" . org-mode))

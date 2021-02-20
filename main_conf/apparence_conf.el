@@ -46,6 +46,7 @@
 
 ;;; distraction-free writing mode with writeroom
 (use-package writeroom-mode
+  :straight t
   :ensure t
   :bind ("C-x w" . 'writeroom-mode))
 
@@ -62,23 +63,25 @@
 ;(setq line-number-mode t)
 ;(setq column-number-mode -1)
 (use-package doom-modeline
+  :straight t
   :ensure t
   :init (doom-modeline-mode 1)
+  :config
+  (setq doom-modeline-project-detection 'project)
+  ;; Whether display the buffer encoding.
+  (setq doom-modeline-buffer-encoding nil)
+  ;; Specify font family in modeline
+  ;; If the actual char height is larger, it respects the actual height.
+  (setq doom-modeline-height 25)
+  ;; How wide the mode-line bar should be. It's only respected in GUI.
+  (setq doom-modeline-bar-width 1)
+  (set-face-attribute 'mode-line nil :family "Source Code Pro" :height 100)
+  (set-face-attribute 'mode-line-inactive nil :family "Source Code Pro" :height 100)
 )
 
-(setq doom-modeline-project-detection 'project)
-;; Whether display the buffer encoding.
-(setq doom-modeline-buffer-encoding nil)
-;; Specify font family in modeline
-;; If the actual char height is larger, it respects the actual height.
-(setq doom-modeline-height 25)
-;; How wide the mode-line bar should be. It's only respected in GUI.
-(setq doom-modeline-bar-width 1)
-(set-face-attribute 'mode-line nil :family "Source Code Pro" :height 100)
-(set-face-attribute 'mode-line-inactive nil :family "Source Code Pro" :height 100)
-
 ;; add all the icon for doom modeline
-(use-package all-the-icons)
+(use-package all-the-icons
+  :straight t)
 
 ;; remove right and left margin
 ;; https://emacsredux.com/blog/2015/01/18/customizing-the-fringes/
