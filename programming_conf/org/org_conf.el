@@ -96,6 +96,10 @@
 (setq org-outline-path-complete-in-steps nil)
 ;; (setq org-refile-targets '(("projects.org" :regexp . "\\(?:\\(?:Note\\|Task\\)s\\)")))
 (setq org-refile-targets (quote (("projects.org" :maxlevel . 5))))
+;; If issue "Invalid function: org-preserve-local-variables" do :
+;; https://github.com/syl20bnr/spacemacs/issues/11801#issuecomment-451814619
+;;   cd ~/.emacs.d/elpa
+;;   find org*/*.elc -print0 | xargs -0 rm
 
 (defun log-todo-next-creation-date (&rest ignore)
   "Log NEXT creation time in the property drawer under the key 'ACTIVATED'"
