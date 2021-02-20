@@ -177,6 +177,26 @@
 ;;  :ensure t
 ;;  :bind ("C-c s" . 'swiper))
 
+;; (use-package ivy
+;;   :ensure t
+;;   :diminish ivy-mode
+;;   :config
+;;   (ivy-mode 1)
+;;   (bind-key "C-c C-r" 'ivy-resume))
+
+;; (use-package ivy-prescient
+;;   :after ivy
+;;   :config
+;;   (ivy-prescient-mode))
+
+;; (use-package counsel
+;;   :ensure t
+;;   :bind
+;;   ("M-x" . counsel-M-x)
+;;   ("C-c k" . counsel-ag)
+;;   ("C-x C-f" . counsel-find-file)
+;; )
+
 ;;; ibuffer instead of the default switch-to-buffer
 (global-set-key (kbd "C-x b") 'ibuffer)
 
@@ -184,10 +204,10 @@
 (use-package avy
   :ensure t
   :bind
-    ("M-s" . avy-goto-char)
+    ("C-c SPC" . avy-goto-char)
 )
 
-;;; emacs treats camelCase strings as a single word by default, this changes said behaviour
+;;; emacs treats camelCasestrings as a single word by default, this changes said behaviour
 (global-subword-mode 1)
 
 ;; dealing with pair symbol
@@ -260,7 +280,8 @@
     (global-undo-tree-mode)
     (setq undo-tree-visualizer-timestamps t)
     (setq undo-tree-visualizer-diff t)
-    ))
+    )
+)
 
 ;; make ctrl-Z redo
 (defalias 'redo 'undo-tree-redo)
@@ -296,43 +317,6 @@
   (yas-global-mode 1)
   :config
   (add-to-list 'yas-snippet-dirs (locate-user-emacs-file "~/Dropbox/.emacs.d/snippets")))
-
-;; company (text completion framework)
-;;(add-hook 'after-init-hook 'global-company-mode)
-; No delay in showing suggestions (https://www.monolune.com/configuring-company-mode-in-emacs/)
-;;(setq company-idle-delay 0)
-; Show suggestions after entering one character.
-;;(setq company-minimum-prefix-length 1)
-; the end of the list of suggestions does not wrap around to the top of the list again
-;;(setq company-selection-wrap-around t)
-
-(use-package company
-  :diminish company-mode
-  :init
-  (global-company-mode)
-  :config
-  ;; set default `company-backends'
-  (setq company-backends
-        '((company-files          ; files & directory
-           company-keywords       ; keywords
-           company-capf)  ; completion-at-point-functions
-          (company-abbrev company-dabbrev)
-          ))
-  (setq company-idle-delay 0) ; No delay in showing suggestions (https://www.monolune.com/configuring-company-mode-in-emacs/)
-  (setq company-minimum-prefix-length 1) ; Show suggestions after entering one character.
-  (setq company-selection-wrap-around t) ; the end of the list of suggestions does not wrap around to the top of the list again
-)
-
-(use-package company-quickhelp
-    :config
-    (company-quickhelp-mode))
-
-(use-package prescient)
-
-(use-package company-prescient
-  :after company
-  :config
-  (company-prescient-mode))
 
 ;; truncate line, don't toggle
 (set-default 'truncate-lines t)
@@ -391,3 +375,38 @@
     (which-key-mode)
     (which-key-setup-side-window-right))
 )
+
+(use-package company
+  :diminish company-mode
+  :init
+  (global-company-mode)
+  :config
+  ;; set default `company-backends'
+  (setq company-backends
+        '((company-files    ; files & directory
+           company-keywords ; keywords
+           company-jedi     ; python
+           company-capf)    ; completion-at-point-functions
+          (company-abbrev company-dabbrev)
+          ))
+  (setq company-idle-delay 0) ; No delay in showing suggestions (https://www.monolune.com/configuring-company-mode-in-emacs/)
+  (setq company-minimum-prefix-length 1) ; Show suggestions after entering one character.
+  (setq company-selection-wrap-around t) ; the end of the list of suggestions does not wrap around to the top of the list again
+  (setq company-tooltip-align-annotations t
+          ;; Easy navigation to candidates with M-<n>
+          company-show-numbers t)
+  :diminish company-mode
+  :bind (:map company-active-map ("<tab>" . company-complete-selection))
+)
+
+(use-package company-quickhelp          ; Documentation popups for Company
+  :ensure t
+  :defer t
+  :init (add-hook 'global-company-mode-hook #'company-quickhelp-mode))
+
+(use-package prescient)
+
+(use-package company-prescient
+  :after company
+  :config
+  (company-prescient-mode))

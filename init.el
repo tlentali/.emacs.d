@@ -56,20 +56,3 @@
 ;; theme
 ;;------
 (add-to-list 'custom-theme-load-path (concat root theme))
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(initial-frame-alist (quote ((fullscreen . maximized))))
- '(package-selected-packages
-   (quote
-    (doom-modeline zoom zerodark-theme yasnippet-snippets yascroll writeroom-mode window-numbering use-package-ensure-system-package undo-tree treemacs swiper speed-type spaceline smooth-scrolling smex smartparens shrink-path rainbow-delimiters py-autopep8 projectile popup-kill-ring org-plus-contrib org-journal neotree multiple-cursors mood-line markdown-toc magit jupyter impatient-mode ido-vertical-mode horizon-theme golden-ratio gist flycheck expand-region elpy ein dimmer diff-hl dashboard ctrlf color-theme-sanityinc-tomorrow beacon)))
- '(zoom-mode t nil (zoom))
- '(zoom-size (quote (0.618 . 0.618))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(show-paren-match ((t (:foreground "#f60386" :background "#2d2d2d")))))
