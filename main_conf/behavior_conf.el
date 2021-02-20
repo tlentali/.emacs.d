@@ -318,6 +318,41 @@
   :config
   (add-to-list 'yas-snippet-dirs (locate-user-emacs-file "~/Dropbox/.emacs.d/snippets")))
 
+(use-package company
+  :diminish company-mode
+  :init
+  (global-company-mode)
+  :config
+  ;; set default `company-backends'
+  (setq company-backends
+        '((company-files          ; files & directory
+           company-keywords       ; keywords
+           company-capf)  ; completion-at-point-functions
+          (company-abbrev company-dabbrev)
+          ))
+  (setq company-idle-delay 0) ; No delay in showing suggestions (https://www.monolune.com/configuring-company-mode-in-emacs/)
+  (setq company-minimum-prefix-length 1) ; Show suggestions after entering one character.
+  (setq company-selection-wrap-around t) ; the end of the list of suggestions does not wrap around to the top of the list again
+  (setq company-show-numbers t)          ; visual numbering of candidates using M-<n>
+  ;; Use tab to navigate in company mode
+  (eval-after-load 'company 
+    '(progn
+       (define-key company-active-map (kbd "TAB") 'company-select-next)
+       (define-key company-active-map [tab] 'company-select-next)))
+
+)
+
+(use-package company-quickhelp
+    :config
+    (company-quickhelp-mode))
+
+(use-package prescient)
+
+(use-package company-prescient
+  :after company
+  :config
+  (company-prescient-mode))
+
 ;; truncate line, don't toggle
 (set-default 'truncate-lines t)
 
