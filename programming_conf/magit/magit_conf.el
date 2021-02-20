@@ -7,7 +7,3 @@
   :bind
   (("C-x g" . magit-status))
 )
-
-(use-package magit-filenotify
-  :commands (magit-filenotify-mode)
-  :hook (magit-status-mode . magit-filenotify-mode))
