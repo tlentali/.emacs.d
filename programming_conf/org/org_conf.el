@@ -6,10 +6,6 @@
 (setq root_org (concat home dropbox alfred org_folder))
 (setq org-directory root_org)
 
-(load-library "find-lisp")
-
-;;(setq org-agenda-files (list "inbox.org" "agenda.org" "note.org" "projects.org"))
-
 (use-package org
   :straight t
   :ensure org-plus-contrib ;; load from the package instead of internal
@@ -18,14 +14,15 @@
   :commands (org-agenda org-capture)
   :config
   (setq org-log-done 'time) ;; add a timestamp when closing a todo
-  (setq org-todo-keywords '((sequence "TODO(t)" "NEXT(n)" "HOLD(h)" "|" "DONE(d)")))
-  )
+  (setq org-todo-keywords '((sequence "TODO(t)" "NEXT(n)" "HOLD(h)" "|" "DONE(d)"))))
 
 (use-package org-capture
   :after org
   :commands (org-capture)
   :config
   (add-to-list 'org-capture-templates
+               ;; the file lambda () is added because of :
+               ;; https://emacs.stackexchange.com/a/42140
                `("i" "Inbox" entry  (file (lambda () (concat root_org "inbox.org")))
                  ,(concat "* TODO %?\n"
                           "/Entered on/ %U")))
@@ -37,13 +34,10 @@
                          "<%<%Y-%m-%d %a %H:00>>")))
   (add-to-list 'org-capture-templates
                `("n" "Note" entry  (file (lambda () (concat root_org "note.org")))
-                 (concat "* Note (%a)\n"
-                         "/Entered on/ %U\n" "\n" "%?")))
+                 ,(concat "* Note %?\n"
+                          "/Entered on/ %U")))
   :bind
-  (("C-c c" . org-capture))
-)
-;; the file lambda () is added because of :
-;; https://emacs.stackexchange.com/a/42140
+  (("C-c c" . org-capture)))
 
 (use-package org-agenda
   :after org
@@ -54,6 +48,7 @@
   :config
   ;; (use-package org-super-agenda
   ;;   :config (org-super-agenda-mode))
+  (load-library "find-lisp")
   (setq org-agenda-files (find-lisp-find-files root_org "\.org$"))
   (setq org-agenda-span 'day)
   (setq org-agenda-start-on-weekday 1)
@@ -88,8 +83,7 @@
                        ((org-agenda-prefix-format "  %?-12t% s")
                         (org-agenda-overriding-header "\nInbox\n")))
             (tags "CLOSED>=\"<today>\""
-                  ((org-agenda-overriding-header "\nCompleted today\n")))))))
-  )
+                  ((org-agenda-overriding-header "\nCompleted today\n"))))))))
 
 ;; Refile
 (setq org-refile-use-outline-path 'file)

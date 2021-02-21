@@ -23,6 +23,9 @@
 ;; truncate line, don't toggle
 (set-default 'truncate-lines t)
 
+;; Shortcut to project.org file
+(global-set-key (kbd "<f6>") (lambda() (interactive)(find-file "~/Dropbox/alfred/org/projects.org")))
+
 ;;; After you split a window, your cursor goes on the new one
 (defun split-and-follow-horizontally ()
   (interactive)
