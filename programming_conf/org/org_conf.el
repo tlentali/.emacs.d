@@ -25,7 +25,7 @@
   (setq org-todo-keywords '((sequence "TODO(t)" "NEXT(n)" "HOLD(h)" "|" "DONE(d)")))
   ;; org-capture
   (setq org-capture-templates
-        ;;(quote (;; the file lambda () is added because of :
+        ;; the file lambda () is added because of :
         ;; https://emacs.stackexchange.com/a/42140
         '(("i" "Inbox" entry  (file (lambda () (concat root_org "inbox.org")))
            "* TODO %?\n/Entered on/ %U")
@@ -33,7 +33,7 @@
                                  (lambda () (concat root_org "agenda.org")) "Future")
            "* %? :meeting:\n<%<%Y-%m-%d %a %H:00>>")
           ("n" "Note" entry  (file (lambda () (concat root_org "note.org")))
-           "* Note %?\n/Entered on/ %U")));;)
+           "* Note %?\n/Entered on/ %U")))
   ;; org-agenda
   ;; (use-package org-super-agenda
   ;;   :config (org-super-agenda-mode))
