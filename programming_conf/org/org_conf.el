@@ -72,7 +72,39 @@
                        ((org-agenda-prefix-format "  %?-12t% s")
                         (org-agenda-overriding-header "\nInbox\n")))
             (tags "CLOSED>=\"<today>\""
-                  ((org-agenda-overriding-header "\nCompleted today\n")))))))
+                  ((org-agenda-overriding-header "\nCompleted today\n")))
+            (tags "CLOSED>=\"<yesterday>\""
+                  ((org-agenda-overriding-header "\nCompleted yesterday\n")))))
+          ("a" "My Agenda"
+           ((agenda "" (
+                        (org-agenda-overriding-header "\nSCHEDULE:\n")
+                        (org-agenda-skip-scheduled-if-done t)
+                        (org-agenda-skip-timestamp-if-done t)
+                        (org-agenda-skip-deadline-if-done t)
+                        (org-agenda-start-day "+0d")
+                        (org-agenda-span 15)           
+                        (org-agenda-repeating-timestamp-show-all nil)
+                        (org-agenda-remove-tags t)
+                        (org-agenda-prefix-format "  %-3i  %-15b%t %s")
+                        ;; (concat "  %-3i  %-15b %t%s" org-agenda-hidden-separator))
+                        (org-agenda-todo-keyword-format " ☐ ")
+                        (org-agenda-time)
+                        (org-agenda-current-time-string "⮜┈┈┈┈┈┈┈ now")
+                        (org-agenda-scheduled-leaders '("" ""))
+                        (org-agenda-deadline-leaders '("" ""))
+                        (org-agenda-time-grid (quote ((today require-timed remove-match) (0900 2100) "      " "┈┈┈┈┈┈┈┈┈┈┈┈┈")
+                                                     ))))
+            (todo "NEXT" (
+                          (org-agenda-overriding-header "\nNEXT:\n")
+                          (org-agenda-remove-tags t)
+                          (org-agenda-prefix-format "  %-2i  %b")
+                          (org-agenda-todo-keyword-format "")))
+            (todo "TODO" (
+                          (org-agenda-overriding-header "\nTODO:\n")
+                          (org-agenda-remove-tags t)
+                          (org-agenda-prefix-format "  %-2i  %b")
+                          (org-agenda-todo-keyword-format "")))))
+          ))
   ;; Refile
   (setq org-refile-use-outline-path 'file)
   (setq org-outline-path-complete-in-steps nil)
