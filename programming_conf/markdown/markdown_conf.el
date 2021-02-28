@@ -1,4 +1,5 @@
 (use-package markdown-mode
+  :straight t
   :ensure t
   :mode ("\\.md\\'" . gfm-mode)
   :commands (markdown-mode gfm-mode)
@@ -13,12 +14,14 @@
 ;; Answer from Bits and Bobs (https://blog.bitsandbobs.net/blog/emacs-markdown-live-preview/)
  
 (use-package simple-httpd
+  :straight t
   :ensure t
   :config
   (setq httpd-port 7070)
   (setq httpd-host (system-name)))
 
 (use-package impatient-mode
+  :straight t
   :ensure t
   :commands impatient-mode)
 

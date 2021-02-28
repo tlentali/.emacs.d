@@ -1,4 +1,5 @@
 (use-package elpy
+  :straight t
   :ensure
   :defer t
   :init
