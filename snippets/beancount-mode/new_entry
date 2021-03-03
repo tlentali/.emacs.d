@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: Beancount new entry
+# key: bne
+# --
+2021-$1-$2 * "$3"
+    Assets:FR:BNP:Cheque                              -$5 EUR
+    Expenses:$4                                        $5 EUR
+$0

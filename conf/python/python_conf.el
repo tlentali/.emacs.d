@@ -1,6 +1,6 @@
 (use-package elpy
   :straight t
-  :ensure
+  :ensure t
   :defer t
   :init
   (advice-add 'python-mode :before 'elpy-enable)

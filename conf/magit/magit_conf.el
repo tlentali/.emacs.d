@@ -2,6 +2,7 @@
 
 (use-package magit
   :straight t
+  :defer t
   :commands (magit-status magit-log)
   :init
   (global-magit-file-mode)

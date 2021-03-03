@@ -7,6 +7,11 @@
 
 (setq main_conf (file-name-as-directory "main_conf"))
 (setq programming_conf (file-name-as-directory "programming_conf"))
+(setq conf (file-name-as-directory "conf"))
+
+(setq package (file-name-as-directory "package"))
+(setq apparence (file-name-as-directory "apparence"))
+(setq behavior (file-name-as-directory "behavior"))
 
 (setq python (file-name-as-directory "python"))
 (setq markdown (file-name-as-directory "markdown"))
@@ -14,6 +19,7 @@
 (setq org (file-name-as-directory "org"))
 (setq magit (file-name-as-directory "magit"))
 (setq dired (file-name-as-directory "dired"))
+(setq beancount (file-name-as-directory "beancount"))
 
 (setq theme (file-name-as-directory "theme"))
 (setq snippet (file-name-as-directory "snippets"))
@@ -34,38 +40,43 @@
 
 ;; package
 ;;--------
-(setq path_package_conf (concat root main_conf "package_conf.el"))
+(setq path_package_conf (concat root conf package "package_conf.el"))
 (load path_package_conf)
 
 ;; apparence
 ;;----------
-(setq path_apparence_conf (concat root main_conf "apparence_conf.el"))
+(setq path_apparence_conf (concat root conf apparence "apparence_conf.el"))
 (load path_apparence_conf)
 
 ;; behavior
 ;;---------
-(setq path_behavior_conf (concat root main_conf "behavior_conf.el"))
+(setq path_behavior_conf (concat root conf behavior "behavior_conf.el"))
 (load path_behavior_conf)
 
 ;; python
 ;;-------
-(setq path_python_conf (concat root programming_conf python "python_conf.el"))
+(setq path_python_conf (concat root conf python "python_conf.el"))
 (load path_python_conf)
 
 ;; org
 ;;-------
-(setq path_org_conf (concat root programming_conf org "org_conf.el"))
+(setq path_org_conf (concat root conf org "org_conf.el"))
 (load path_org_conf)
 
 ;; magit
 ;;-------
-(setq path_magit_conf (concat root programming_conf magit "magit_conf.el"))
+(setq path_magit_conf (concat root conf magit "magit_conf.el"))
 (load path_magit_conf)
 
 ;; csv
 ;;----
-(setq path_csv_conf (concat root programming_conf csv "csv_conf.el"))
+(setq path_csv_conf (concat root conf csv "csv_conf.el"))
 (load path_csv_conf)
+
+;; beancount
+;;----
+(setq path_beancount_conf (concat root conf beancount "beancount_conf.el"))
+(load path_beancount_conf)
 
 ;; theme
 ;;------

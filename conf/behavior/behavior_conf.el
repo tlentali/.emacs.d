@@ -377,11 +377,11 @@
 (use-package prescient
   :straight t)
 
-(use-package company-prescient
-  :straight t
-  :after company
-  :config
-  (company-prescient-mode))
+;; (use-package company-prescient
+;;   :straight t
+;;   :after company
+;;   :config
+;;   (company-prescient-mode))
 
 ;; (use-package centaur-tabs
 ;;   :demand
@@ -478,8 +478,18 @@
 (use-package prescient
   :straight t)
 
-(use-package company-prescient
+;; (use-package company-prescient
+;;   :straight t
+;;   :after company
+;;   :config
+;;   (company-prescient-mode))
+
+;; alternative to highlight-symbol : https://github.com/wolray/symbol-overlay/
+(use-package highlight-symbol
   :straight t
-  :after company
-  :config
-  (company-prescient-mode))
+  :init
+  (global-set-key [(control f3)] 'highlight-symbol)
+  (global-set-key [f3] 'highlight-symbol-next)
+  (global-set-key [(shift f3)] 'highlight-symbol-prev)
+  (global-set-key [(meta f3)] 'highlight-symbol-query-replace)
+)

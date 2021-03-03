@@ -1,5 +1,6 @@
 (use-package markdown-mode
   :straight t
+  :defer t
   :ensure t
   :mode ("\\.md\\'" . gfm-mode)
   :commands (markdown-mode gfm-mode)
@@ -15,6 +16,7 @@
  
 (use-package simple-httpd
   :straight t
+  :defer t
   :ensure t
   :config
   (setq httpd-port 7070)
@@ -22,6 +24,7 @@
 
 (use-package impatient-mode
   :straight t
+  :defer t
   :ensure t
   :commands impatient-mode)
 
