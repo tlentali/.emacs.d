@@ -42,7 +42,7 @@
    '(show-paren-match ((t (:foreground "#f60386" :background "#2d2d2d")))))
   (set-face-attribute 'show-paren-match nil :weight 'extra-bold))
 
-;;; cursor scroll smoothly 
+;; cursor scroll smoothly 
 (use-package smooth-scrolling
   :straight t
   :config
@@ -55,7 +55,7 @@
         scroll-margin 0
         scroll-conservatively 100000))
 
-;;; window-numbering
+;; window-numbering
 (use-package window-numbering
   :straight t
   :config
@@ -67,16 +67,8 @@
   (zoom-mode t)
   (setq zoom-size '(0.618 . 0.618))
 )
-;;; zoom current window size
-;; (custom-set-variables '(zoom-mode t))
-;; ;; (defun size-callback ()
-;; ;;   (cond ((> (frame-pixel-width) 1280) '(0.90 . 0.75))
-;; ;;         (t                            '(0.618 . 0.618))))
-;; ;; (custom-set-variables
-;; ;;  '(zoom-size 'size-callback))
-;; (custom-set-variables '(zoom-size '(0.618 . 0.618)))
 
-;;; dimmer visually highlight the selected buffer
+;; dimmer visually highlight the selected buffer
 (use-package dimmer
   :straight t
   :config
@@ -92,7 +84,7 @@
   (setq projectile-enable-caching t)
   (define-key projectile-mode-map (kbd "C-c p") #'projectile-command-map))
 
-;;; treemacs
+;; treemacs
 (use-package treemacs
   :straight t
   :ensure t
@@ -169,16 +161,12 @@
   :straight t
   :after treemacs magit)
 
-;;; move around quickly
+;; move around quickly
 (use-package avy
   :straight t
   :ensure t
   :bind
   ("C-c SPC" . avy-goto-char))
-
-;; ;; dealing with pair symbol
-;; (require 'smartparens-config)
-;; (smartparens-global-mode t)
 	
 (use-package smartparens
   :straight t
@@ -189,7 +177,7 @@
   (smartparens-global-mode t)
   :diminish smartparens-mode)
 
-;;; colors parentheses and other delimiters depending on their depth
+;; colors parentheses and other delimiters depending on their depth
 (use-package rainbow-delimiters
   :straight t
   :config
@@ -198,32 +186,7 @@
       (rainbow-delimiters-mode t))
     (add-hook 'prog-mode-hook '@-enable-rainbow-delimiters)))
 
-;; (use-package highlight-parentheses
-;;   :straight t
-;;   :ensure t
-;;   :config 
-;;   (setq hl-paren-background-colors '("#2d2d2d"))
-;;   (setq hl-paren-colors '("#f60386")))
-
-;;; highlights matching parens when the cursor is just behind one of them
-;; (show-paren-mode 1)
-;; (setq show-paren-delay 0)
-;; ; change the color/face
-;; ;; ;; https://emacs.stackexchange.com/questions/47795/spacemacs-how-can-i-customize-the-highlight-style-of-a-matching-parenthesis
-;; ;;(require 'paren)
-;; (custom-set-faces
-;;  '(show-paren-match ((t (:foreground "#f60386" :background "#2d2d2d")))))
-;; (set-face-attribute 'show
-                    ;; -paren-match nil :weight 'extra-bold)
-
-;; (use-package paren
-;;   :straight t
-;;   :ensure t
-;;   :config 
-;;   (custom-set-faces
-;;    '(show-paren-match ((t (:foreground "#f60386" :background "#2d2d2d"))))))
-
-;;; briefly highlighted your cursor when changing buffer 
+;; briefly highlighted your cursor when changing buffer 
 (use-package beacon
   :straight t
   :ensure t
@@ -237,13 +200,13 @@
     (setq beacon-blink-delay .2)          ; default .3
     (setq beacon-size 8))
 
-;;; Expand region selection
+;; Expand region selection
 (use-package expand-region
   :straight t
   :ensure t
   :bind ("C-q" . er/expand-region))
 
-;;; popup-kill-ring
+;; popup-kill-ring
 (use-package popup-kill-ring
   :straight t
   :ensure t
@@ -258,13 +221,7 @@
 	ido-everywhere t)
   (ido-mode t))
 
-;;; use ido to find file and switch buffer
-;; (setq ido-enable-flex-matching nil)
-;; (setq ido-create-new-buffer 'always)
-;; (setq ido-everywhere t)
-;; (ido-mode 1)
-
-;;; ido vertical
+;; ido vertical
 (use-package ido-vertical-mode
   :straight t
   :ensure t
@@ -273,7 +230,7 @@
   :config
   (setq ido-vertical-define-keys 'C-n-C-p-up-down-left-right))
 
-;;; undo tree
+;; undo tree
 (use-package undo-tree
   :straight t
   :ensure t
@@ -286,10 +243,6 @@
   (defalias 'redo 'undo-tree-redo)
   (global-set-key (kbd "C-S-z") 'redo))
 
-;; make ctrl-Z redo
-;; (defalias 'redo 'undo-tree-redo)
-;; (global-set-key (kbd "C-S-z") 'redo)  
-
 (use-package smex
   :straight t
   :ensure t
@@ -298,12 +251,6 @@
   ("M-X" . smex-major-mode-commands)
   ("C-c C-c M-x" . execute-extended-command))
 
-;;; key binding helper smex
-;; (global-set-key (kbd "M-x") 'smex)
-;; (global-set-key (kbd "M-X") 'smex-major-mode-commands)
-;; ;; This is your old M-x.
-;; (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
-
 (use-package diff-hl
   :straight t
   :config
@@ -311,12 +258,6 @@
   (diff-hl-margin-mode 1)
   ;; show diff on the spot, without saving the file
   (diff-hl-flydiff-mode 1))
-
-;; ;; show git diff in file
-;; (global-diff-hl-mode)
-;; (diff-hl-margin-mode 1)
-;; ;; show diff on the spot, without saving the file
-;; (diff-hl-flydiff-mode 1) 
 
 ;; ctrlf
 (use-package ctrlf
@@ -331,12 +272,6 @@
   (setq cua-auto-tabify-rectangles nil) ;; Don't tabify after rectangle commands
   (transient-mark-mode 1) ;; No region when it is not highlighted
   (setq cua-keep-region-after-copy nil))
-
-;; ;; cua mode (copy/paste normal mode) 
-;; (cua-mode t)
-;; (setq cua-auto-tabify-rectangles nil) ;; Don't tabify after rectangle commands
-;; (transient-mark-mode 1) ;; No region when it is not highlighted
-;; (setq cua-keep-region-after-copy nil) 
 
 (use-package yasnippet
   :straight t
@@ -377,12 +312,6 @@
 (use-package prescient
   :straight t)
 
-;; (use-package company-prescient
-;;   :straight t
-;;   :after company
-;;   :config
-;;   (company-prescient-mode))
-
 ;; (use-package centaur-tabs
 ;;   :demand
 ;;   :config
@@ -405,9 +334,6 @@
   :straight t
   :bind 
   ("C-x b" . ibuffer))
-
-;;; ibuffer instead of the default switch-to-buffer
-;; (global-set-key (kbd "C-x b") 'ibuffer) 
 
 (use-package ibuffer-vc
   :straight t
@@ -477,12 +403,6 @@
 
 (use-package prescient
   :straight t)
-
-;; (use-package company-prescient
-;;   :straight t
-;;   :after company
-;;   :config
-;;   (company-prescient-mode))
 
 ;; alternative to highlight-symbol : https://github.com/wolray/symbol-overlay/
 (use-package highlight-symbol

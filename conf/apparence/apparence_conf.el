@@ -17,10 +17,10 @@
   ;;(add-to-list 'custom-theme-load-path
   ;;                  "~/Dropbox/.emacs.d/theme/")
   ;; (add-to-list 'load-path "~/Dropbox/.emacs.d/theme/")
-  ;;(use-package horizon-theme)
-  ;;(load-theme 'sanityinc-tomorrow-eighties t)
-  ;;(load-theme 'zerodark t)
-  ;;(zerodark-setup-modeline-format)
+  ;; (use-package horizon-theme)
+  ;; (load-theme 'sanityinc-tomorrow-eighties t)
+  ;; (load-theme 'zerodark t)
+  ;; (zerodark-setup-modeline-format)
   ;; Cursor
   ;; Set cursor color to indian pink
   (set-cursor-color "#f60386")
@@ -48,18 +48,23 @@
   (load-theme 'zerodark t)
   (zerodark-setup-modeline-format))
 
+;; (use-package monokai-pro-theme
+;;   :ensure t
+;;   :config
+;;   (load-theme 'monokai-pro-ristretto t))
+
 ;; distraction-free writing mode with writeroom
 (use-package writeroom-mode
   :straight t
   :ensure t
   :bind ("C-x w" . 'writeroom-mode))
 
-;;; modeline
+;; modeline
 ;; choose mood line as modeline
-;(mood-line-mode)
+;; (mood-line-mode)
 ;; mode line cursor position
-;(setq line-number-mode t)
-;(setq column-number-mode -1)
+;; (setq line-number-mode t)
+;; (setq column-number-mode -1)
 (use-package doom-modeline
   :straight t
   :ensure t

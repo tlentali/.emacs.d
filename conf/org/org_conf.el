@@ -1,4 +1,4 @@
-;;; set path
+;; set path
 (setq home (file-name-as-directory "~"))
 (setq dropbox (file-name-as-directory "Dropbox"))
 (setq alfred (file-name-as-directory "alfred"))
@@ -34,9 +34,6 @@
            "* %? :meeting:\n<%<%Y-%m-%d %a %H:00>>")
           ("n" "Note" entry  (file (lambda () (concat root_org "note.org")))
            "* Note %?\n/Entered on/ %U")))
-  ;; org-agenda
-  ;; (use-package org-super-agenda
-  ;;   :config (org-super-agenda-mode))
   (load-library "find-lisp")
   (setq org-agenda-files (find-lisp-find-files root_org "\.org$"))
   (setq org-agenda-span 'day)
@@ -120,4 +117,3 @@
                (not (org-entry-get nil "ACTIVATED")))
       (org-entry-put nil "ACTIVATED" (format-time-string "[%Y-%m-%d]"))))
   (add-hook 'org-after-todo-state-change-hook #'log-todo-next-creation-date))
-
