@@ -29,7 +29,7 @@
         ;; https://emacs.stackexchange.com/a/42140
         '(("i" "Inbox" entry  (file (lambda () (concat root_org "inbox.org")))
            "* TODO %?\n/Entered on/ %U")
-          ("m" "Meeting" entry  (file+headline 
+          ("m" "Meeting" entry  (file+headline
                                  (lambda () (concat root_org "agenda.org")) "Future")
            "* %? :meeting:\n<%<%Y-%m-%d %a %H:00>>")
           ("n" "Note" entry  (file (lambda () (concat root_org "note.org")))
@@ -79,7 +79,7 @@
                         (org-agenda-skip-timestamp-if-done t)
                         (org-agenda-skip-deadline-if-done t)
                         (org-agenda-start-day "+0d")
-                        (org-agenda-span 15)           
+                        (org-agenda-span 15)
                         (org-agenda-repeating-timestamp-show-all nil)
                         (org-agenda-remove-tags t)
                         (org-agenda-prefix-format "  %-3i  %-15b%t %s")
@@ -101,14 +101,14 @@
                           (org-agenda-remove-tags t)
                           (org-agenda-prefix-format "  %-2i  %b")
                           (org-agenda-todo-keyword-format "")))))
-          ("t" "Thomas'time"
-           ((agenda "" 
+          ("t" "Thomas'timeline"
+           ((agenda ""
                     ((org-agenda-overriding-header "\nSCHEDULE:\n")
                      (org-agenda-skip-scheduled-if-done nil)
                      (org-agenda-skip-timestamp-if-done nil)
                      (org-agenda-skip-deadline-if-done nil)
                      (org-agenda-start-day "-1d")
-                     (org-agenda-span 8)          
+                     (org-agenda-span 8)
                      (org-agenda-start-on-weekday nil)
                      (org-agenda-repeating-timestamp-show-all nil)
                      (org-agenda-remove-tags t)
@@ -118,24 +118,30 @@
                      (org-agenda-scheduled-leaders '("" ""))
                      (org-agenda-deadline-leaders '("" ""))
                      (org-agenda-time-grid (quote ((today require-timed remove-match) (0900 2100) "      " "┈┈┈┈┈┈┈┈┈┈┈┈┈")
-                                                  ))))   
+                                                  ))))
             (todo "NEXT"
-                  ((org-agenda-skip-function
-                    '(org-agenda-skip-entry-if 'deadline))
-                   (org-agenda-prefix-format "%-12c%-20b")
-                   (org-agenda-overriding-header "\nNext\n")))        
+                  ((org-agenda-prefix-format "%-12c%-20b")
+                   (org-agenda-overriding-header "\nNext\n")))
+            (tags-todo "DEADLINE>=\"<today>\"&DEADLINE<=\"<+30d>\""
+                  ((org-agenda-sorting-strategy '(todo-state-down))
+                   (org-agenda-overriding-header "\nDeadline 30d\n")
+                   (org-agenda-prefix-format "%-12c%-20b")))
             (todo "TODO"
-                  ((org-agenda-skip-function
-                    '(org-agenda-skip-entry-if 'deadline))
-                   (org-agenda-prefix-format "%-12c%-20b")
+                  ((org-agenda-prefix-format "%-12c%-20b")
                    (org-agenda-overriding-header "\nTodo\n")))
             (tags "CLOSED>=\"<today>\""
                   ((org-agenda-overriding-header "\nCompleted today\n")
                    (org-agenda-prefix-format "%-12c%-20b")))
-            (tags "CLOSED>=\"<-1d>\""
+            (tags "CLOSED<=\"<today>\"&CLOSED>=\"<-1d>\""
                   ((org-agenda-overriding-header "\nCompleted yesterday\n")
-                   (org-agenda-prefix-format "%-12c%-20b")))))
-          ))
+                   (org-agenda-prefix-format "%-12c%-20b")))
+            (tags "CLOSED<=\"<-1d>\"&CLOSED>=\"<-7d>\""
+                  ((org-agenda-overriding-header "\nCompleted between yesterday and 7 days\n")
+                   (org-agenda-prefix-format "%-12c%-20b")))
+            (tags "CLOSED<=\"<-7d>\"&CLOSED>=\"<-14d>\""
+                  ((org-agenda-overriding-header "\nCompleted between 7 and 14 days\n")
+                   (org-agenda-prefix-format "%-12c%-20b")))
+            ))))
   ;; Refile
   (setq org-refile-use-outline-path 'file)
   (setq org-outline-path-complete-in-steps nil)
