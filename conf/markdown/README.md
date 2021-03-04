@@ -12,8 +12,8 @@
 
 `C-c C-s h` 
 
-# See output
+# See output Github flavored
 
-`C-c C-c l`
+`M-x gh-markdown-preview`
 
 [[Source](https://jblevins.org/projects/markdown-mode/)]

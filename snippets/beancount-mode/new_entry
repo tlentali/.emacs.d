@@ -2,7 +2,8 @@
 # name: Beancount new entry
 # key: bne
 # --
-2021-$1-$2 * "$3"
-    Assets:FR:BNP:Cheque                              -$5 EUR
-    Expenses:$4                                        $5 EUR
+2021-${1:month}-${2:day} * "${3:descr}"
+    Assets:FR:BNP:Cheque                              -${5:price} EUR
+    Expenses:${4:expenses}                             $5 EUR
+
 $0
