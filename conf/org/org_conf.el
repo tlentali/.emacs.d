@@ -101,6 +101,40 @@
                           (org-agenda-remove-tags t)
                           (org-agenda-prefix-format "  %-2i  %b")
                           (org-agenda-todo-keyword-format "")))))
+          ("t" "Thomas'time"
+           ((agenda "" 
+                    ((org-agenda-overriding-header "\nSCHEDULE:\n")
+                     (org-agenda-skip-scheduled-if-done nil)
+                     (org-agenda-skip-timestamp-if-done nil)
+                     (org-agenda-skip-deadline-if-done nil)
+                     (org-agenda-start-day "-1d")
+                     (org-agenda-span 8)          
+                     (org-agenda-start-on-weekday nil)
+                     (org-agenda-repeating-timestamp-show-all nil)
+                     (org-agenda-remove-tags t)
+                     (org-agenda-prefix-format "%-12c%-20b%t %s")
+                     (org-agenda-time)
+                     (org-agenda-current-time-string "┈┈┈┈┈┈┈┈┈ now")
+                     (org-agenda-scheduled-leaders '("" ""))
+                     (org-agenda-deadline-leaders '("" ""))
+                     (org-agenda-time-grid (quote ((today require-timed remove-match) (0900 2100) "      " "┈┈┈┈┈┈┈┈┈┈┈┈┈")
+                                                  ))))   
+            (todo "NEXT"
+                  ((org-agenda-skip-function
+                    '(org-agenda-skip-entry-if 'deadline))
+                   (org-agenda-prefix-format "%-12c%-20b")
+                   (org-agenda-overriding-header "\nNext\n")))        
+            (todo "TODO"
+                  ((org-agenda-skip-function
+                    '(org-agenda-skip-entry-if 'deadline))
+                   (org-agenda-prefix-format "%-12c%-20b")
+                   (org-agenda-overriding-header "\nTodo\n")))
+            (tags "CLOSED>=\"<today>\""
+                  ((org-agenda-overriding-header "\nCompleted today\n")
+                   (org-agenda-prefix-format "%-12c%-20b")))
+            (tags "CLOSED>=\"<-1d>\""
+                  ((org-agenda-overriding-header "\nCompleted yesterday\n")
+                   (org-agenda-prefix-format "%-12c%-20b")))))
           ))
   ;; Refile
   (setq org-refile-use-outline-path 'file)
