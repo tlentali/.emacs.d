@@ -108,7 +108,7 @@
                      (org-agenda-skip-timestamp-if-done nil)
                      (org-agenda-skip-deadline-if-done nil)
                      (org-agenda-start-day "-1d")
-                     (org-agenda-span 8)
+                     (org-agenda-span 15)
                      (org-agenda-start-on-weekday nil)
                      (org-agenda-repeating-timestamp-show-all nil)
                      (org-agenda-prefix-format "%-12c%-20b%t %s")
