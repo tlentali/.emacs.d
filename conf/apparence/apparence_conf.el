@@ -42,11 +42,16 @@
   ;; https://emacsredux.com/blog/2015/01/18/customizing-the-fringes/
   (fringe-mode '(1 . 1)))
 
-(use-package zerodark-theme
+(use-package atom-one-dark-theme
 :ensure t
 :init
-  (load-theme 'zerodark t)
-  (zerodark-setup-modeline-format))
+  (load-theme 'atom-one-dark t))
+
+;; (use-package zerodark-theme
+;; :ensure t
+;; :init
+;;   (load-theme 'zerodark t)
+;;   (zerodark-setup-modeline-format))
 
 ;; (use-package monokai-pro-theme
 ;;   :ensure t
