@@ -109,6 +109,7 @@
                      (org-agenda-skip-deadline-if-done nil)
                      (org-agenda-start-day "-1d")
                      (org-agenda-span 15)
+                     (org-deadline-warning-days 1)
                      (org-agenda-start-on-weekday nil)
                      (org-agenda-repeating-timestamp-show-all nil)
                      (org-agenda-prefix-format "%-12c%-20b%t %s")
@@ -133,11 +134,14 @@
             (tags "CLOSED<=\"<today>\"&CLOSED>=\"<-1d>\""
                   ((org-agenda-overriding-header "\nCompleted yesterday\n")
                    (org-agenda-prefix-format "%-12c%-20b")))
-            (tags "CLOSED<=\"<-1d>\"&CLOSED>=\"<-7d>\""
-                  ((org-agenda-overriding-header "\nCompleted between yesterday and 7 days\n")
+            (tags "CLOSED<=\"<-1d>\"&CLOSED>=\"<-2d>\""
+                  ((org-agenda-overriding-header "\nCompleted between yesterday and 2 days ago\n")
                    (org-agenda-prefix-format "%-12c%-20b")))
-            (tags "CLOSED<=\"<-7d>\"&CLOSED>=\"<-14d>\""
-                  ((org-agenda-overriding-header "\nCompleted between 7 and 14 days\n")
+            (tags "CLOSED<=\"<-2d>\"&CLOSED>=\"<-3d>\""
+                  ((org-agenda-overriding-header "\nCompleted between 2 and 3 days ago\n")
+                   (org-agenda-prefix-format "%-12c%-20b")))
+            (tags "CLOSED<=\"<-3d>\"&CLOSED>=\"<-14d>\""
+                  ((org-agenda-overriding-header "\nCompleted between 3 and 14 days ago\n")
                    (org-agenda-prefix-format "%-12c%-20b")))
             ))))
   ;; Refile
