@@ -48,11 +48,6 @@
 (setq path_apparence_conf (concat root conf apparence "apparence_conf.el"))
 (load path_apparence_conf)
 
-;; behavior
-;;---------
-(setq path_behavior_conf (concat root conf behavior "behavior_conf.el"))
-(load path_behavior_conf)
-
 ;; python
 ;;-------
 (setq path_python_conf (concat root conf python "python_conf.el"))
@@ -81,3 +76,12 @@
 ;; theme
 ;;------
 (add-to-list 'custom-theme-load-path (concat root theme))
+
+;; behavior
+;;---------
+(setq path_behavior_conf (concat root conf behavior "behavior_conf.el"))
+(load path_behavior_conf)
+
+;;------------
+;; end of init
+;;------------

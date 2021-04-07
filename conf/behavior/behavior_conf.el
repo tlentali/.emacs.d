@@ -39,7 +39,7 @@
   ;; https://emacs.stackexchange.com/questions/47795/spacemacs-how-can-i-customize-the-highlight-style-of-a-matching-parenthesis
   ;;(require 'paren)
   (custom-set-faces
-   '(show-paren-match ((t (:foreground "#f60386"))))) 
+   '(show-paren-match ((t (:foreground "#f60386" :background nil :underline t))))) 
   (set-face-attribute 'show-paren-match nil :weight 'extra-bold))
 
 ;; cursor scroll smoothly 
