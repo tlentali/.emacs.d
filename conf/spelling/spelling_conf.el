@@ -34,23 +34,43 @@
 (use-package flyspell
   :straight t
   :defer 1
+  :hook ((markdown-mode org-mode text-mode) . flyspell-mode)
   :custom
   (flyspell-issue-message-flag nil)
   (flyspell-issue-welcome-flag nil)
   (flyspell-mode 1))
 
-(use-package flyspell-correct-ivy
+(use-package flyspell-popup
   :straight t
+  :ensure t
   :after flyspell
   :bind (:map flyspell-mode-map
-        ("C-;" . flyspell-correct-word-generic))
-  :custom (flyspell-correct-interface 'flyspell-correct-ivy))
+              ("C-;" . #'flyspell-popup-correct)))
+
+(defhydra hydra-spelling (:color blue)
+  "
+  ^
+  ^Spelling^          ^Errors^            ^Checker^
+  ^────────^──────────^──────^────────────^───────^───────
+  _q_ quit            _<_ previous        _c_ correction
+  ^^                  _>_ next            _d_ dictionary
+  ^^                  _f_ check           _m_ mode
+  ^^                  ^^                  ^^
+  "
+  ("q" nil)
+  ("<" flyspell-correct-previous :color pink)
+  (">" flyspell-correct-next :color pink)
+  ("c" ispell)
+  ("d" ispell-change-dictionary)
+  ("f" flyspell-buffer)
+  ("m" flyspell-mode))
 
 (use-package flycheck
   :straight t
   :defer 2
+  :hook ((markdown-mode org-mode text-mode) . flycheck-mode)
   :diminish
-  :init (global-flycheck-mode)
+  ;; :init (global-flycheck-mode)
   :custom
   (flycheck-display-errors-delay .3)
   (flycheck-stylelintrc "~/.stylelintrc.json"))
@@ -77,24 +97,6 @@
   ("m" flycheck-mode)
   ("s" flycheck-select-checker)
   ("v" flycheck-verify-setup))
-
-(defhydra hydra-spelling (:color blue)
-  "
-  ^
-  ^Spelling^          ^Errors^            ^Checker^
-  ^────────^──────────^──────^────────────^───────^───────
-  _q_ quit            _<_ previous        _c_ correction
-  ^^                  _>_ next            _d_ dictionary
-  ^^                  _f_ check           _m_ mode
-  ^^                  ^^                  ^^
-  "
-  ("q" nil)
-  ("<" flyspell-correct-previous :color pink)
-  (">" flyspell-correct-next :color pink)
-  ("c" ispell)
-  ("d" ispell-change-dictionary)
-  ("f" flyspell-buffer)
-  ("m" flyspell-mode))
 
 (provide 'spelling_conf)
 ;;; spelling_conf.el ends here

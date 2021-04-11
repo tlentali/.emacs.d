@@ -5,14 +5,12 @@
 (setq emacs_d (file-name-as-directory ".emacs.d"))
 (setq root (concat home dropbox emacs_d))
 
-(setq main_conf (file-name-as-directory "main_conf"))
-(setq programming_conf (file-name-as-directory "programming_conf"))
 (setq conf (file-name-as-directory "conf"))
+(setq snippet (file-name-as-directory "snippets"))
 
 (setq package (file-name-as-directory "package"))
 (setq apparence (file-name-as-directory "apparence"))
 (setq behavior (file-name-as-directory "behavior"))
-
 (setq python (file-name-as-directory "python"))
 (setq markdown (file-name-as-directory "markdown"))
 (setq csv (file-name-as-directory "csv"))
@@ -20,9 +18,7 @@
 (setq magit (file-name-as-directory "magit"))
 (setq dired (file-name-as-directory "dired"))
 (setq beancount (file-name-as-directory "beancount"))
-
-(setq theme (file-name-as-directory "theme"))
-(setq snippet (file-name-as-directory "snippets"))
+(setq spelling (file-name-as-directory "spelling"))
 
 ;; Straight
 (defvar bootstrap-version)
@@ -73,14 +69,15 @@
 (setq path_beancount_conf (concat root conf beancount "beancount_conf.el"))
 (load path_beancount_conf)
 
-;; theme
-;;------
-(add-to-list 'custom-theme-load-path (concat root theme))
-
 ;; behavior
 ;;---------
 (setq path_behavior_conf (concat root conf behavior "behavior_conf.el"))
 (load path_behavior_conf)
+
+;; behavior
+;;---------
+(setq path_spelling_conf (concat root conf spelling "spelling_conf.el"))
+(load path_spelling_conf)
 
 ;;------------
 ;; end of init

@@ -33,16 +33,12 @@
   (set-cursor-color "#f60386")          ; Set cursor color to indian pink
   (setq-default cursor-type '(bar . 2)) ; cursor in bar
   (blink-cursor-mode 0)                 ; no blink cursor
-   ;; Start full screen
+  ;; Start full screen
   (custom-set-variables
    '(initial-frame-alist (quote ((fullscreen . maximized)))))
   ;; font
-  ;; (custom-set-faces
-  ;;  '(default ((t (:height 100 :family "hack")))))
-  ;; (set-frame-font "source code pro-10" nil t)
   (setq default-frame-alist '((font . "Source Code Pro-10")))
-  ;; remove right and left margin
-  ;; https://emacsredux.com/blog/2015/01/18/customizing-the-fringes/
+  ;; remove right and left margin https://emacsredux.com/blog/2015/01/18/customizing-the-fringes/
   (fringe-mode '(1 . 1))
   (defalias 'yes-or-no-p 'y-or-n-p) ; change yes-or-no questions into y-or-n questions
   ; Shortcut to project.org file
@@ -63,9 +59,7 @@
   ; highlights matching parens when the cursor is just behind one of them
   (show-paren-mode 1)
   (defvar show-paren-delay 0)
-  ; change the color/face
-  ; https://emacs.stackexchange.com/questions/47795/spacemacs-how-can-i-customize-the-highlight-style-of-a-matching-parenthesis
-  ;(require 'paren)
+  ; change the color/face https://emacs.stackexchange.com/questions/47795/spacemacs-how-can-i-customize-the-highlight-style-of-a-matching-parenthesis
   (custom-set-faces
    '(show-paren-match ((t (:foreground "#f60386" :background nil :underline t)))))
   (set-face-attribute 'show-paren-match nil :weight 'extra-bold))
@@ -89,19 +83,20 @@
   :config
   (window-numbering-mode 1))
 
+; fixed and automatic balanced window layout for Emacs
 (use-package zoom
   :straight t
   :config
   (zoom-mode t)
   (setq zoom-size '(0.618 . 0.618)))
 
-; dimmer visually highlight the selected buffer
+; visually highlight the selected buffer
 (use-package dimmer
   :straight t
   :config
   (dimmer-mode))
 
-; projectile
+; project Interaction Library for Emacs
 (use-package projectile
   :straight t
   :config
@@ -110,7 +105,7 @@
   (setq projectile-enable-caching t)
   (define-key projectile-mode-map (kbd "C-c p") #'projectile-command-map))
 
-; treemacs
+; tree layout file explorer for Emacs
 (use-package treemacs
   :straight t
   :defer t
@@ -161,7 +156,6 @@
     ; The default width and height of the icons is 22 pixels. If you are
     ; using a Hi-DPI display, uncomment this to double the icon size.
     (treemacs-resize-icons 13)
-
     (treemacs-follow-mode t)
     (treemacs-filewatch-mode t)
     (treemacs-fringe-indicator-mode 'always)
@@ -193,6 +187,7 @@
   :bind
   ("C-c SPC" . avy-goto-char))
 
+; deals with parens pairs and tries to be smart about it
 (use-package smartparens
   :straight t
   :ensure t
@@ -217,15 +212,13 @@
   :ensure t
   :config
     (beacon-mode 1)
-    ; only flash on window/buffer changes...
-    (setq beacon-blink-when-window-changes t)
-    ; ... don't be excessive:
+    (setq beacon-blink-when-window-changes t) ; only flash on window/buffer changes
     (setq beacon-blink-when-window-scrolls nil)
-    (setq beacon-blink-duration .2)       ; default .3
-    (setq beacon-blink-delay .2)          ; default .3
+    (setq beacon-blink-duration .2)
+    (setq beacon-blink-delay .2)
     (setq beacon-size 8))
 
-; Expand region selection
+; expand region selection
 (use-package expand-region
   :straight t
   :ensure t
@@ -238,24 +231,7 @@
   :ensure t
   :bind ("M-y" . popup-kill-ring))
 
-(use-package ido
-  :straight t
-  :ensure t
-  :config
-  (setq ido-enable-flex-matching nil
-    ido-create-new-buffer 'always
-    ido-everywhere t)
-  (ido-mode t))
-
-; ido vertical
-(use-package ido-vertical-mode
-  :straight t
-  :ensure t
-  :init
-  (ido-vertical-mode 1)
-  :config
-  (setq ido-vertical-define-keys 'C-n-C-p-up-down-left-right))
-
+; a branching tree of changes
 (use-package undo-tree
   :straight t
   :ensure t
@@ -268,6 +244,7 @@
   (defalias 'redo 'undo-tree-redo)
   (global-set-key (kbd "C-S-z") 'redo))
 
+; smart M-x enhancement for Emacs
 (use-package smex
   :straight t
   :ensure t
@@ -276,6 +253,7 @@
   ("M-X" . smex-major-mode-commands)
   ("C-c C-c M-x" . execute-extended-command))
 
+; highlighting uncommitted changes
 (use-package diff-hl
   :straight t
   :config
@@ -284,13 +262,7 @@
   ; show diff on the spot, without saving the file
   (diff-hl-flydiff-mode 1))
 
-; ctrlf
-;; (use-package ctrlf
-;;   :straight t
-;;   :init
-;;   (ctrlf-mode +1))
-
-; cua mode (copy/paste normal mode)
+; cua mode (copy/paste "normal" mode)
 (use-package cua-base
   :straight t
   :config (cua-mode)
@@ -298,6 +270,7 @@
   (transient-mark-mode 1) ; No region when it is not highlighted
   (setq cua-keep-region-after-copy nil))
 
+; template system for Emacs
 (use-package yasnippet
   :straight t
   :ensure t
@@ -306,29 +279,13 @@
   :config
   (add-to-list 'yas-snippet-dirs (locate-user-emacs-file "~/Dropbox/.emacs.d/snippets")))
 
-; (use-package centaur-tabs
-;   :demand
-;   :config
-;   (centaur-tabs-mode t)
-;   (setq centaur-tabs-style "bar"
-;     centaur-tabs-height 25
-;     centaur-tabs-set-icons t
-;     centaur-tabs-set-modified-marker t
-;     centaur-tabs-show-navigation-buttons t
-;     centaur-tabs-set-bar 'over
-;       centaur-tabs-gray-out-icons 'buffer
-;     x-underline-at-descent-line t)
-;   (centaur-tabs-headline-match)
-;   :bind
-;   ("C-<prior>" . centaur-tabs-backward)
-;   ("C-<next>" . centaur-tabs-forward)
-; )
-
+; buffer highlighting alternate layouts
 (use-package ibuffer
   :straight t
   :bind
   ("C-x b" . ibuffer))
 
+; ibuffer-mode group files by git project etc., and show file state
 (use-package ibuffer-vc
   :straight t
   :ensure t
@@ -351,14 +308,14 @@
                                     (unless (eq ibuffer-sorting-mode 'alphabetic)
                                       (ibuffer-do-sort-by-alphabetic)))))
 
-; Smart Move, move to the beginning/end of line, code or comment
+; smart Move, move to the beginning/end of line, code or comment
 (use-package mwim
   :straight t
   :bind
   ("C-a" . mwim-beginning-of-code-or-line)
   ("C-e" . mwim-end-of-code-or-line))
 
-; Display Keybind
+; display Keybind
 (use-package which-key
   :straight t
   :config
@@ -366,6 +323,7 @@
     (which-key-mode)
     (which-key-setup-side-window-right)))
 
+; modular in-buffer completion framework for Emacs
 (use-package company
   :straight t
   :init
@@ -393,17 +351,12 @@
        (define-key company-active-map [tab] 'company-select-next)))
   )
 
-(use-package company-quickhelp          ; Documentation popups for Company
+; documentation popups for Company
+(use-package company-quickhelp
   :straight t
   :defer t
   :config
   (company-quickhelp-mode))
-
-(use-package prescient
-  :straight t
-  :config
-  (setq prescient-save-file (concat user-emacs-directory "prescient_cache"))
-    (prescient-persist-mode))
 
 ; alternative to highlight-symbol : https://github.com/wolray/symbol-overlay/
 (use-package highlight-symbol
@@ -415,6 +368,7 @@
   (global-set-key [(meta f3)] 'highlight-symbol-query-replace)
 )
 
+; common Emacs commands that are customised to make the best use of Ivy
 (use-package counsel
   :straight t
   :after ivy
@@ -433,6 +387,7 @@
   (add-to-list 'ivy-sort-functions-alist
              '(counsel-recentf . file-newer-than-file-p)))
 
+; generic completion frontend for Emacs
 (use-package ivy
   :straight t
   :delight
@@ -564,6 +519,7 @@
   (add-to-list 'all-the-icons-ivy-file-commands 'counsel-find-library)
   (all-the-icons-ivy-setup))
 
+; isearch with an overview
 (use-package swiper
   :straight t
   :after ivy
@@ -571,12 +527,18 @@
          :map swiper-map
          ("M-%" . swiper-query-replace)))
 
+; simple but effective sorting and filtering for Emacs
+(use-package prescient
+  :straight t
+  :config
+  (setq prescient-save-file (concat user-emacs-directory "prescient_cache"))
+    (prescient-persist-mode))
+
 (use-package ivy-prescient
   :straight t
   :config (ivy-prescient-mode t))
 
-;; spell
-
+; make Emacs bindings that stick around
 (use-package hydra
   :straight t
   :defer 2

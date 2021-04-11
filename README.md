@@ -26,7 +26,6 @@
 <!-- markdown-toc end -->
 
 
-
 # 🚀 Get inspired <a name="get-inspired"/>
 
 This Emacs configuration, on top of being a documented configuration for my future self, aims to inspire you through some amazing features delivered by **Emacs**.  
