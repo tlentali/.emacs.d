@@ -175,21 +175,21 @@ It's [Magit](https://magit.vc/) !
 - on your computer settings : change the <kbd>CapsLk</kbd> key by <kbd>ctrl</kbd>. You're welcome.
 - before saving, look whatś different from last save :
 
-```text
-M-x diff-buffer-with-file
-```
+  ```text
+  M-x diff-buffer-with-file
+  ```
 
 - align comment or anything using a separator : 
 
-```text
-M-x diff-buffer-with-file
-```
+  ```text
+  M-x diff-buffer-with-file
+  ```
 
 - preview markdown file : 
 
-```text
-M-x markdown-live-preview-mode
-```
+  ```text
+  M-x markdown-live-preview-mode
+  ```
 
 - to make `.emacs` point on the `.emacs.d/init.el` config file, add the following in your `.emacs` file :
 
