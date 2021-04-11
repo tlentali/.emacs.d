@@ -47,24 +47,6 @@
   :bind (:map flyspell-mode-map
               ("C-;" . #'flyspell-popup-correct)))
 
-(defhydra hydra-spelling (:color blue)
-  "
-  ^
-  ^Spelling^          ^Errors^            ^Checker^
-  ^────────^──────────^──────^────────────^───────^───────
-  _q_ quit            _<_ previous        _c_ correction
-  ^^                  _>_ next            _d_ dictionary
-  ^^                  _f_ check           _m_ mode
-  ^^                  ^^                  ^^
-  "
-  ("q" nil)
-  ("<" flyspell-correct-previous :color pink)
-  (">" flyspell-correct-next :color pink)
-  ("c" ispell)
-  ("d" ispell-change-dictionary)
-  ("f" flyspell-buffer)
-  ("m" flyspell-mode))
-
 (use-package flycheck
   :straight t
   :defer 2
@@ -74,29 +56,6 @@
   :custom
   (flycheck-display-errors-delay .3)
   (flycheck-stylelintrc "~/.stylelintrc.json"))
-
-(defhydra hydra-flycheck (:color blue)
-  "
-  ^
-  ^Flycheck^          ^Errors^            ^Checker^
-  ^────────^──────────^──────^────────────^───────^─────
-  _q_ quit            _<_ previous        _?_ describe
-  _M_ manual          _>_ next            _d_ disable
-  _v_ verify setup    _f_ check           _m_ mode
-  ^^                  _l_ list            _s_ select
-  ^^                  ^^                  ^^
-  "
-  ("q" nil)
-  ("<" flycheck-previous-error :color pink)
-  (">" flycheck-next-error :color pink)
-  ("?" flycheck-describe-checker)
-  ("M" flycheck-manual)
-  ("d" flycheck-disable-checker)
-  ("f" flycheck-buffer)
-  ("l" flycheck-list-errors)
-  ("m" flycheck-mode)
-  ("s" flycheck-select-checker)
-  ("v" flycheck-verify-setup))
 
 (provide 'spelling_conf)
 ;;; spelling_conf.el ends here

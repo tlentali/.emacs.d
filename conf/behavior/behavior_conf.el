@@ -105,6 +105,11 @@
   (setq projectile-enable-caching t)
   (define-key projectile-mode-map (kbd "C-c p") #'projectile-command-map))
 
+(use-package counsel-projectile
+  :straight t
+  :after (counsel projectile)
+  :config (counsel-projectile-mode 1))
+
 ; tree layout file explorer for Emacs
 (use-package treemacs
   :straight t
@@ -537,13 +542,6 @@
 (use-package ivy-prescient
   :straight t
   :config (ivy-prescient-mode t))
-
-; make Emacs bindings that stick around
-(use-package hydra
-  :straight t
-  :defer 2
-  :bind (("C-c f" . hydra-flycheck/body)
-         ("C-c k" . hydra-spelling/body)))
 
 (provide 'behavior_conf)
 ;;; behavior_conf.el ends here
