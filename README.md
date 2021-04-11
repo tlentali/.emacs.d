@@ -1,9 +1,5 @@
 <p align="center"><img src="./misc/emacs_icon.svg" width=150 heigth=150/></p>
-<p align="center">
-	<a href="https://www.gnu.org/software/emacs/"><img src="https://img.shields.io/badge/GNU%20Emacs-27.0.50-b48ead.svg?style=flat-square"/></a>
-	<a href="https://orgmode.org/"><img src="https://img.shields.io/badge/org--mode-9.2.3-489a9f.svg?style=flat-square"/></a>
-</p>
-<p align="center">Personal <a href="https://www.gnu.org/software/emacs/"><b>GNU Emacs</b></a> configuration ✨🐂💫</p>
+<p align="center">At the end of the day <a href="https://www.gnu.org/software/emacs/"><b>GNU Emacs</b></a> is more fun than it is frustrating ✨🐂💫</p>
 
 ---
 
@@ -177,7 +173,24 @@ It's [Magit](https://magit.vc/) !
 # 🙌 Life changing tricks <a name="life-changing-tricks"/>
 
 - on your computer settings : change the <kbd>CapsLk</kbd> key by <kbd>ctrl</kbd>. You're welcome.
-- preview markdown file : `M-x markdown-live-preview-mode`
+- before saving, look whatś different from last save :
+
+```text
+M-x diff-buffer-with-file
+```
+
+- align comment or anything using a separator : 
+
+```text
+M-x diff-buffer-with-file
+```
+
+- preview markdown file : 
+
+```text
+M-x markdown-live-preview-mode
+```
+
 - to make `.emacs` point on the `.emacs.d/init.el` config file, add the following in your `.emacs` file :
 
   ```lang-el
