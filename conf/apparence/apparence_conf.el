@@ -1,51 +1,16 @@
-(use-package "startup"
-  :config
-  ;; Start full screen
-  (custom-set-variables
-   '(initial-frame-alist (quote ((fullscreen . maximized)))))
-  ;; no line number
-  (global-linum-mode 0)
-  ;; remove menu
-  (menu-bar-mode -1)
-  ;; remove tool bar
-  (tool-bar-mode -1)
-  ;; remove scroll bar
-  (toggle-scroll-bar -1)
-  ;; add yascroll (text scroll bar) instead of scroll bar
-  (global-yascroll-bar-mode 1)
-  ;; theme
-  ;;(add-to-list 'custom-theme-load-path
-  ;;                  "~/Dropbox/.emacs.d/theme/")
-  ;; (add-to-list 'load-path "~/Dropbox/.emacs.d/theme/")
-  ;; (use-package horizon-theme)
-  ;; (load-theme 'sanityinc-tomorrow-eighties t)
-  ;; (load-theme 'zerodark t)
-  ;; (zerodark-setup-modeline-format)
-  ;; Cursor
-  ;; Set cursor color to indian pink
-  (set-cursor-color "#f60386")
-  ;; cursor in bar
-  (setq-default cursor-type '(bar . 2))
-  ;; no blink cursor
-  (blink-cursor-mode 0)
-  ;; startup screen : scratch
-  (setq-default inhibit-startup-screen t)
-  (setq inhibit-splash-screen t)
-  (setq inhibit-startup-message t)
-  (setq initial-scratch-message "")
-  ;; font
-  ;; (custom-set-faces
-  ;;  '(default ((t (:height 100 :family "hack")))))
-  ;;(set-frame-font "source code pro-10" nil t)
-  (setq default-frame-alist '((font . "Source Code Pro-10")))
-  ;; remove right and left margin
-  ;; https://emacsredux.com/blog/2015/01/18/customizing-the-fringes/
-  (fringe-mode '(1 . 1)))
+;; theme
+;;(add-to-list 'custom-theme-load-path
+;;                  "~/Dropbox/.emacs.d/theme/")
+;; (add-to-list 'load-path "~/Dropbox/.emacs.d/theme/")
+;; (use-package horizon-theme)
+;; (load-theme 'sanityinc-tomorrow-eighties t)
+;; (load-theme 'zerodark t)
+;; (zerodark-setup-modeline-format)
 
-(use-package atom-one-dark-theme
-:ensure t
-:init
-  (load-theme 'atom-one-dark t))
+;; (use-package atom-one-dark-theme
+;; :ensure t
+;; :init
+;;   (load-theme 'atom-one-dark t))
 
 ;; (use-package zerodark-theme
 ;; :ensure t
@@ -90,3 +55,30 @@
 ;; add all the icon for doom modeline
 (use-package all-the-icons
   :straight t)
+
+;; helps visually distinguish file-visiting windows from other windows
+(use-package solaire-mode
+  :straight t
+  :custom (solaire-mode-remap-fringe t)
+  :config
+  (solaire-mode-swap-bg)
+  (solaire-global-mode +1))
+
+(use-package doom-themes
+  :config
+  ;; Global settings (defaults)
+  (setq doom-themes-enable-bold t    ; if nil, bold is universally disabled
+        doom-themes-enable-italic t) ; if nil, italics is universally disabled
+  (load-theme 'doom-one t)
+
+  ;; Enable flashing mode-line on errors
+  (doom-themes-visual-bell-config)
+  
+  ;; Enable custom neotree theme (all-the-icons must be installed!)
+  (doom-themes-neotree-config)
+  ;; or for treemacs users
+  (setq doom-themes-treemacs-theme "doom-colors") ; use the colorful treemacs theme
+  (doom-themes-treemacs-config)
+  
+  ;; Corrects (and improves) org-mode's native fontification.
+  (doom-themes-org-config))

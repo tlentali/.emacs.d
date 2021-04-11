@@ -1,6 +1,5 @@
-(use-package elpy
+ (use-package elpy
   :straight t
-  :ensure t
   :defer t
   :init
   (advice-add 'python-mode :before 'elpy-enable)
@@ -29,3 +28,38 @@
 
 ;; emacs ipython notebook
 ;;(require 'ein)
+
+(use-package blacken
+  :straight t
+  :delight
+  :hook (python-mode . blacken-mode)
+  :custom (blacken-line-length 79))
+
+(use-package py-isort
+  :straight t
+  :after python
+  :hook ((python-mode . pyvenv-mode)
+         (before-save . py-isort-before-save)))
+
+;; (use-package pyenv-mode
+;;   :straight t
+;;   :after python
+;;   :hook ((python-mode . pyenv-mode)
+;;          (projectile-switch-project . projectile-pyenv-mode-set))
+;;   :custom (pyenv-mode-set "3.8.5")
+;;   :preface
+;;   (defun projectile-pyenv-mode-set ()
+;;     "Set pyenv version matching project name."
+;;     (let ((project (projectile-project-name)))
+;;       (if (member project (pyenv-mode-versions))
+;;           (pyenv-mode-set project)
+;;         (pyenv-mode-unset)))))
+
+;; (use-package pyvenv
+;;   :straight t
+;;   :after python
+;;   :hook (python-mode . pyvenv-mode)
+;;   :custom
+;;   (pyvenv-default-virtual-env-name "env")
+;;   (pyvenv-mode-line-indicator '(pyvenv-virtual-env-name ("[venv:"
+;;                                                          pyvenv-virtual-env-name "]"))))
