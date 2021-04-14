@@ -1,4 +1,4 @@
-<p align="center"><img src="./misc/emacs_icon.svg" width=150 heigth=150/></p>
+<p align="center"><img src="./misc/matrix_screens.jpeg" width=150 heigth=150/></p>
 <p align="center">At the end of the day <a href="https://www.gnu.org/software/emacs/"><b>GNU Emacs</b></a> is more fun than it is frustrating ✨🐂💫</p>
 
 ---
