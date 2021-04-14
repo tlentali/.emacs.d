@@ -23,12 +23,12 @@
    use-package-always-ensure t      ; Avoid the :ensure keyword for each package
    make-backup-files nil            ; No backup file
    auto-save-default nil            ; Disable backups auto-saves
+   column-number-mode t             ; display the current column
    )
   (global-linum-mode 0)        ; no line number
   (menu-bar-mode -1)           ; remove menu
   (tool-bar-mode -1)           ; remove tool bar
   (toggle-scroll-bar -1)       ; remove scroll bar
-  (global-yascroll-bar-mode 1) ; add yascroll (text scroll bar) instead of scroll bar
   ;; cursor
   (set-cursor-color "#f60386")          ; Set cursor color to indian pink
   (setq-default cursor-type '(bar . 2)) ; cursor in bar
@@ -38,8 +38,6 @@
    '(initial-frame-alist (quote ((fullscreen . maximized)))))
   ;; font
   (setq default-frame-alist '((font . "Source Code Pro-10")))
-  ;; remove right and left margin https://emacsredux.com/blog/2015/01/18/customizing-the-fringes/
-  (fringe-mode '(1 . 1))
   (defalias 'yes-or-no-p 'y-or-n-p) ; change yes-or-no questions into y-or-n questions
   ; Shortcut to project.org file
   (global-set-key (kbd "<f6>") (lambda() (interactive)(find-file "~/Dropbox/alfred/org/projects.org")))
