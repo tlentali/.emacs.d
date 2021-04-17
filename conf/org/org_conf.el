@@ -112,7 +112,7 @@
                      (org-deadline-warning-days 1)
                      (org-agenda-start-on-weekday nil)
                      (org-agenda-repeating-timestamp-show-all nil)
-                     (org-agenda-prefix-format "%-12c%-20b%t %s")
+                     (org-agenda-prefix-format "%-12c%-20b%t [%e] %s")
                      (org-agenda-time)
                      (org-agenda-current-time-string "┈┈┈┈┈┈┈┈┈ now")
                      (org-agenda-time-grid (quote ((today require-timed remove-match) (0900 2100) "      " "┈┈┈┈┈┈┈┈┈┈┈┈┈")
