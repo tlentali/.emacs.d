@@ -27,7 +27,7 @@
   (setq org-capture-templates
         ;; the file lambda () is added because of :
         ;; https://emacs.stackexchange.com/a/42140
-        '(("i" "Inbox" entry  (file (lambda () (concat root_org "inbox.org")))
+        '(("i" "Inbox" entry  (file  (lambda () (concat root_org "inbox.org")))
            "* TODO %?\n/Entered on/ %U")
           ("m" "Meeting" entry  (file+headline
                                  (lambda () (concat root_org "agenda.org")) "Future")
@@ -144,6 +144,12 @@
                   ((org-agenda-overriding-header "\nCompleted between 3 and 14 days ago\n")
                    (org-agenda-prefix-format "%-12c%-20b")))
             ))))
+  
+(use-package org-contacts
+  :ensure nil
+  :after org
+  :custom (org-contacts-files '("~/Dropbox/alfred/org/contact.org")))
+
   ;; Refile
   (setq org-refile-use-outline-path 'file)
   (setq org-outline-path-complete-in-steps nil)
