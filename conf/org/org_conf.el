@@ -36,6 +36,12 @@
            "* Note %?\n/Entered on/ %U")))
   (load-library "find-lisp")
   (setq org-agenda-files (find-lisp-find-files root_org "\.org$"))
+  ;; Refile
+  (setq org-refile-allow-creating-parent-nodes 'confirm)
+  (setq org-refile-use-cache nil)
+  (setq org-refile-use-outline-path nil)
+  (setq org-refile-targets '((nil :maxlevel . 9)
+                             (org-agenda-files :maxlevel . 9)))
   (setq org-agenda-span 'day)
   (setq org-agenda-start-on-weekday 1)
   (setq org-agenda-compact-blocks t)
@@ -150,18 +156,31 @@
   :after org
   :custom (org-contacts-files '("~/Dropbox/alfred/org/contact.org")))
 
-  ;; Refile
-  (setq org-refile-use-outline-path 'file)
-  (setq org-outline-path-complete-in-steps nil)
-  ;; (setq org-refile-targets '(("projects.org" :regexp . "\\(?:\\(?:Note\\|Task\\)s\\)")))
-  (setq org-refile-targets (quote (("projects.org" :maxlevel . 5))))
-  ;; If issue "Invalid function: org-preserve-local-variables" do :
-  ;; https://github.com/syl20bnr/spacemacs/issues/11801#issuecomment-451814619
-  ;;   cd ~/.emacs.d/elpa
-  ;;   find org*/*.elc -print0 | xargs -0 rm
-  (defun log-todo-next-creation-date (&rest ignore)
-    "Log NEXT creation time in the property drawer under the key 'ACTIVATED'"
-    (when (and (string= (org-get-todo-state) "NEXT")
-               (not (org-entry-get nil "ACTIVATED")))
-      (org-entry-put nil "ACTIVATED" (format-time-string "[%Y-%m-%d]"))))
-  (add-hook 'org-after-todo-state-change-hook #'log-todo-next-creation-date))
+;; If issue "Invalid function: org-preserve-local-variables" do :
+;; https://github.com/syl20bnr/spacemacs/issues/11801#issuecomment-451814619
+;;   cd ~/.emacs.d/elpa
+;;   find org*/*.elc -print0 | xargs -0 rm
+(defun log-todo-next-creation-date (&rest ignore)
+  "Log NEXT creation time in the property drawer under the key 'ACTIVATED'"
+  (when (and (string= (org-get-todo-state) "NEXT")
+             (not (org-entry-get nil "ACTIVATED")))
+    (org-entry-put nil "ACTIVATED" (format-time-string "[%Y-%m-%d]"))))
+(add-hook 'org-after-todo-state-change-hook #'log-todo-next-creation-date))
+
+;; Automatically saving files after refile 
+;; https://github.com/rougier/emacs-gtd/issues/9#issue-769874432
+;; Save the corresponding buffers
+(defun gtd-save-org-buffers ()
+  "Save `org-agenda-files' buffers without user confirmation.
+See also `org-save-all-org-buffers'"
+  (interactive)
+  (message "Saving org-agenda-files buffers...")
+  (save-some-buffers t (lambda () 
+			 (when (member (buffer-file-name) org-agenda-files) 
+			   t)))
+  (message "Saving org-agenda-files buffers... done"))
+
+;; Add it after refile
+(advice-add 'org-refile :after
+	    (lambda (&rest _)
+	      (gtd-save-org-buffers)))
