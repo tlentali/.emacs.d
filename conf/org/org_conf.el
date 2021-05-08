@@ -54,60 +54,7 @@
           (tags   . " %i %-12:c")
           (search . " %i %-12:c")))
   (setq org-agenda-custom-commands
-        '(("g" "Get Things Done (GTD)"
-           ((agenda ""
-                    ((org-agenda-skip-function
-                      '(org-agenda-skip-entry-if 'deadline))
-                     (org-deadline-warning-days 0)))
-            (todo "NEXT"
-                  ((org-agenda-skip-function
-                    '(org-agenda-skip-entry-if 'deadline))
-                   (org-agenda-prefix-format "  %i %-12:c [%e] ")
-                   (org-agenda-overriding-header "\nTasks\n")))
-            (agenda nil
-                    ((org-agenda-entry-types '(:deadline))
-                     (org-agenda-format-date "")
-                     (org-deadline-warning-days 7)
-                     (org-agenda-skip-function
-                      '(org-agenda-skip-entry-if 'notregexp "\\* NEXT"))
-                     (org-agenda-overriding-header "\nDeadlines")))
-            (tags-todo "inbox"
-                       ((org-agenda-prefix-format "  %?-12t% s")
-                        (org-agenda-overriding-header "\nInbox\n")))
-            (tags "CLOSED>=\"<today>\""
-                  ((org-agenda-overriding-header "\nCompleted today\n")))
-            (tags "CLOSED>=\"<yesterday>\""
-                  ((org-agenda-overriding-header "\nCompleted yesterday\n")))))
-          ("a" "My Agenda"
-           ((agenda "" (
-                        (org-agenda-overriding-header "\nSCHEDULE:\n")
-                        (org-agenda-skip-scheduled-if-done t)
-                        (org-agenda-skip-timestamp-if-done t)
-                        (org-agenda-skip-deadline-if-done t)
-                        (org-agenda-start-day "+0d")
-                        (org-agenda-span 15)
-                        (org-agenda-repeating-timestamp-show-all nil)
-                        (org-agenda-remove-tags t)
-                        (org-agenda-prefix-format "  %-3i  %-15b%t %s")
-                        ;; (concat "  %-3i  %-15b %t%s" org-agenda-hidden-separator))
-                        (org-agenda-todo-keyword-format " ☐ ")
-                        (org-agenda-time)
-                        (org-agenda-current-time-string "⮜┈┈┈┈┈┈┈ now")
-                        (org-agenda-scheduled-leaders '("" ""))
-                        (org-agenda-deadline-leaders '("" ""))
-                        (org-agenda-time-grid (quote ((today require-timed remove-match) (0900 2100) "      " "┈┈┈┈┈┈┈┈┈┈┈┈┈")
-                                                     ))))
-            (todo "NEXT" (
-                          (org-agenda-overriding-header "\nNEXT:\n")
-                          (org-agenda-remove-tags t)
-                          (org-agenda-prefix-format "  %-2i  %b")
-                          (org-agenda-todo-keyword-format "")))
-            (todo "TODO" (
-                          (org-agenda-overriding-header "\nTODO:\n")
-                          (org-agenda-remove-tags t)
-                          (org-agenda-prefix-format "  %-2i  %b")
-                          (org-agenda-todo-keyword-format "")))))
-          ("r" "Thomas'timeline"
+        '(("w" "Tom's agenda"
            ((agenda ""
                     ((org-agenda-overriding-header "\nSCHEDULE:\n")
                      (org-agenda-skip-scheduled-if-done nil)
@@ -134,20 +81,8 @@
             (todo "TODO"
                   ((org-agenda-prefix-format "%-12c%-20b")
                    (org-agenda-overriding-header "\nTodo\n")))
-            (tags "CLOSED>=\"<today>\""
-                  ((org-agenda-overriding-header "\nCompleted today\n")
-                   (org-agenda-prefix-format "%-12c%-20b")))
-            (tags "CLOSED<=\"<today>\"&CLOSED>=\"<-1d>\""
-                  ((org-agenda-overriding-header "\nCompleted yesterday\n")
-                   (org-agenda-prefix-format "%-12c%-20b")))
-            (tags "CLOSED<=\"<-1d>\"&CLOSED>=\"<-2d>\""
-                  ((org-agenda-overriding-header "\nCompleted between yesterday and 2 days ago\n")
-                   (org-agenda-prefix-format "%-12c%-20b")))
-            (tags "CLOSED<=\"<-2d>\"&CLOSED>=\"<-3d>\""
-                  ((org-agenda-overriding-header "\nCompleted between 2 and 3 days ago\n")
-                   (org-agenda-prefix-format "%-12c%-20b")))
-            (tags "CLOSED<=\"<-3d>\"&CLOSED>=\"<-14d>\""
-                  ((org-agenda-overriding-header "\nCompleted between 3 and 14 days ago\n")
+            (tags "CLOSED<=\"<today>\"&CLOSED>=\"<-7d>\""
+                  ((org-agenda-overriding-header "\nCompleted this week\n")
                    (org-agenda-prefix-format "%-12c%-20b")))
             ))))
   
