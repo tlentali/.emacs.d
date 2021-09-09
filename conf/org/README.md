@@ -1,12 +1,44 @@
 # Org mode
 
-## guru
-- [rememberYou](https://github.com/rememberYou/.emacs.d)
-- [my life in org mode](https://karl-voit.at/orgmode/)
+## Calendar
 
-## source
-- [tip_how_i_organize_myself_with_orgmode](https://www.reddit.com/r/emacs/comments/9ajxqj/tip_how_i_organize_myself_with_orgmode/)
-- [cabaret example](https://karl-voit.at/2016/12/18/org-depend/)
+| action                               | keybinding             |
+|:-------------------------------------|:-----------------------|
+| display                              | `C-c a w`              |
+| capture todo                         | `C-c c i`              |
+| refresh agenda                       | `g`                    |
+| quit agenda                          | `q`                    |
+
+## Todo
+
+| action                               | keybinding             |
+|:-------------------------------------|:-----------------------|
+| sort todo                            | `M-x org-sort-entries` |
+| change header hierarchy              | `M-S-right`            |
+| new line with same header hierarchy  | `C-S-RET`              |
+| new TODO with same header hierarchy  | `S-M-RET`              | 
+| change `TODO` state                  | `S-<left/right arrow>` or `C-c C-t` |
+| refile                               | `C-c C-w`              |
+| estimate effort                      | `C-c C-x e`            | 
+| display the global TODO list         | `C-c a t`              |
+
+## Schedule
+
+| action                               | keybinding             |
+|:-------------------------------------|:-----------------------|
+| add date schedule                    | `C-c C-s`              |
+| add date deadline                    | `C-c C-d`              |
+| add date indication                  | `C-c !`                |
+| add a date                           | `C-c .`                |
+
+### Timestamp
+
+| action                                      | keybinding                 |
+|:--------------------------------------------|:---------------------------|
+| in one month                                | `<2005-10-01 Sat +1m>`     |
+| in one month, warning me 3 days before      | `<2005-10-01 Sat +1m -3d>` |
+| in one month, the same week day             | `<2005-10-01 Sat ++1m>`    |
+| in one month from the moment it is DONE     | `<2005-10-01 Sat .+1m>`    |
 
 # Org contact
 
@@ -47,60 +79,10 @@ Highlight :
 - `TODO` are moved to the next day if not `DONE`
 - schedule a appointment in the future by adding a timestamp using `C-c .` (it will appear in `M-x org-agenda o`)
 
-# Todo list
+# Gurus
+- [rememberYou](https://github.com/rememberYou/.emacs.d)
+- [my life in org mode](https://karl-voit.at/orgmode/)
 
-## Add Todo item
-
-`C-c C-t`
-
-## Insert a new TODO entry below the current one
-
-`S-M-RET`
-
-## Change task state
-
-`C-c C-t` or `S-arrow`
-
-## Schedule task
-
-`C-c C-s`
-
-## Deadline task
-
-`C-c C-d`
-
-## Repeated tasks
-
-In one month :
-
-`<2005-10-01 Sat +1m>`
-
-In one month, warning me 3 days before :
-
-<2005-10-01 Sat +1m -3d>
-
-In one month, the same week day :
-
-<2005-10-01 Sat ++1m>
-
-In one month from the moment I made it DONE :
-
-<2005-10-01 Sat .+1m>
-
-## Show the global TODO list
-
-`C-c a t`
-
-# Agenda
-
-Custome :
-
-`C-c a o`
-
-Normal :
-
-`C-c a a`
-
-Show the global TODO list
-
-`C-c a t`
+# Source
+- [tip_how_i_organize_myself_with_orgmode](https://www.reddit.com/r/emacs/comments/9ajxqj/tip_how_i_organize_myself_with_orgmode/)
+- [cabaret example](https://karl-voit.at/2016/12/18/org-depend/)
