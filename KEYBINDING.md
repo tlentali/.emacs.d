@@ -31,7 +31,7 @@
 | #macro             |                                                     | see code in macro                                                                  |
 | #macro             | `M-x name-last-kbd-macro`                           | name last macro                                                                    |
 | #macro             | `M-x insert-kbd-macro`                              | call named macro                                                                   |
-| #macro             | `M-x kmacro-insert-counter`                         | incremental number                                                                 |
+| #macro             | `M-x kmacro-insert-counter` or `C-x C-k TAB`        | incremental number (https://stackoverflow.com/a/1510038/8479387)                   |
 | #practical         | `M-x whitespace-cleanup`                            | to cleanup invisible stuff #practical                                              |
 | #practical         | `C-g`                                               | to quit anything                                                                   |
 | #practical         | `C-q`                                               | extend region selection                                                            |
