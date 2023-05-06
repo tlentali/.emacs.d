@@ -7,14 +7,6 @@
 (use-package all-the-icons
   :straight t)
 
-; helps visually distinguish file-visiting windows from other windows
-(use-package solaire-mode
-  :straight t
-  :custom (solaire-mode-remap-fringe t)
-  :config
-  (solaire-mode-swap-bg)
-  (solaire-global-mode +1))
-
 ; distraction-free writing mode with writeroom
 (use-package writeroom-mode
   :straight t
@@ -27,7 +19,7 @@
         doom-themes-enable-italic t) ; if nil, italics is universally disabled
   (load-theme 'doom-one t)
   (setq doom-themes-treemacs-theme "doom-colors") ; use the colorful treemacs theme
-  (doom-themes-treemacs-config)  
+  (doom-themes-treemacs-config)
   (doom-themes-org-config) ; Corrects (and improves) org-mode's native fontification.
 )
 

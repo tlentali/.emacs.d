@@ -40,7 +40,7 @@
   (setq default-frame-alist '((font . "Source Code Pro-10")))
   (defalias 'yes-or-no-p 'y-or-n-p) ; change yes-or-no questions into y-or-n questions
   ; Shortcut to project.org file
-  (global-set-key (kbd "<f6>") (lambda() (interactive)(find-file "~/Dropbox/alfred/org/projects.org")))
+  (global-set-key (kbd "<f6>") (lambda() (interactive)(find-file "~/alfred/org/projects.org")))
   ; After you split a window, your cursor goes on the new one
   (defun split-and-follow-horizontally ()
     (interactive)
@@ -280,7 +280,7 @@
   :init
   (yas-global-mode 1)
   :config
-  (add-to-list 'yas-snippet-dirs (locate-user-emacs-file "~/Dropbox/.emacs.d/snippets")))
+  (add-to-list 'yas-snippet-dirs (locate-user-emacs-file "~/.emacs.d/snippets")))
 
 ; buffer highlighting alternate layouts
 (use-package ibuffer

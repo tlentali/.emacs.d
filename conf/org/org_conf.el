@@ -1,9 +1,9 @@
 ;; set path
 (setq home (file-name-as-directory "~"))
-(setq dropbox (file-name-as-directory "Dropbox"))
+(setq project (file-name-as-directory "project"))
 (setq alfred (file-name-as-directory "alfred"))
 (setq org_folder (file-name-as-directory "org"))
-(setq root_org (concat home dropbox alfred org_folder))
+(setq root_org (concat home project alfred org_folder))
 (setq org-directory root_org)
 
 (use-package org
@@ -85,11 +85,11 @@
                   ((org-agenda-overriding-header "\nCompleted this week\n")
                    (org-agenda-prefix-format "%-12c%-20b")))
             ))))
-  
-(use-package org-contacts
-  :ensure nil
-  :after org
-  :custom (org-contacts-files '("~/Dropbox/alfred/org/contact.org")))
+
+;; (use-package org-contacts
+;; :ensure nil
+;;  :after org
+;;  :custom (org-contacts-files '("~/project/alfred/org/contact.org")))
 
 ;; If issue "Invalid function: org-preserve-local-variables" do :
 ;; https://github.com/syl20bnr/spacemacs/issues/11801#issuecomment-451814619
@@ -102,7 +102,7 @@
     (org-entry-put nil "ACTIVATED" (format-time-string "[%Y-%m-%d]"))))
 (add-hook 'org-after-todo-state-change-hook #'log-todo-next-creation-date))
 
-;; Automatically saving files after refile 
+;; Automatically saving files after refile
 ;; https://github.com/rougier/emacs-gtd/issues/9#issue-769874432
 ;; Save the corresponding buffers
 (defun gtd-save-org-buffers ()
@@ -110,8 +110,8 @@
 See also `org-save-all-org-buffers'"
   (interactive)
   (message "Saving org-agenda-files buffers...")
-  (save-some-buffers t (lambda () 
-			 (when (member (buffer-file-name) org-agenda-files) 
+  (save-some-buffers t (lambda ()
+			 (when (member (buffer-file-name) org-agenda-files)
 			   t)))
   (message "Saving org-agenda-files buffers... done"))
 

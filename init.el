@@ -1,9 +1,8 @@
 ;; set folder names
 ;;-----------------
 (setq home (file-name-as-directory "~"))
-(setq dropbox (file-name-as-directory "Dropbox"))
 (setq emacs_d (file-name-as-directory ".emacs.d"))
-(setq root (concat home dropbox emacs_d))
+(setq root (concat home emacs_d))
 
 (setq conf (file-name-as-directory "conf"))
 (setq snippet (file-name-as-directory "snippets"))
